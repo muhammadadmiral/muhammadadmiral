@@ -12,17 +12,11 @@
 </p>
 
 <p align="center">
-  <a href="mailto:madmiirall10@gmail.com">
-    <img src="https://img.shields.io/badge/Email-madmiirall10%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-  <a href="https://linkedin.com/in/muhammad-admiral-60b552257">
+  <a href="https://www.linkedin.com/in/muhammadadmiral/">
     <img src="https://img.shields.io/badge/LinkedIn-muhammad--admiral-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   <a href="https://instagram.com/admiraalll">
     <img src="https://img.shields.io/badge/Instagram-%40admiraalll-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
-  </a>
-  <a href="https://twitter.com/admiraalll">
-    <img src="https://img.shields.io/badge/Twitter-@admiraalll-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/>
   </a>
 </p>
 
@@ -40,8 +34,8 @@
 ---
 
 <div align="center">
-  <!-- Streak -->
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=muhammadadmiral&theme=synthwave&hide_border=true" alt="🔥 Streak" height="130"/>
+<!-- 🔥 GitHub Streak -->
+<img src="https://streak-stats.demolab.com/?user=muhammadadmiral&theme=synthwave&hide_border=true" alt="🔥 Streak" height="130"/>
 
   <!-- Stats -->
   <img src="https://github-readme-stats.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=synthwave&hide_border=true&icon_color=ff1493" alt="Stats" height="130"/>
