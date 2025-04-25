@@ -3,13 +3,12 @@
 </p>
 
 <h1 align="center">
-  Yo! I'm Muhammad Admiral <img src="https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.gif" width="30" alt="👋"/>
+  yo <img src="https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.gif" width="30" alt="👋"/>
 </h1>
 
 <p align="center">
-  Just a chill coder fueled by ☕️ coffee & 🎧 beats  
+  Coffee Addict ☕️🎧  
   <br>
-  Always up for fun projects and random chat!
 </p>
 
 <p align="center">
@@ -35,9 +34,7 @@
 </p>
 <p align="center">
   Hey, I'm Admiral 👑<br>
-  I build cool stuff, sip my infinite coffee, and vibe to sick beats.  
-  When I'm not coding, you can find me gaming or watching anime.  
-  Hit me up for a chat or collab!
+  dah gitu aja gausah banyak banyak
 </p>
 
 ---
