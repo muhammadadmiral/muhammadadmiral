@@ -1,1 +1,62 @@
-<h1 align="center"> Hi there <img src="https://cdn.pixabay.com/animation/2023/04/08/14/46/14-46-30-107_512.gif" alt="Waving hand" width="30"/> I'm Muhammad Admiral </h1> <p align="center"> <a href="mailto:madmiirall10@gmail.com"><img src="https://img.shields.io/badge/Email-madmiirall10%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white" alt="Email"></a> <a href="https://linkedin.com/in/muhammad-admiral-60b552257"><img src="https://img.shields.io/badge/LinkedIn-muhammad--admiral-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"></a> <a href="https://instagram.com/admiraalll"><img src="https://img.shields.io/badge/Instagram-%40admiraalll-E4405F?style=flat&logo=instagram&logoColor=white" alt="Instagram"></a> </p> <h2 align="center">😄 About Me</h2> <p align="center"> <img src="https://cdn.pixabay.com/animation/2024/05/16/21/46/21-46-02-195_512.gif" alt="Coding" width="200"/> </p> <p align="center"> Hey! I'm Admiral, a tech enthusiast who loves to code and chill. I’m all about working on cool projects, learning new stuff, and having a good time while at it. When I’m not coding, you can catch me gaming, jamming to music, or just relaxing with a cup of coffee ☕. I'm pretty laid-back and always up for a chat about tech, games, or anything fun! </p> <h2 align="center">📊 GitHub Stats</h2> <p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=synthwave&hide_border=true" alt="Admiral's GitHub Stats" height="165"/> <img src="https://github-readme-streak-stats.herokuapp.com?user=muhammadadmiral&theme=synthwave&hide_border=true" alt="GitHub Streak" height="165"/> </p> <p align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=synthwave&hide_border=true" alt="Top Languages"/> </p> <p align="center">✨ Thanks for visiting my profile! ✨</p>
+<p align="center">
+  <img src="https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif" width="180" alt="Cool Vibes"/>
+</p>
+
+<h1 align="center">
+  Yo! I'm Muhammad Admiral <img src="https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.gif" width="30" alt="👋"/>
+</h1>
+
+<p align="center">
+  Just a chill coder fueled by ☕️ coffee & 🎧 beats  
+  <br>
+  Always up for fun projects and random chat!
+</p>
+
+<p align="center">
+  <a href="mailto:madmiirall10@gmail.com">
+    <img src="https://img.shields.io/badge/Email-madmiirall10%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+  </a>
+  <a href="https://linkedin.com/in/muhammad-admiral-60b552257">
+    <img src="https://img.shields.io/badge/LinkedIn-muhammad--admiral-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+  <a href="https://instagram.com/admiraalll">
+    <img src="https://img.shields.io/badge/Instagram-%40admiraalll-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
+  </a>
+  <a href="https://twitter.com/admiraalll">
+    <img src="https://img.shields.io/badge/Twitter-@admiraalll-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/>
+  </a>
+</p>
+
+---
+
+<h2 align="center">☕ About Me</h2>
+<p align="center">
+  <img src="https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif" width="150" alt="Coffee"/>
+</p>
+<p align="center">
+  Hey, I'm Admiral 👑<br>
+  I build cool stuff, sip my infinite coffee, and vibe to sick beats.  
+  When I'm not coding, you can find me gaming or watching anime.  
+  Hit me up for a chat or collab!
+</p>
+
+---
+
+<div align="center">
+  <!-- Streak -->
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=muhammadadmiral&theme=synthwave&hide_border=true" alt="🔥 Streak" height="130"/>
+
+  <!-- Stats -->
+  <img src="https://github-readme-stats.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=synthwave&hide_border=true&icon_color=ff1493" alt="Stats" height="130"/>
+  
+  <!-- Languages -->
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=synthwave&hide_border=true&icon_color=ff1493" alt="Langs" height="130"/>
+</div>
+
+---
+
+<p align="center">
+  <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" width="100" alt="Thank You"/>
+  <br>
+  Thanks for stopping by! Keep calm & drink coffee ☕✨
+</p>
