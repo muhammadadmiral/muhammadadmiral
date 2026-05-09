@@ -1,53 +1,100 @@
 <p align="center">
-  <img src="https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif" width="180" alt="Cool Vibes"/>
+  <img src="https://i.pinimg.com/originals/8a/2d/5d/8a2d5d8c7b6b3c6df8c6c8a7a2d1c8e4.gif" width="180"/>
 </p>
 
 <h1 align="center">
-  yo <img src="https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.gif" width="30" alt="👋"/>
+  yo there 👋
 </h1>
 
 <p align="center">
-  Coffee Addict ☕️🎧  
-  <br>
+  fullstack dev • react enjoyer • framer motion addict • coffee dependent ☕
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/muhammadadmiral/">
-    <img src="https://img.shields.io/badge/LinkedIn-muhammad--admiral-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+    <img src="https://img.shields.io/badge/LinkedIn-Admiral-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
+  
   <a href="https://instagram.com/admiraalll">
-    <img src="https://img.shields.io/badge/Instagram-%40admiraalll-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Instagram-admiraalll-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
+  </a>
+
+  <a href="https://github.com/muhammadadmiral">
+    <img src="https://img.shields.io/github/followers/muhammadadmiral?style=for-the-badge&logo=github&label=Followers"/>
   </a>
 </p>
 
 ---
 
-<h2 align="center">☕ About Me</h2>
+<h2 align="center">☕ about me</h2>
+
 <p align="center">
-  <img src="https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif" width="150" alt="Coffee"/>
+  hey, i'm admiral 👑 <br>
+  building random stuff with react, nestjs, firebase, and little bit of chaos.
 </p>
+
 <p align="center">
-  Hey, I'm Admiral 👑<br>
-  dah gitu aja gausah banyak banyak
+  currently:
+</p>
+
+<p align="center">
+  ⚡ slicing figma until 3am <br>
+  🎧 listening to city pop & krnb <br>
+  ☕ surviving with caffeine <br>
+  ✨ trying to make ui look expensive
 </p>
 
 ---
+
+<h2 align="center">📊 github vibes</h2>
 
 <div align="center">
-<!-- 🔥 GitHub Streak -->
-<img src="https://streak-stats.demolab.com/?user=muhammadadmiral&theme=synthwave&hide_border=true" alt="🔥 Streak" height="130"/>
 
-  <!-- Stats -->
-  <img src="https://github-readme-stats.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=synthwave&hide_border=true&icon_color=ff1493" alt="Stats" height="130"/>
-  
-  <!-- Languages -->
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=synthwave&hide_border=true&icon_color=ff1493" alt="Langs" height="130"/>
+  <img 
+    height="170"
+    src="https://github-readme-stats.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=radical&hide_border=true&rank_icon=github&cache_seconds=1800"
+  />
+
+  <img 
+    height="170"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=radical&hide_border=true&langs_count=8&cache_seconds=1800"
+  />
+
+</div>
+
+<div align="center">
+
+  <img
+    src="https://streak-stats.demolab.com?user=muhammadadmiral&theme=radical&hide_border=true"
+    height="170"
+  />
+
 </div>
 
 ---
 
+<h2 align="center">🛠 tech stack</h2>
+
 <p align="center">
-  <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" width="100" alt="Thank You"/>
-  <br>
-  Thanks for stopping by! Keep calm & drink coffee ☕✨
+  <img src="https://skillicons.dev/icons?i=react,vite,tailwind,nodejs,nestjs,firebase,postgres,python,docker,figma,git,vscode" />
+</p>
+
+---
+
+<h2 align="center">🎵 currently playing</h2>
+
+<p align="center">
+  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31wq5xj4z6z5w2k4d6r7m1n7l4ha&cover_image=true&theme=novatorem&show_offline=false&background_color=0d1117&interchange=false&bar_color=ff69b4&bar_color_cover=false"/>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&width=500&lines=fullstack+developer;coffee+addict;framer+motion+enjoyer;probably+fixing+bugs+right+now" />
+</p>
+
+---
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=ff69b4&height=100&section=footer"/>
 </p>
