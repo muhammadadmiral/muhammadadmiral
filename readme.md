@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=gradient&customColorList=24,20,17,12,30&text=MUHAMMAD%20ADMIRAL&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=fullstack%20developer%20•%20ui%20enthusiast%20•%20coffee%20powered&descAlignY=58"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=260&color=0:0f0c29,50:302b63,100:24243e&text=Muhammad%20Admiral&fontColor=ffffff&fontSize=48&fontAlignY=38&desc=Fullstack%20Developer%20•%20Framer%20Motion%20Enjoyer&descAlignY=58&animation=fadeIn"/>
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=24&duration=2500&pause=1200&color=F75CBE&center=true&vCenter=true&width=700&lines=React+%2F+NestJS+Developer;Framer+Motion+Enjoyer;Building+Clean+and+Interactive+UI;Coffee+Addict+☕;Gym+•+Music+•+Gaming" />
+<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=24&duration=2800&pause=1200&color=FF4DA6&center=true&vCenter=true&width=700&lines=React+%2F+NestJS+Developer;Interactive+UI+Engineer;Building+Smooth+Experiences;Gym+•+Guitar+•+Gaming;Coffee+Powered+Developer" />
 
 <br/><br/>
 
 <a href="https://github.com/muhammadadmiral">
-  <img src="https://img.shields.io/github/followers/muhammadadmiral?style=for-the-badge&logo=github&label=Followers&color=F75CBE"/>
+  <img src="https://img.shields.io/github/followers/muhammadadmiral?style=for-the-badge&logo=github&label=Followers&color=FF4DA6"/>
 </a>
 
 <a href="https://instagram.com/admiraalll">
@@ -30,75 +30,107 @@
 name: Muhammad Admiral
 role: Fullstack Developer
 
-focus:
-  - Frontend Engineering
-  - Interactive UI / UX
+specialties:
+  - Frontend Development
   - Dashboard Development
-  - API Integration
+  - Interactive UI / UX
   - Motion Design
+  - API Integration
 
-currently_learning:
-  - Machine Learning
-  - System Design
-  - Automation Testing
-  - Deep Learning
+currently_using:
+  - React
+  - Tailwind CSS
+  - Framer Motion
+  - NestJS
+  - Firebase
+  - PostgreSQL
 
-tech_stack:
-  frontend:
-    - React
-    - Vite
-    - Tailwind CSS
-    - Framer Motion
-
-  backend:
-    - NestJS
-    - Node.js
-    - Firebase
-
-  database:
-    - PostgreSQL
-
-  languages:
-    - JavaScript
-    - Kotlin
-    - Python
-
-lifestyle:
+interests:
   - Gym
-  - Guitar / Music
+  - Guitar & Music
   - Gaming
   - Coffee
 ```
 
 ---
 
-# ⚒️ Tech Stack
+# ⚡ Tech Stack
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=react,vite,tailwind,js,nodejs,nestjs,firebase,postgres,python,kotlin,docker,git,figma,vscode&perline=7"/>
+<img src="https://skillicons.dev/icons?i=react,vite,tailwind,js,ts,nodejs,nestjs,firebase,postgres,python,kotlin,docker,git,figma,vscode&perline=5"/>
 
 </div>
 
 ---
 
-# 📈 Activity
+# 📊 GitHub Analytics
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=muhammadadmiral&theme=radical&hide_border=true&border_radius=12"/>
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=muhammadadmiral&theme=tokyonight"/>
+
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=muhammadadmiral&theme=tokyonight"/>
+
+</div>
+
+<div align="center">
+
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=muhammadadmiral&theme=tokyonight"/>
+
+<img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=muhammadadmiral&theme=tokyonight&utcOffset=7"/>
 
 </div>
 
 ---
 
-# 🎧 Interests
+# 🔥 Contribution Streak
 
 <div align="center">
 
-| 🏋️ Gym | 🎸 Guitar & Music | 🎮 Gaming |
-|---|---|---|
-| bodybuilding & aesthetics | electric guitar enjoyer | story & competitive games |
+<img src="https://streak-stats.demolab.com?user=muhammadadmiral&theme=tokyonight&hide_border=true&border_radius=15"/>
+
+</div>
+
+---
+
+# 🎧 Lifestyle
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+### 🏋️ Gym
+
+hypertrophy  
+body aesthetics  
+progressive overload
+
+</td>
+
+<td align="center" width="33%">
+
+### 🎸 Music
+
+electric guitar  
+city pop & krnb  
+late night sessions
+
+</td>
+
+<td align="center" width="33%">
+
+### 🎮 Gaming
+
+EA Sports FC  
+story games  
+competitive games
+
+</td>
+</tr>
+</table>
 
 </div>
 
@@ -109,9 +141,9 @@ lifestyle:
 <div align="center">
 
 ```diff
-+ building random side projects
-+ making UI look unnecessarily smooth
-+ overusing Framer Motion
++ building side projects
++ making ui smoother than necessary
++ overusing framer motion
 + probably fixing bugs right now
 ```
 
@@ -119,11 +151,21 @@ lifestyle:
 
 ---
 
-# 🌌 Random Quote
+# 🌌 Random Dev Quote
 
 <div align="center">
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical"/>
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight"/>
+
+</div>
+
+---
+
+# 🐍 Contribution Snake
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/muhammadadmiral/muhammadadmiral/output/snake.svg" alt="Snake animation"/>
 
 </div>
 
@@ -131,6 +173,6 @@ lifestyle:
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=140&color=gradient&customColorList=24,20,17,12,30&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=130&color=0:0f0c29,50:302b63,100:24243e&section=footer"/>
 
 </div>
