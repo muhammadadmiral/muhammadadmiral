@@ -1,70 +1,112 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=260&color=0:0f0c29,50:302b63,100:24243e&text=Muhammad%20Admiral&fontColor=ffffff&fontSize=48&fontAlignY=38&desc=Fullstack%20Developer%20•%20Framer%20Motion%20Enjoyer&descAlignY=58&animation=fadeIn"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=260&text=Muhammad%20Admiral&fontSize=48&fontAlignY=38&animation=fadeIn&fontColor=ffffff&color=0:0f0c29,25:302b63,50:24243e,75:ff4da6,100:7928ca&desc=Fullstack%20Developer%20•%20Interactive%20UI%20Engineer%20•%20Framer%20Motion%20Enjoyer&descAlignY=58"/>
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=24&duration=2800&pause=1200&color=FF4DA6&center=true&vCenter=true&width=700&lines=React+%2F+NestJS+Developer;Interactive+UI+Engineer;Building+Smooth+Experiences;Gym+•+Guitar+•+Gaming;Coffee+Powered+Developer" />
+<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=24&duration=2400&pause=900&color=FF4DA6&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=90&lines=React+%2F+NestJS+Developer;Gym+%E2%80%A2+Gaming+%E2%80%A2+Guitar+Vibes;Still+Learning.+Always+Learning." />
 
 <br/><br/>
 
 <a href="https://github.com/muhammadadmiral">
-  <img src="https://img.shields.io/github/followers/muhammadadmiral?style=for-the-badge&logo=github&label=Followers&color=FF4DA6"/>
+  <img src="https://img.shields.io/github/followers/muhammadadmiral?style=for-the-badge&logo=github&label=FOLLOWERS&color=ff4da6"/>
 </a>
 
 <a href="https://instagram.com/admiraalll">
-  <img src="https://img.shields.io/badge/Instagram-@admiraalll-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
+  <img src="https://img.shields.io/badge/INSTAGRAM-@admiraalll-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
 </a>
 
 <a href="https://www.linkedin.com/in/muhammadadmiral/">
-  <img src="https://img.shields.io/badge/LinkedIn-Muhammad%20Admiral-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  <img src="https://img.shields.io/badge/LINKEDIN-MUHAMMAD%20ADMIRAL-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 
 </div>
 
 ---
 
-# 💫 About Me
+# 🚀 about.js
 
-```yaml
-name: Muhammad Admiral
-role: Fullstack Developer
+```js
+const admiral = {
+  name: "Muhammad Admiral",
+  role: "Fullstack Developer",
 
-specialties:
-  - Frontend Development
-  - Dashboard Development
-  - Interactive UI / UX
-  - Motion Design
-  - API Integration
+  specialties: [
+    "Frontend Development",
+    "Dashboard Development",
+    "Interactive UI / UX",
+    "Motion Design",
+    "API Integration",
+  ],
 
-currently_using:
-  - React
-  - Tailwind CSS
-  - Framer Motion
-  - NestJS
-  - Firebase
-  - PostgreSQL
+  currentlyUsing: {
+    frontend: [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vite",
+    ],
 
-interests:
-  - Gym
-  - Guitar & Music
-  - Gaming
-  - Coffee
+    backend: [
+      "NestJS",
+      "Firebase",
+      "PostgreSQL",
+    ],
+
+    learning: [
+      "PHP",
+      "Machine Learning",
+      "System Design",
+    ],
+  },
+
+  interests: () => ({
+    gym: [
+      "Incline DB Press Addict",
+      "Shoulder Press Addict",
+      "Lat Pulldown Addict",
+    ],
+
+    gaming: [
+      "VALORANT",
+      "CS2",
+      "Overwatch 2",
+      "EA Sports FC",
+    ],
+
+    music: [
+      "Rock",
+      "Pop Rock",
+      "City Pop",
+      "Twangy Vox AC30 Vibes",
+      "Neck Pickup Strat Sounds",
+      "0 Gain Tube Screamer",
+    ],
+
+    lifestyle: [
+      "Coffee",
+      "Late Night Coding",
+      "Fixing Bugs at 2AM",
+    ],
+  }),
+
+  motto: "Still learning. Always learning.",
+};
 ```
 
 ---
 
-# ⚡ Tech Stack
+# ⚡ tech-stack.tsx
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=react,vite,tailwind,js,ts,nodejs,nestjs,firebase,postgres,python,kotlin,docker,git,figma,vscode&perline=5"/>
+<img src="https://skillicons.dev/icons?i=react,vite,tailwind,js,ts,nodejs,nestjs,firebase,postgres,python,php,kotlin,docker,git,figma,vscode&perline=8"/>
 
 </div>
 
 ---
 
-# 📊 GitHub Analytics
+# 📊 github.analytics()
 
 <div align="center">
 
@@ -84,7 +126,7 @@ interests:
 
 ---
 
-# 🔥 Contribution Streak
+# 🔥 contribution.streak()
 
 <div align="center">
 
@@ -94,78 +136,54 @@ interests:
 
 ---
 
-# 🎧 Lifestyle
+# 🎮 now.playing()
 
 <div align="center">
 
-<table>
-<tr>
-<td align="center" width="33%">
+```yaml
+competitive:
+  - VALORANT
+  - Counter-Strike 2
+  - Overwatch 2
 
-### 🏋️ Gym
+sports:
+  - EA Sports FC
 
-hypertrophy  
-body aesthetics  
-progressive overload
+music:
+  - city pop
+  - pop rock
+  - strat neck pickup cleans
+  - vox ac30 tones
+  - 0 gain tube screamer vibes
 
-</td>
-
-<td align="center" width="33%">
-
-### 🎸 Music
-
-electric guitar  
-city pop & krnb  
-late night sessions
-
-</td>
-
-<td align="center" width="33%">
-
-### 🎮 Gaming
-
-EA Sports FC  
-story games  
-competitive games
-
-</td>
-</tr>
-</table>
-
-</div>
-
----
-
-# ☕ Current Status
-
-<div align="center">
-
-```diff
-+ building side projects
-+ making ui smoother than necessary
-+ overusing framer motion
-+ probably fixing bugs right now
+gym:
+  - incline dumbbell press
+  - shoulder press
+  - lat pulldown
 ```
 
 </div>
 
 ---
 
-# 🌌 Random Dev Quote
+# 🧠 favorite.quote()
 
 <div align="center">
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight"/>
+```txt
+"train to failure."
+— Sam Sulek
+```
 
 </div>
 
 ---
 
-# 🐍 Contribution Snake
+# 🐍 contribution.snake()
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/muhammadadmiral/muhammadadmiral/output/snake.svg" alt="Snake animation"/>
+<img src="https://raw.githubusercontent.com/muhammadadmiral/muhammadadmiral/output/snake.svg"/>
 
 </div>
 
@@ -173,6 +191,6 @@ competitive games
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=130&color=0:0f0c29,50:302b63,100:24243e&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=130&section=footer&color=0:0f0c29,25:302b63,50:24243e,75:ff4da6,100:7928ca"/>
 
 </div>
