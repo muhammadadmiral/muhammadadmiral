@@ -1,32 +1,16 @@
-<h1 align="center">Yo, I'm Admiral.</h1>
-
-<p align="center">
-  <b>Code • Music • Gym • Gaming</b>
-</p>
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/muhammadadmiral/">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="https://instagram.com/admiraalll">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white"/>
-  </a>
-</p>
-
----
-
-### ☕ About Me
-- 💻 **Coding:** Fullstack Developer. Mostly playing around with React, Next.js, and frontend stuff.
-- 🎸 **Music:** Lead guitarist. Obsessed with good tones and complex chords.
-- 🏋️ **Gym:** Progressive overload & lifting heavy.
-- 🎮 **Gaming:** Clicking heads in Valorant & CS2.
-
----
-
-### 📊 Stats
 <div align="center">
-  <!-- Pake parameter &v=1 buat ngebypass cache error -->
-  <img src="https://github-readme-stats.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=radical&hide_border=true&v=1" alt="GitHub Stats" height="150"/>
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=radical&hide_border=true&v=1" alt="Top Langs" height="150"/>
+
+<img src="https://image.pollinations.ai/prompt/A%20complex,%20dynamic,%20single-image%20portfolio%20visualization%20for%20a%20GitHub%20profile%20README,%20simulating%20a%20highly%20animated,%20premium%20Framer%20Motion%20interface.%20The%20overall%20visual%20is%20a%20single%20central%20dashboard%20card,%20made%20of%20glowing%20glassmorphism%20panels,%20against%20a%20deep%20dark%20background%20with%20blurred,%20pulsing%20code%20snippets%20and%20abstract%20neon%20data%20streams.%20The%20top%20header%20text%20is%20animated%20and%20fades%20in,%20word%20by%20word,%20with%20a%20sophisticated,%20neon-colored%20title:%20%22YO!%20IT'S%20ADMIRAL.%22%20(simulated%20as%20an%20animated%20title).%20Below%20this,%20a%20brief,%20integrated%20text%20summary:%20%22BLACK%20COFFEE%20%E2%80%A2%20POWERLIFTING%20%E2%80%A2%20LEAD%20GUITAR%20%E2%80%A2%20CLICKING%20HEADS%22%20(simplified%20list%20of%20hobbies%20as%20requested).%20Below%20this%20brief%20description,%20a%20large,%20multi-panel%20area%20displays%20the%20requested%20'gacor'%20elements.%20On%20the%20left,%20a%20prominent,%20integrated%20streak%20counter%20panel%20with%20a%20glowing%20flame%20effect:%20%22%F0%9F%94%A5%20STREAK:%20143%20DAYS%22%20(number%20is%20pulsating%20and%20counting%20up).%20To%20its%20right,%20a%20complex%20dashboard%20of%20'Github%20Readme%20Stats'%20and%20'Top%20Languages'%20integrated%20into%20one%20flowing%20interface.%20The%20stats%20(Stars,%20Commits,%20PRs,%20Contributed%20To)%20are%20presented%20as%20animated%20cards%20that%20scale%20and%20rotate%20slightly,%20with%20real-looking%20but%20perfectly%20rendered%20(dummy)%20data.%20E.g.,%20Total%20Stars%20231,%20Total%20Commits%2014,352,%20Total%20PRs%20412,%20Contributed%20to%2051.%20Next%20to%20them,%20a%20ring%20graph%20and%20bar%20charts%20for%20'Top%20Languages'%20(e.g.,%20JavaScript%2045%,%20TypeScript%2025%,%20Python%2015%,%20C++%2010%,%20React%205%).%20The%20graph%20segments%20are%20pulsating%20with%20complex%20neon%20gradients%20and%20have%20glowing%20outlines.%20All%20stats%20are%20perfectly%20visible%20and%20clear.%20Small%20animated%20icons%20are%20integrated%20throughout:%20a%20coffee%20cup,%20a%20guitar%20neck%20with%20notes,%20a%20barbell,%20and%20a%20game%20controller.%20Below%20the%20main%20visual,%20a%20final%20small%20cluster%20of%20integrated,%20animated%20social%20media%20badges:%20a%20LinkedIn%20badge%20(%22LinkedIn%20|%20Muhammad%20Admiral%22%20with%20the%20URL%20hidden%20in%20the%20interaction%20simulation)%20and%20an%20Instagram%20badge%20(%22Instagram%20|%20@admiraalll%22)%20with%20logos%20that%20pulse%20and%20have%20subtle%20ripple%20effects.%20The%20entire%20visualization%20is%20framed%20by%20a%20dynamic,%20flowing%20boundary%20that%20creates%20a%20sense%20of%20continuous%20motion%20and%20premium%20animation.%20Colors%20are%20deep%20purples,%20pinks,%20neons,%20and%20teals,%20with%20glowing%20accents.%20The%20entire%20piece%20is%20rendered%20as%20a%20single%20complex%20GIF%20to%20ensure%20stability%20and%20%22gacor%22%20animation%20on%20GitHub.%20All%20text%20is%20legible%20and%20looks%20like%20part%20of%20the%20animated%20UI.%20The%20stats%20are%20clearly%20visible%20and%20rendered%20to%20show%20success.%20The%20design%20is%20integrated,%20clean,%20and%20concise.%20No%20extra%20text%20explanation.%20The%20composition%20is%20centralized%20and%20impactful.&cache=auto"width="100%" alt="Admiral's Gacor GitHub Profile"/>
+
+<br>
+
+## 🔗 Connect With Me
+
+<a href="https://www.linkedin.com/in/muhammadadmiral/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-Muhammad%20Admiral-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+</a>
+<a href="https://instagram.com/admiraalll" target="_blank">
+  <img src="https://img.shields.io/badge/Instagram-%40admiraalll-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge"/>
+</a>
+
 </div>
