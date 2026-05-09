@@ -1,16 +1,136 @@
 <div align="center">
 
-<img src="https://image.pollinations.ai/prompt/A%20complex,%20dynamic,%20single-image%20portfolio%20visualization%20for%20a%20GitHub%20profile%20README,%20simulating%20a%20highly%20animated,%20premium%20Framer%20Motion%20interface.%20The%20overall%20visual%20is%20a%20single%20central%20dashboard%20card,%20made%20of%20glowing%20glassmorphism%20panels,%20against%20a%20deep%20dark%20background%20with%20blurred,%20pulsing%20code%20snippets%20and%20abstract%20neon%20data%20streams.%20The%20top%20header%20text%20is%20animated%20and%20fades%20in,%20word%20by%20word,%20with%20a%20sophisticated,%20neon-colored%20title:%20%22YO!%20IT'S%20ADMIRAL.%22%20(simulated%20as%20an%20animated%20title).%20Below%20this,%20a%20brief,%20integrated%20text%20summary:%20%22BLACK%20COFFEE%20%E2%80%A2%20POWERLIFTING%20%E2%80%A2%20LEAD%20GUITAR%20%E2%80%A2%20CLICKING%20HEADS%22%20(simplified%20list%20of%20hobbies%20as%20requested).%20Below%20this%20brief%20description,%20a%20large,%20multi-panel%20area%20displays%20the%20requested%20'gacor'%20elements.%20On%20the%20left,%20a%20prominent,%20integrated%20streak%20counter%20panel%20with%20a%20glowing%20flame%20effect:%20%22%F0%9F%94%A5%20STREAK:%20143%20DAYS%22%20(number%20is%20pulsating%20and%20counting%20up).%20To%20its%20right,%20a%20complex%20dashboard%20of%20'Github%20Readme%20Stats'%20and%20'Top%20Languages'%20integrated%20into%20one%20flowing%20interface.%20The%20stats%20(Stars,%20Commits,%20PRs,%20Contributed%20To)%20are%20presented%20as%20animated%20cards%20that%20scale%20and%20rotate%20slightly,%20with%20real-looking%20but%20perfectly%20rendered%20(dummy)%20data.%20E.g.,%20Total%20Stars%20231,%20Total%20Commits%2014,352,%20Total%20PRs%20412,%20Contributed%20to%2051.%20Next%20to%20them,%20a%20ring%20graph%20and%20bar%20charts%20for%20'Top%20Languages'%20(e.g.,%20JavaScript%2045%,%20TypeScript%2025%,%20Python%2015%,%20C++%2010%,%20React%205%).%20The%20graph%20segments%20are%20pulsating%20with%20complex%20neon%20gradients%20and%20have%20glowing%20outlines.%20All%20stats%20are%20perfectly%20visible%20and%20clear.%20Small%20animated%20icons%20are%20integrated%20throughout:%20a%20coffee%20cup,%20a%20guitar%20neck%20with%20notes,%20a%20barbell,%20and%20a%20game%20controller.%20Below%20the%20main%20visual,%20a%20final%20small%20cluster%20of%20integrated,%20animated%20social%20media%20badges:%20a%20LinkedIn%20badge%20(%22LinkedIn%20|%20Muhammad%20Admiral%22%20with%20the%20URL%20hidden%20in%20the%20interaction%20simulation)%20and%20an%20Instagram%20badge%20(%22Instagram%20|%20@admiraalll%22)%20with%20logos%20that%20pulse%20and%20have%20subtle%20ripple%20effects.%20The%20entire%20visualization%20is%20framed%20by%20a%20dynamic,%20flowing%20boundary%20that%20creates%20a%20sense%20of%20continuous%20motion%20and%20premium%20animation.%20Colors%20are%20deep%20purples,%20pinks,%20neons,%20and%20teals,%20with%20glowing%20accents.%20The%20entire%20piece%20is%20rendered%20as%20a%20single%20complex%20GIF%20to%20ensure%20stability%20and%20%22gacor%22%20animation%20on%20GitHub.%20All%20text%20is%20legible%20and%20looks%20like%20part%20of%20the%20animated%20UI.%20The%20stats%20are%20clearly%20visible%20and%20rendered%20to%20show%20success.%20The%20design%20is%20integrated,%20clean,%20and%20concise.%20No%20extra%20text%20explanation.%20The%20composition%20is%20centralized%20and%20impactful.&cache=auto"width="100%" alt="Admiral's Gacor GitHub Profile"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=gradient&customColorList=24,20,17,12,30&text=MUHAMMAD%20ADMIRAL&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=fullstack%20developer%20•%20ui%20enthusiast%20•%20coffee%20powered&descAlignY=58"/>
 
-<br>
+<br/>
 
-## 🔗 Connect With Me
+<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=24&duration=2500&pause=1200&color=F75CBE&center=true&vCenter=true&width=700&lines=React+%2F+NestJS+Developer;Framer+Motion+Enjoyer;Building+Clean+and+Interactive+UI;Coffee+Addict+☕;Gym+•+Music+•+Gaming" />
 
-<a href="https://www.linkedin.com/in/muhammadadmiral/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-Muhammad%20Admiral-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+<br/><br/>
+
+<a href="https://github.com/muhammadadmiral">
+  <img src="https://img.shields.io/github/followers/muhammadadmiral?style=for-the-badge&logo=github&label=Followers&color=F75CBE"/>
 </a>
-<a href="https://instagram.com/admiraalll" target="_blank">
-  <img src="https://img.shields.io/badge/Instagram-%40admiraalll-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge"/>
+
+<a href="https://instagram.com/admiraalll">
+  <img src="https://img.shields.io/badge/Instagram-@admiraalll-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
 </a>
+
+<a href="https://www.linkedin.com/in/muhammadadmiral/">
+  <img src="https://img.shields.io/badge/LinkedIn-Muhammad%20Admiral-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+</div>
+
+---
+
+# 💫 About Me
+
+```yaml
+name: Muhammad Admiral
+role: Fullstack Developer
+
+focus:
+  - Frontend Engineering
+  - Interactive UI / UX
+  - Dashboard Development
+  - API Integration
+  - Motion Design
+
+currently_learning:
+  - Machine Learning
+  - System Design
+  - Automation Testing
+  - Deep Learning
+
+tech_stack:
+  frontend:
+    - React
+    - Vite
+    - Tailwind CSS
+    - Framer Motion
+
+  backend:
+    - NestJS
+    - Node.js
+    - Firebase
+
+  database:
+    - PostgreSQL
+
+  languages:
+    - JavaScript
+    - Kotlin
+    - Python
+
+lifestyle:
+  - Gym
+  - Guitar / Music
+  - Gaming
+  - Coffee
+```
+
+---
+
+# ⚒️ Tech Stack
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=react,vite,tailwind,js,nodejs,nestjs,firebase,postgres,python,kotlin,docker,git,figma,vscode&perline=7"/>
+
+</div>
+
+---
+
+# 📈 Activity
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=muhammadadmiral&theme=radical&hide_border=true&border_radius=12"/>
+
+</div>
+
+---
+
+# 🎧 Interests
+
+<div align="center">
+
+| 🏋️ Gym | 🎸 Guitar & Music | 🎮 Gaming |
+|---|---|---|
+| bodybuilding & aesthetics | electric guitar enjoyer | story & competitive games |
+
+</div>
+
+---
+
+# ☕ Current Status
+
+<div align="center">
+
+```diff
++ building random side projects
++ making UI look unnecessarily smooth
++ overusing Framer Motion
++ probably fixing bugs right now
+```
+
+</div>
+
+---
+
+# 🌌 Random Quote
+
+<div align="center">
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical"/>
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=140&color=gradient&customColorList=24,20,17,12,30&section=footer"/>
 
 </div>
