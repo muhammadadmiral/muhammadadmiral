@@ -22,9 +22,15 @@
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=radical&hide_border=true"/>
+<img 
+  height="170"
+  src="https://github-readme-stats.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=86400"
+/>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=radical&hide_border=true"/>
+<img 
+  height="170"
+  src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=86400"
+/>
 
 <img height="170" src="https://streak-stats.demolab.com?user=muhammadadmiral&theme=radical&hide_border=true"/>
 
@@ -35,7 +41,7 @@
 <h2 align="center">🛠 Tech Stack</h2>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,vite,tailwind,nestjs,nodejs,firebase,postgres,python,docker,git,figma,vscode"/>
+  <img src="https://skillicons.dev/icons?i=react,vite,tailwind,nestjs,nodejs,firebase,postgres,python,docker,git,kotlin,vscode,androidstudio"/>
 </p>
 
 ---
