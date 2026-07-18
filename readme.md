@@ -67,8 +67,7 @@
 
 <br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=muhammadadmiral&theme=tokyonight&hide_border=true&border_radius=15&count_private=true"/>
-
+<a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=muhammadadmiral&theme=kanagawa-paper&border_radius=5" alt="GitHub Streak" /></a>
 <br/><br/>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammadadmiral&theme=tokyo-night&hide_border=true&area=true"/>
