@@ -1,8 +1,6 @@
-<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="260" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
 <defs>
   <linearGradient id="bgQ" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#01050100"/>
-    <stop offset="0%" stop-color="#01050100"/>
     <stop offset="0%" stop-color="#010501"/>
     <stop offset="100%" stop-color="#020a02"/>
   </linearGradient>
@@ -15,9 +13,6 @@
     <feFlood flood-color="#00ff88" result="c"/>
     <feComposite in="c" in2="b" operator="in" result="g"/>
     <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="vignetteQ">
-    <feComposite in="SourceGraphic" in2="SourceGraphic" operator="over"/>
   </filter>
   <radialGradient id="vigQ" cx="50%" cy="50%" r="70%">
     <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
@@ -44,59 +39,60 @@
 </defs>
 
 <!-- Background — deep CRT black -->
-<rect width="900" height="220" rx="18" fill="#010601"/>
-<rect width="900" height="220" rx="18" fill="url(#noiseQ)" opacity="0.4"/>
+<rect width="900" height="260" rx="18" fill="#010601"/>
+<rect width="900" height="260" rx="18" fill="url(#noiseQ)" opacity="0.4"/>
 
-<!-- CRT outer frame glow (3D depth) -->
-<rect x="0" y="0" width="900" height="220" rx="18" fill="none" stroke="#00ff88" stroke-width="3" opacity="0.08" filter="url(#crtGlowBig)"/>
-<!-- Inner crisp border -->
-<rect x="1.5" y="1.5" width="897" height="217" rx="17" fill="none" stroke="#00ff88" stroke-width="1.5" opacity="0.75" filter="url(#crtGlow)"/>
-<!-- Top highlight (3D depth) -->
+<!-- CRT frame effects -->
+<rect x="0" y="0" width="900" height="260" rx="18" fill="none" stroke="#00ff88" stroke-width="3" opacity="0.08" filter="url(#crtGlowBig)"/>
+<rect x="1.5" y="1.5" width="897" height="257" rx="17" fill="none" stroke="#00ff88" stroke-width="1.5" opacity="0.75" filter="url(#crtGlow)"/>
 <rect x="3" y="3" width="894" height="2" rx="1" fill="#00ff88" opacity="0.3"/>
 
 <!-- Scanlines -->
-<rect width="900" height="220" rx="18" fill="url(#scanlQ)"/>
+<rect width="900" height="260" rx="18" fill="url(#scanlQ)"/>
 
-<!-- Floating cursor line (horizontal jitter) -->
-<rect x="0" y="110" width="900" height="1" fill="#00ff88" opacity="0.04">
-  <animate attributeName="y" values="20;200;20" dur="8s" repeatCount="indefinite" calcMode="linear"/>
+<!-- Floating cursor line (jitter) -->
+<rect x="0" y="130" width="900" height="1" fill="#00ff88" opacity="0.04">
+  <animate attributeName="y" values="20;240;20" dur="8s" repeatCount="indefinite" calcMode="linear"/>
   <animate attributeName="opacity" values="0;0.06;0" dur="8s" repeatCount="indefinite"/>
 </rect>
 
-<!-- Prompt line 1 -->
+<!-- Original Content Area (retained) -->
 <text x="40" y="65" font-family="'Courier New',monospace" font-size="15" fill="#3a4a3a">
   guest@admiral<tspan fill="#00ff88">:~$</tspan>
   <tspan fill="#5a6a5a"> cat</tspan>
   <tspan fill="#39ff9d"> favorite_quote.txt</tspan>
 </text>
-
-<!-- Quote (3D shadow + main) -->
 <text x="42" y="108" font-family="'Courier New',monospace" font-size="21" fill="#00ff88" opacity="0.18" font-weight="700">"train to failure."</text>
-<text x="40" y="106" font-family="'Courier New',monospace" font-size="21" fill="#00ff88" font-weight="700" filter="url(#glowDrop3d)">
-  "train to failure."
+<text x="40" y="106" font-family="'Courier New',monospace" font-size="21" fill="#00ff88" font-weight="700" filter="url(#glowDrop3d)">"train to failure."
   <animate attributeName="opacity" values="1;0.85;1" dur="3s" repeatCount="indefinite"/>
 </text>
-
-<!-- Attribution -->
 <text x="42" y="134" font-family="'Courier New',monospace" font-size="14" fill="#4d7a5a" opacity="0.9">— Sam Sulek</text>
 <text x="40" y="132" font-family="'Courier New',monospace" font-size="14" fill="#6df0a0">— Sam Sulek</text>
 
-<!-- Prompt line 2 -->
-<text x="40" y="168" font-family="'Courier New',monospace" font-size="15" fill="#3a4a3a">
+<!-- NEW REFINED CONTENT -->
+<text x="40" y="155" font-family="'Courier New',monospace" font-size="12" fill="#4d7a5a" opacity="0.8">
+  Latest Interaction: Quote displayed [2024-05-27 10:31:01]
+</text>
+<text x="40" y="172" font-family="'Courier New',monospace" font-size="12" fill="#4d7a5a" opacity="0.8">
+  Status: <tspan fill="#39ff9d">[NOMINAL]</tspan>  |  Disk Usage: <tspan fill="#ff1cf7">62%</tspan>  |  Network: <tspan fill="#00d4ff">Active</tspan>
+</text>
+
+<!-- Final Moved Prompt line and Updated Cursor -->
+<text x="40" y="208" font-family="'Courier New',monospace" font-size="15" fill="#3a4a3a">
   guest@admiral<tspan fill="#00ff88">:~$</tspan>
 </text>
 
-<!-- Blinking cursor block -->
-<rect x="226" y="154" width="11" height="18" rx="1" fill="#00ff88" filter="url(#crtGlowBig)">
+<!-- NEW: Significantly shrunk blinking thin cursor (bar style) -->
+<rect x="226" y="198" width="2" height="14" rx="0.5" fill="#00ff88" filter="url(#crtGlowBig)">
   <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="1.0s" repeatCount="indefinite"/>
 </rect>
 
-<!-- Vignette overlay -->
+<!-- Vignette -->
 <rect width="900" height="220" rx="18" fill="url(#vigQ)"/>
 
-<!-- CRT corner spherical distortion hint (color aberration dots) -->
+<!-- Re-positioned Aberration dots -->
 <circle cx="12" cy="12" r="4" fill="#ff1cf7" opacity="0.08"/>
 <circle cx="888" cy="12" r="4" fill="#00d4ff" opacity="0.08"/>
-<circle cx="12" cy="208" r="4" fill="#00d4ff" opacity="0.08"/>
-<circle cx="888" cy="208" r="4" fill="#ff1cf7" opacity="0.08"/>
+<circle cx="12" cy="248" r="4" fill="#00d4ff" opacity="0.08"/>
+<circle cx="888" cy="248" r="4" fill="#ff1cf7" opacity="0.08"/>
 </svg>

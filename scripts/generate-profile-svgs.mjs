@@ -450,8 +450,13 @@ function arcPath(cx, cy, R, ri, a1deg, a2deg) {
 // ── 1. STATS CARD — dynamic rank + 3D orbital avatar ─────────────────────────
 // ══════════════════════════════════════════════════════════════════════════════
 function genStatsCard(data) {
+  // Layout: card x=16..884, avatar col x=16..198, stats x=206..748, rank x=756..884
   const { user, contributions, totalStars } = data;
   const W = 900, H = 290;
+  const CX = 107; // avatar center X
+  const CY = 152; // avatar center Y
+  const AV_R = 54; // avatar radius
+  const initial = (user.login ?? USERNAME).slice(0,1).toUpperCase();
 
   const memberSince = new Date(user.created_at).toLocaleDateString("en-US", {
     month: "short", day: "numeric", year: "numeric",
@@ -465,133 +470,155 @@ function genStatsCard(data) {
   const stars     = totalStars ?? 0;
   const rank      = calcRank({ commits, prs, stars, followers, repos, issues });
 
+  // Card: x=16..884 (w=868). Avatar col: 16..200. Stats: 208..740. Rank: 748..884.
+  // Rank badge: cx=816, r=44 → rightmost=860 < 884 ✓
+  const RANK_CX = 820, RANK_CY = 152, RANK_R = 44;
+
   const topStats = [
     { icon: "⭐", label: "TOTAL STARS",   val: fmt(stars)    },
     { icon: "📝", label: "COMMITS (yr)",  val: fmt(commits)  },
     { icon: "🔀", label: "PULL REQUESTS", val: fmt(prs)      },
-    { icon: "🐛", label: "ISSUES OPENED", val: fmt(issues)   },
+    { icon: "🐛", label: "ISSUES",        val: fmt(issues)   },
   ];
   const botStats = [
-    { icon: "📦", label: "PUBLIC REPOS",   val: fmt(repos)    },
-    { icon: "👥", label: "FOLLOWERS",      val: fmt(followers) },
-    { icon: "🔥", label: "CONTRIBUTIONS",  val: fmt(total)    },
+    { icon: "📦", label: "REPOS",          val: fmt(repos)     },
+    { icon: "👥", label: "FOLLOWERS",      val: fmt(followers)  },
+    { icon: "🔥", label: "CONTRIBS",       val: fmt(total)      },
   ];
-  const xTop = [222, 362, 502, 644];
-  const xBot = [222, 400, 578];
+  // Stats columns within x=208..735 (width 527 / 4 cols = 131 each)
+  const xTop = [214, 346, 478, 610];
+  const xBot = [214, 394, 574];
+
+  // Initial letter avatar (GitHub blocks <image> in SVGs)
+  const avatarInitial = (user.login ?? USERNAME).slice(0, 1).toUpperCase();
 
   return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
 <defs>${DEFS}
   <radialGradient id="gAvatar" cx="40%" cy="35%" r="60%">
-    <stop offset="0%"   stop-color="#2d0966"/>
+    <stop offset="0%"   stop-color="#3b0d8c"/>
     <stop offset="100%" stop-color="#0a0220"/>
+  </radialGradient>
+  <radialGradient id="gRankBg" cx="50%" cy="50%" r="50%">
+    <stop offset="0%"   stop-color="#1a0540"/>
+    <stop offset="100%" stop-color="#07031a"/>
   </radialGradient>
 </defs>
 ${nebulaBg(W, H)}
-${card3d(50, 14, 800, 262, 24)}
+${card3d(16, 10, 868, 270, 24)}
 
-<text x="${W/2}" y="54" text-anchor="middle"
-  font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="800"
+<!-- ── Title ── -->
+<text x="${W/2}" y="50" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="14" font-weight="800"
   letter-spacing="3" fill="url(#gPrimary)" filter="url(#fGlow)">📊 GITHUB STATS — @${esc(USERNAME)}</text>
 
-<line x1="204" y1="28" x2="204" y2="266" stroke="${T.p1}" stroke-width="0.7"
-  stroke-dasharray="3 5" opacity="0.2"/>
+<!-- Vertical divider: avatar | stats -->
+<line x1="200" y1="24" x2="200" y2="270" stroke="${T.p1}" stroke-width="0.7"
+  stroke-dasharray="3 5" opacity="0.18"/>
+<!-- Vertical divider: stats | rank -->
+<line x1="748" y1="24" x2="748" y2="270" stroke="${T.p1}" stroke-width="0.7"
+  stroke-dasharray="3 5" opacity="0.18"/>
 
-<!-- Avatar outer pulse ring -->
-<circle cx="124" cy="152" r="62" fill="none" stroke="${T.p1}" stroke-width="0.8" opacity="0.2">
-  <animate attributeName="r"       values="60;66;60"    dur="3.2s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3.2s" repeatCount="indefinite"/>
+<!-- ── Avatar — stylized initial letter (GitHub blocks <image> in SVGs) ── -->
+<!-- Outer pulse ring -->
+<circle cx="108" cy="${CY}" r="60" fill="none" stroke="${T.p1}" stroke-width="0.8" opacity="0.18">
+  <animate attributeName="r"       values="58;64;58"    dur="3.2s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.18;0.45;0.18" dur="3.2s" repeatCount="indefinite"/>
 </circle>
-<circle cx="124" cy="152" r="52" fill="url(#gAvatar)" stroke="${T.p1}" stroke-width="1.6"/>
-<text x="124" y="167" text-anchor="middle" font-size="46" opacity="0.85">⬡</text>
-<!-- Orbital ring 1 -->
-<ellipse cx="124" cy="152" rx="72" ry="22" fill="none"
+<!-- Avatar circle -->
+<circle cx="108" cy="${CY}" r="${AV_R}" fill="url(#gAvatar)" stroke="${T.p1}" stroke-width="1.5"/>
+<!-- Initial letter -->
+<text x="108" y="164" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="44" font-weight="900"
+  fill="url(#gPrimary)" opacity="0.9">${avatarInitial}</text>
+<!-- Orbital ring 1 (wide, tilted) -->
+<ellipse cx="108" cy="${CY}" rx="70" ry="21" fill="none"
   stroke="${T.p1}" stroke-width="1" opacity="0.3" stroke-dasharray="4 4">
   <animateTransform attributeName="transform" type="rotate"
-    values="0 124 152;360 124 152" dur="8s" repeatCount="indefinite"/>
+    values="0 108 152;360 108 152" dur="8s" repeatCount="indefinite"/>
 </ellipse>
-<circle cx="196" cy="152" r="4.5" fill="${T.p3}" filter="url(#fDot)">
+<circle cx="178" cy="${CY}" r="4.5" fill="${T.p3}" filter="url(#fDot)">
   <animateTransform attributeName="transform" type="rotate"
-    values="0 124 152;360 124 152" dur="8s" repeatCount="indefinite"/>
+    values="0 108 152;360 108 152" dur="8s" repeatCount="indefinite"/>
 </circle>
 <!-- Orbital ring 2 -->
-<ellipse cx="124" cy="152" rx="60" ry="16" fill="none"
+<ellipse cx="108" cy="${CY}" rx="58" ry="15" fill="none"
   stroke="${T.p2}" stroke-width="0.8" opacity="0.2">
   <animateTransform attributeName="transform" type="rotate"
-    values="60 124 152;-300 124 152" dur="5s" repeatCount="indefinite"/>
+    values="60 108 152;-300 108 152" dur="5s" repeatCount="indefinite"/>
 </ellipse>
-<circle cx="184" cy="152" r="3" fill="${T.p2}" opacity="0.85" filter="url(#fDot)">
+<circle cx="166" cy="${CY}" r="3" fill="${T.p2}" opacity="0.85" filter="url(#fDot)">
   <animateTransform attributeName="transform" type="rotate"
-    values="60 124 152;-300 124 152" dur="5s" repeatCount="indefinite"/>
+    values="60 108 152;-300 108 152" dur="5s" repeatCount="indefinite"/>
 </circle>
-<circle cx="64"  cy="152" r="2.5" fill="${T.p1}" opacity="0.6" filter="url(#fDot)">
-  <animateTransform attributeName="transform" type="rotate"
-    values="180 124 152;-180 124 152" dur="6.5s" repeatCount="indefinite"/>
-</circle>
-
-<text x="124" y="220" text-anchor="middle"
-  font-family="'Segoe UI',system-ui,sans-serif" font-size="12.5" font-weight="800"
+<!-- Username & bio -->
+<text x="108" y="220" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="11.5" font-weight="800"
   fill="${T.text}">${esc(USERNAME)}</text>
-<text x="124" y="237" text-anchor="middle"
-  font-family="'Segoe UI',system-ui,sans-serif" font-size="9.5" fill="${T.muted}">${esc(BIO)}</text>
-<text x="124" y="254" text-anchor="middle"
-  font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="${T.dim}">Since ${esc(memberSince)}</text>
+<text x="108" y="236" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="${T.muted}">${esc(BIO)}</text>
+<text x="108" y="254" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="${T.dim}">Since ${esc(memberSince)}</text>
 
+<!-- ── Top stats row ── -->
 ${topStats.map(({ icon, label, val }, i) => `
-<g transform="translate(${xTop[i]},76)">
+<g transform="translate(${xTop[i]},72)">
   <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif"
-    font-size="9.5" fill="${T.dim}" letter-spacing="0.8">${icon} ${esc(label)}</text>
-  <text x="0" y="30" font-family="'Segoe UI',system-ui,sans-serif"
-    font-size="32" font-weight="900" fill="url(#gPrimary)" filter="url(#fNumGlow)">${esc(val)}</text>
+    font-size="8.5" fill="${T.dimmer}" letter-spacing="0.8">${icon} ${label}</text>
+  <text x="0" y="28" font-family="'Segoe UI',system-ui,sans-serif"
+    font-size="28" font-weight="900" fill="url(#gPrimary)" filter="url(#fNumGlow)">${esc(val)}</text>
 </g>`).join("")}
 
+<!-- ── Bottom stats row ── -->
 ${botStats.map(({ icon, label, val }, i) => `
-<g transform="translate(${xBot[i]},163)">
+<g transform="translate(${xBot[i]},160)">
   <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif"
-    font-size="9.5" fill="${T.dim}" letter-spacing="0.8">${icon} ${esc(label)}</text>
-  <text x="0" y="30" font-family="'Segoe UI',system-ui,sans-serif"
-    font-size="32" font-weight="900" fill="url(#gPrimary)" filter="url(#fNumGlow)">${esc(val)}</text>
+    font-size="8.5" fill="${T.dimmer}" letter-spacing="0.8">${icon} ${label}</text>
+  <text x="0" y="28" font-family="'Segoe UI',system-ui,sans-serif"
+    font-size="28" font-weight="900" fill="url(#gPrimary)" filter="url(#fNumGlow)">${esc(val)}</text>
 </g>`).join("")}
 
-<!-- Rank badge -->
-<g transform="translate(768,82)">
-  <circle cx="46" cy="52" r="52" fill="#0a0220" opacity="0.8"/>
-  <circle cx="46" cy="52" r="42" fill="none" stroke="#1a0540" stroke-width="6"/>
-  <circle cx="46" cy="52" r="42" fill="none" stroke="url(#gRank)" stroke-width="5.5"
-    stroke-dasharray="${rank.arc} 264" stroke-linecap="round"
-    transform="rotate(-90 46 52)" opacity="0.92">
-    <animate attributeName="stroke-dasharray"
-      values="0 264;${rank.arc} 264" dur="1.8s" fill="freeze" begin="0.2s"/>
-  </circle>
-  <circle cx="46" cy="52" r="33" fill="#07031a" stroke="${T.p1}" stroke-width="0.5" opacity="0.6"/>
-  <text x="46" y="43" text-anchor="middle"
-    font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="${T.muted}" letter-spacing="2">RANK</text>
-  <text x="46" y="70" text-anchor="middle"
-    font-family="'Segoe UI',system-ui,sans-serif" font-size="27" font-weight="900"
-    fill="#ffffff" filter="url(#fNumGlow)">${esc(rank.grade)}</text>
-  <text x="46" y="85" text-anchor="middle"
-    font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="${T.dim}">Top ${rank.pct}%</text>
-  <circle cx="88" cy="52" r="3" fill="${T.p3}" filter="url(#fDot)">
-    <animateTransform attributeName="transform" type="rotate"
-      values="0 46 52;360 46 52" dur="9s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="4"  cy="52" r="2.2" fill="${T.p2}" filter="url(#fDot)">
-    <animateTransform attributeName="transform" type="rotate"
-      values="0 46 52;-360 46 52" dur="6s" repeatCount="indefinite"/>
-  </circle>
-</g>
+<!-- ── Rank badge — contained within x=748..884 ── -->
+<!-- Rank ambient glow -->
+<circle cx="${RANK_CX}" cy="${RANK_CY}" r="52" fill="#120040" opacity="0.9"/>
+<!-- Track ring -->
+<circle cx="${RANK_CX}" cy="${RANK_CY}" r="${RANK_R}" fill="none" stroke="#1a0540" stroke-width="5"/>
+<!-- Progress arc -->
+<circle cx="${RANK_CX}" cy="${RANK_CY}" r="${RANK_R}" fill="none" stroke="url(#gRank)" stroke-width="4.5"
+  stroke-dasharray="${rank.arc} 264" stroke-linecap="round"
+  transform="rotate(-90 ${RANK_CX} ${RANK_CY})" opacity="0.92">
+  <animate attributeName="stroke-dasharray"
+    values="0 264;${rank.arc} 264" dur="1.8s" fill="freeze" begin="0.2s"/>
+</circle>
+<!-- Inner face -->
+<circle cx="${RANK_CX}" cy="${RANK_CY}" r="${RANK_R - 10}" fill="url(#gRankBg)" stroke="${T.p1}" stroke-width="0.4" opacity="0.7"/>
+<!-- RANK label -->
+<text x="${RANK_CX}" y="${RANK_CY - 8}" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="${T.muted}" letter-spacing="2">RANK</text>
+<!-- Grade -->
+<text x="${RANK_CX}" y="${RANK_CY + 16}" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="24" font-weight="900"
+  fill="#ffffff" filter="url(#fNumGlow)">${esc(rank.grade)}</text>
+<!-- Pct label -->
+<text x="${RANK_CX}" y="${RANK_CY + 32}" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="${T.dim}">Top ${rank.pct}%</text>
+<!-- Orbiting dots on rank ring -->
+<circle cx="${RANK_CX + RANK_R}" cy="${RANK_CY}" r="3" fill="${T.p3}" filter="url(#fDot)">
+  <animateTransform attributeName="transform" type="rotate"
+    values="0 ${RANK_CX} ${RANK_CY};360 ${RANK_CX} ${RANK_CY}" dur="9s" repeatCount="indefinite"/>
+</circle>
+<circle cx="${RANK_CX - RANK_R}" cy="${RANK_CY}" r="2.2" fill="${T.p2}" filter="url(#fDot)">
+  <animateTransform attributeName="transform" type="rotate"
+    values="0 ${RANK_CX} ${RANK_CY};-360 ${RANK_CX} ${RANK_CY}" dur="6s" repeatCount="indefinite"/>
+</circle>
 
 <!-- Floating sparkles -->
-<circle cx="260" cy="26" r="1.6" fill="${T.p1}" opacity="0.7">
+<circle cx="320" cy="24" r="1.5" fill="${T.p1}" opacity="0.7">
   <animate attributeName="opacity" values="0.7;0.1;0.7" dur="3.3s" repeatCount="indefinite"/>
-  <animateTransform attributeName="transform" type="translate" values="0,0;4,-8;0,0" dur="3.3s" repeatCount="indefinite"/>
+  <animateTransform attributeName="transform" type="translate" values="0,0;3,-7;0,0" dur="3.3s" repeatCount="indefinite"/>
 </circle>
-<circle cx="550" cy="22" r="2" fill="${T.p2}" opacity="0.6">
+<circle cx="570" cy="20" r="1.8" fill="${T.p2}" opacity="0.6">
   <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2.8s" repeatCount="indefinite" begin="0.6s"/>
-  <animateTransform attributeName="transform" type="translate" values="0,0;-5,-9;0,0" dur="2.8s" repeatCount="indefinite" begin="0.6s"/>
-</circle>
-<circle cx="700" cy="28" r="1.4" fill="${T.p3}" opacity="0.8">
-  <animate attributeName="opacity" values="0.8;0.1;0.8" dur="4s" repeatCount="indefinite" begin="1.2s"/>
-  <animateTransform attributeName="transform" type="translate" values="0,0;3,-7;0,0" dur="4s" repeatCount="indefinite" begin="1.2s"/>
+  <animateTransform attributeName="transform" type="translate" values="0,0;-4,-8;0,0" dur="2.8s" repeatCount="indefinite" begin="0.6s"/>
 </circle>
 </svg>`;
 }
@@ -606,10 +633,13 @@ function genLangsCard(data) {
   const ROW_H   = 38;
   const H       = 68 + languages.length * ROW_H + 24;
   const W       = 900;
-  const DONUT_X = 148;
-  const DONUT_Y = 36 + languages.length * ROW_H / 2;
-  const BAR_X   = 290;
-  const BAR_W   = 572;
+  // Card: x=16..884. Donut center at x=130.
+  // Bar area: x=248 to x=868 (card right edge 884 minus 16 padding) → BAR_W=620
+  // Max bar right edge: 248 + 616 = 864 < 884 ✓, % label at 248+616-2=862 ✓
+  const DONUT_X = 130;
+  const DONUT_Y = Math.max(110, 36 + languages.length * ROW_H / 2);
+  const BAR_X   = 248;
+  const BAR_W   = 616;
   const maxPct  = languages[0]?.pct ?? 100;
   const totalPct= languages.reduce((a, l) => a + l.pct, 0);
 
@@ -634,44 +664,48 @@ function genLangsCard(data) {
   });
 
   return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-<defs>${DEFS}</defs>
+<defs>${DEFS}
+  <clipPath id="clipBar">
+    <rect x="0" y="0" width="${BAR_W}" height="${H}"/>
+  </clipPath>
+</defs>
 ${nebulaBg(W, H, "#020c18")}
-${card3d(50, 10, 800, H - 20, 24)}
+${card3d(16, 10, 868, H - 20, 24)}
 
 <text x="${W/2}" y="46" text-anchor="middle"
-  font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="800"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="14" font-weight="800"
   letter-spacing="3" fill="url(#gPrimary)" filter="url(#fGlow)">🧬 MOST USED LANGUAGES</text>
 
-<!-- 3D Donut chart -->
+<!-- Vertical divider: donut | bars -->
+<line x1="232" y1="58" x2="232" y2="${H - 16}" stroke="${T.p1}" stroke-width="0.6"
+  stroke-dasharray="3 5" opacity="0.2"/>
+
+<!-- 3D Donut chart (cx=130, r=90 → from x=40 to x=220, inside card x=16..884) -->
 ${donutSegs.join("")}
 <!-- Donut center hole -->
 <circle cx="${DONUT_X}" cy="${DONUT_Y}" r="56" fill="${T.card}" opacity="0.97"/>
-<text x="${DONUT_X}" y="${DONUT_Y - 6}" text-anchor="middle"
+<text x="${DONUT_X}" y="${DONUT_Y - 4}" text-anchor="middle"
   font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="${T.muted}" letter-spacing="1">LANG</text>
-<text x="${DONUT_X}" y="${DONUT_Y + 12}" text-anchor="middle"
-  font-family="'Segoe UI',system-ui,sans-serif" font-size="16" font-weight="900"
+<text x="${DONUT_X}" y="${DONUT_Y + 14}" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="18" font-weight="900"
   fill="url(#gPrimary)" filter="url(#fNumGlow)">${languages.length}</text>
 
-<!-- Bar chart -->
+<!-- Bar chart — BAR_X=${BAR_X}, BAR_W=${BAR_W}, rightmost=${BAR_X+BAR_W}=864 < 884 ✓ -->
 ${languages.map(({ name, pct }, i) => {
   const y   = 58 + i * ROW_H;
   const col = langColor(name);
-  const bw  = Math.max(4, Math.round((pct / maxPct) * (BAR_W - 8)));
+  const bw  = Math.max(4, Math.round((pct / maxPct) * (BAR_W - 52)));
   return `
 <g transform="translate(${BAR_X},${y})">
-  <circle cx="5"   cy="7"  r="5.5" fill="${col}" filter="url(#fDot)"/>
+  <circle cx="5" cy="7" r="5" fill="${col}" filter="url(#fDot)"/>
   <text x="17" y="12" font-family="'Segoe UI',system-ui,sans-serif"
     font-size="12" font-weight="700" fill="${col}">${esc(name)}</text>
-  <text x="${BAR_W - 2}" y="12" text-anchor="end"
-    font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="${T.dim}">${pct}%</text>
-  <rect x="0" y="18" width="${BAR_W - 2}" height="11" rx="5.5" fill="#0a1530"/>
-  <rect x="2" y="21" width="${bw - 2}"    height="6"  rx="3"   fill="${col}" opacity="0.22"/>
-  <rect x="0" y="18" width="0"            height="11" rx="5.5" fill="${col}">
+  <text x="${BAR_W - 4}" y="12" text-anchor="end"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5" fill="${T.dim}">${pct}%</text>
+  <rect x="0" y="18" width="${BAR_W - 50}" height="10" rx="5" fill="#0a1530"/>
+  <rect x="2" y="20" width="${Math.max(2, bw - 4)}" height="6" rx="3" fill="${col}" opacity="0.22"/>
+  <rect x="0" y="18" width="0" height="10" rx="5" fill="${col}">
     <animate attributeName="width" from="0" to="${bw}" dur="1.3s" fill="freeze" begin="${0.12*i+0.05}s"/>
-  </rect>
-  <rect x="-60" y="18" width="55" height="11" rx="5.5" fill="#fff" opacity="0">
-    <animate attributeName="x"       from="-60"    to="${bw}"        dur="1.3s" fill="freeze" begin="${0.12*i+0.05}s"/>
-    <animate attributeName="opacity" values="0;0.3;0"               dur="1.3s" fill="freeze" begin="${0.12*i+0.05}s"/>
   </rect>
 </g>`;
 }).join("")}
@@ -679,7 +713,7 @@ ${languages.map(({ name, pct }, i) => {
 }
 
 // ══════════════════════════════════════════════════════════════════════════════
-// ── 3. STREAK CARD — dynamic dates + month labels on heatmap ──────────────────
+// ── 3. STREAK CARD — INFERNO redesign (total rombak) ─────────────────────────
 // ══════════════════════════════════════════════════════════════════════════════
 function genStreakCard(data) {
   const { contributions } = data;
@@ -689,10 +723,180 @@ function genStreakCard(data) {
     calendar,
   } = contributions;
 
-  const W = 900, H = 250;
+  // Layout: W=900, H=300, Card x=16..884
+  // LEFT PANEL (current streak ring): center at cx=230
+  // Divider at x=450
+  // RIGHT PANEL (longest + mini heatmap): x=458..880
+  const W = 900, H = 300;
   const allDays = calendar ?? [];
-  const last13w = allDays.slice(-91);
-  const maxDay  = Math.max(...last13w.map((d) => d.contributionCount), 1);
+  const last8w  = allDays.slice(-56); // 8 weeks for mini heatmap
+  const maxDay  = Math.max(...last8w.map((d) => d.contributionCount), 1);
+
+  function heatColor(count) {
+    if (count === 0) return "#1a0c28";
+    const t = Math.min(count / maxDay, 1);
+    if (t < 0.25) return "#5b1a8a";
+    if (t < 0.5)  return "#7c3aed";
+    if (t < 0.75) return "#a855f7";
+    return "#e879f9";
+  }
+
+  const CELL = 12, STEP = 15;
+  const NUM_WEEKS = 8;
+  // Heatmap: x=560..560+8*15=680, y=192..192+7*15=297
+  const HX = 560, HY = 190;
+
+  let hMonLbls = "";
+  let lastHMon = -1;
+  for (let wk = 0; wk < NUM_WEEKS; wk++) {
+    const day = last8w[wk * 7];
+    if (day?.date) {
+      const d = new Date(day.date + "T12:00:00");
+      const m = d.getMonth();
+      if (m !== lastHMon) {
+        lastHMon = m;
+        const lbl = d.toLocaleDateString("en-US", { month: "short", year: "2-digit" });
+        hMonLbls += `<text x="${HX + wk * STEP}" y="${HY - 6}"
+  font-family="'Segoe UI',monospace,sans-serif" font-size="8" fill="${T.dimmer}">${esc(lbl)}</text>`;
+      }
+    }
+  }
+
+  let hCells = "";
+  last8w.forEach((day, i) => {
+    const wk  = Math.floor(i / 7);
+    const row = i % 7;
+    hCells += `<rect x="${HX + wk * STEP}" y="${HY + row * STEP}" width="${CELL}" height="${CELL}" rx="2.5"
+  fill="${heatColor(day.contributionCount)}" opacity="${day.contributionCount > 0 ? 1 : 0.4}"/>`;
+  });
+
+  const DAY_ABBR = ["S","M","T","W","T","F","S"];
+  const hDayLbls = DAY_ABBR.map((d, i) =>
+    `<text x="${HX - 5}" y="${HY + i * STEP + 10}" text-anchor="end"
+  font-family="'Segoe UI',monospace,sans-serif" font-size="8" fill="${T.dimmer}">${d}</text>`
+  ).join("");
+
+  // Streak ring: cx=226, cy=170, r=100
+  const SCX = 226, SCY = 170, SR = 100;
+  const streakFrac = Math.min(currentStreak ?? 0, 365) / 365;
+  const C2  = 2 * Math.PI * SR;
+  const streakArcLen = Math.round(streakFrac * C2);
+
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+<defs>${DEFS}
+  <radialGradient id="gFireBg" cx="50%" cy="50%" r="50%">
+    <stop offset="0%"   stop-color="#dc2626" stop-opacity="0.35"/>
+    <stop offset="100%" stop-color="#dc2626" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="gStreakArc" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#dc2626"/>
+    <stop offset="50%"  stop-color="#ea580c"/>
+    <stop offset="100%" stop-color="#fbbf24"/>
+  </linearGradient>
+</defs>
+<rect width="${W}" height="${H}" fill="#050010"/>
+<!-- Fire ambient blob -->\n<ellipse cx="${SCX}" cy="${SCY}" rx="280" ry="200" fill="url(#gFireBg)" filter="url(#fFog)">
+  <animate attributeName="rx" values="260;310;260" dur="5s" repeatCount="indefinite"/>
+</ellipse>
+<!-- Purple ambient right -->
+<ellipse cx="700" cy="160" rx="200" ry="150" fill="#7c3aed" opacity="0.1" filter="url(#fFog)"/>
+<!-- Card -->
+${card3d(16, 10, 868, 280, 24)}
+
+<!-- Title -->
+<text x="${W/2}" y="44" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="14" font-weight="800"
+  letter-spacing="3" fill="url(#gPrimary)" filter="url(#fGlow)">\ud83d\udd25 CONTRIBUTION STREAK</text>
+
+<!-- Center divider -->
+<line x1="448" y1="56" x2="448" y2="282" stroke="${T.dimmer}" stroke-width="0.8"
+  stroke-dasharray="4 5" opacity="0.5"/>
+
+<!-- \u2550\u2550\u2550 LEFT: CURRENT STREAK RING \u2550\u2550\u2550 -->
+<!-- Outer glow aura -->
+<circle cx="${SCX}" cy="${SCY}" r="${SR + 10}" fill="url(#gFireBg)" opacity="0.5">
+  <animate attributeName="r" values="${SR+6};${SR+14};${SR+6}" dur="2.5s" repeatCount="indefinite"/>
+</circle>
+<!-- Track ring (dark) -->
+<circle cx="${SCX}" cy="${SCY}" r="${SR}" fill="none" stroke="#280d0d" stroke-width="10"/>
+<!-- Progress arc (gradient) -->
+<circle cx="${SCX}" cy="${SCY}" r="${SR}" fill="none" stroke="url(#gStreakArc)" stroke-width="9"
+  stroke-dasharray="${streakArcLen} ${Math.ceil(C2)}" stroke-linecap="round"
+  transform="rotate(-90 ${SCX} ${SCY})">
+  <animate attributeName="stroke-dasharray"
+    values="0 ${Math.ceil(C2)};${streakArcLen} ${Math.ceil(C2)}" dur="1.5s" fill="freeze" begin="0.1s"/>
+</circle>
+<!-- Inner circle face -->
+<circle cx="${SCX}" cy="${SCY}" r="${SR - 14}" fill="#080018" opacity="0.97"/>
+<!-- Rotating tick marks on ring -->
+<circle cx="${SCX}" cy="${SCY - SR}" r="3.5" fill="${T.gold}" filter="url(#fDot)">
+  <animateTransform attributeName="transform" type="rotate"
+    values="0 ${SCX} ${SCY};360 ${SCX} ${SCY}" dur="12s" repeatCount="indefinite"/>
+</circle>
+<!-- Fire emoji -->
+<text x="${SCX}" y="${SCY - 18}" text-anchor="middle" font-size="30" filter="url(#fFireGlow)">\ud83d\udd25
+  <animateTransform attributeName="transform" type="translate"
+    values="0,0;1,-4;-1,-2;0,0" dur="0.7s" repeatCount="indefinite"/>
+</text>
+<!-- Big streak number -->
+<text x="${SCX}" y="${SCY + 26}" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="50" font-weight="900"
+  fill="url(#gFire)" filter="url(#fNumGlow)">${esc(String(currentStreak ?? 0))}</text>
+<!-- "days" label -->
+<text x="${SCX}" y="${SCY + 46}" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="12" fill="${T.gold}" letter-spacing="1">DAYS</text>
+<!-- Section title -->
+<text x="${SCX}" y="68" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="${T.muted}" letter-spacing="2">CURRENT STREAK</text>
+<!-- Date range -->
+<text x="${SCX}" y="282" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="${T.dim}">${esc(fmtDate(streakStart))} \u2192 ${esc(fmtDate(streakEnd))}</text>
+<!-- Rising sparks -->
+<circle cx="148" cy="110" r="2.2" fill="${T.gold}" opacity="0.9">
+  <animateTransform attributeName="transform" type="translate" values="0,0;7,-26;-4,-46;0,0" dur="2.6s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.9;0.5;0;0.9" dur="2.6s" repeatCount="indefinite"/>
+</circle>
+<circle cx="300" cy="98" r="1.6" fill="${T.fire}" opacity="0.8">
+  <animateTransform attributeName="transform" type="translate" values="0,0;-6,-22;3,-38;0,0" dur="3.2s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.8;0.3;0;0.8" dur="3.2s" repeatCount="indefinite"/>
+</circle>
+<circle cx="226" cy="82" r="1.3" fill="#fef08a" opacity="0.7">
+  <animateTransform attributeName="transform" type="translate" values="0,0;-4,-28;5,-46;0,0" dur="2.9s" repeatCount="indefinite" begin="0.4s"/>
+  <animate attributeName="opacity" values="0.7;0.2;0;0.7" dur="2.9s" repeatCount="indefinite" begin="0.4s"/>
+</circle>
+
+<!-- \u2550\u2550\u2550 RIGHT PANEL: LONGEST STREAK + HEATMAP \u2550\u2550\u2550 -->
+<!-- Longest streak section -->
+<text x="668" y="68" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="${T.muted}" letter-spacing="2">LONGEST STREAK</text>
+<text x="668" y="118" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="44" font-weight="900"
+  fill="url(#gFire)" filter="url(#fNumGlow)">${esc(String(longestStreak ?? 0))}</text>
+<text x="668" y="136" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="${T.gold}">days \ud83c\udfc6</text>
+<text x="668" y="156" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="${T.dim}">${esc(fmtDate(longestStart))} \u2014 ${esc(fmtDate(longestEnd))}</text>
+
+<!-- Sub-divider line -->
+<line x1="460" y1="170" x2="882" y2="170" stroke="${T.dimmer}" stroke-width="0.6" stroke-dasharray="3 4" opacity="0.4"/>
+
+<!-- Mini heatmap (8 weeks) -->
+<text x="668" y="184" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="8" fill="${T.dimmer}" letter-spacing="2">RECENT ACTIVITY</text>
+${hMonLbls}
+${hDayLbls}
+${hCells}
+
+<!-- Total contributions footer -->
+<text x="668" y="272" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="9.5" fill="${T.muted}" letter-spacing="1">TOTAL THIS YEAR</text>
+<text x="668" y="288" text-anchor="middle"
+  font-family="'Segoe UI',system-ui,sans-serif" font-size="18" font-weight="900"
+  fill="url(#gPrimary)" filter="url(#fNumGlow)">${esc(fmt(total || 0))} contributions</text>
+</svg>`;
+}
+
+
 
   function heatColor(count) {
     if (count === 0) return "#1a1030";

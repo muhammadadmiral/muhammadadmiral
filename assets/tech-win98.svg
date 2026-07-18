@@ -73,7 +73,7 @@
 <text x="80" y="73" font-family="'Courier New','Tahoma',monospace" font-size="14" font-weight="700" fill="#ffffff">📁 C:\ADMIRAL\TECH_STACK.exe — [Build: 2024]</text>
 
 <!-- Window buttons -->
-<g transform="translate(808,59)">
+<g transform="translate(780,59)">
   <rect x="0" y="0" width="22" height="22" fill="#c8c8c8" stroke="#404040" stroke-width="1"/>
   <line x1="6" y1="14" x2="16" y2="14" stroke="#000" stroke-width="2"/>
   <rect x="24" y="0" width="22" height="22" fill="#c8c8c8" stroke="#404040" stroke-width="1"/>
