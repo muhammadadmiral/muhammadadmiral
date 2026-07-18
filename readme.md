@@ -77,11 +77,11 @@
 <img src="https://github-profile-trophy.vercel.app/?username=muhammadadmiral&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=8"/>
 
 <br/>
-<sub>
+<!-- <sub>
 ⚠️ kalau ada card yang gak muncul: layanan publik ini (vercel/demolab) sering kena rate-limit atau lagi down bareng-bareng.<br/>
 Cek lagi beberapa menit kemudian, atau paling stabil <b>self-host</b> — fork repo providernya & deploy ke Vercel akun sendiri.<br/>
 Kalau streak masih 0 padahal udah commit: buka <b>github.com/settings/profile</b> → centang "Include private contributions on my profile".
-</sub>
+</sub> -->
 
 </div>
 
