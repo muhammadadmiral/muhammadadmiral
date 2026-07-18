@@ -91,7 +91,7 @@
   <text x="0" y="14" text-anchor="middle" font-size="30" filter="url(#fGold)">🏆</text>
   <text x="0" y="56" text-anchor="middle"
     font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="900"
-    fill="#ffffff" filter="url(#fNumGlow)">0</text>
+    fill="#ffffff" filter="url(#fNumGlow)">792</text>
   <text x="0" y="72" text-anchor="middle"
     font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="#fbbf24"
     font-weight="700" letter-spacing="0.5">COMMITS</text>
@@ -143,7 +143,7 @@
   <text x="0" y="14" text-anchor="middle" font-size="30" filter="url(#fGold)">🔀</text>
   <text x="0" y="56" text-anchor="middle"
     font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="900"
-    fill="#ffffff" filter="url(#fNumGlow)">0</text>
+    fill="#ffffff" filter="url(#fNumGlow)">43</text>
   <text x="0" y="72" text-anchor="middle"
     font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="#e2e8f0"
     font-weight="700" letter-spacing="0.5">PULL REQS</text>
@@ -169,7 +169,7 @@
   <text x="0" y="14" text-anchor="middle" font-size="30" filter="url(#fGold)">⚡</text>
   <text x="0" y="56" text-anchor="middle"
     font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="900"
-    fill="#ffffff" filter="url(#fNumGlow)">0d</text>
+    fill="#ffffff" filter="url(#fNumGlow)">9d</text>
   <text x="0" y="72" text-anchor="middle"
     font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="#f472b6"
     font-weight="700" letter-spacing="0.5">CUR STREAK</text>
