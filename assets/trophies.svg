@@ -1,88 +1,179 @@
-<svg width="900" height="152" viewBox="0 0 900 152" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="180" viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
 <defs>
-  <linearGradient id="valG" x1="0%" y1="0%" x2="100%" y2="100%">
+  <linearGradient id="gPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
     <stop offset="0%" stop-color="#c084fc"/>
     <stop offset="100%" stop-color="#67e8f9"/>
   </linearGradient>
-  <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#c084fc" stop-opacity="0.8"/>
-    <stop offset="50%" stop-color="#67e8f9" stop-opacity="0.5"/>
-    <stop offset="100%" stop-color="#f472b6" stop-opacity="0.8"/>
-    <animateTransform attributeName="gradientTransform" type="rotate" values="0 .5 .5;360 .5 .5" dur="8s" repeatCount="indefinite"/>
+  <linearGradient id="gBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%"   stop-color="#c084fc" stop-opacity="0.95"/>
+    <stop offset="40%"  stop-color="#67e8f9" stop-opacity="0.65"/>
+    <stop offset="100%" stop-color="#f472b6" stop-opacity="0.95"/>
+    <animateTransform attributeName="gradientTransform" type="rotate"
+      values="0 .5 .5;360 .5 .5" dur="5s" repeatCount="indefinite"/>
   </linearGradient>
-  <linearGradient id="shimmer" x1="-100%" y1="0%" x2="200%" y2="0%">
+  <linearGradient id="gShimmer" x1="-100%" y1="0%" x2="200%" y2="0%">
     <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
-    <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.06"/>
+    <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.07"/>
     <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    <animate attributeName="x1" values="-100%;200%;-100%" dur="5s" repeatCount="indefinite"/>
-    <animate attributeName="x2" values="0%;400%;0%"       dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="x1" values="-100%;200%;-100%" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="0%;400%;0%"       dur="4s" repeatCount="indefinite"/>
   </linearGradient>
-  <filter id="fog" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="48"/></filter>
-  <filter id="cardDepth" x="-8%" y="-8%" width="116%" height="120%">
-    <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#7c3aed" flood-opacity="0.22"/>
+  <linearGradient id="gFire" x1="0%" y1="100%" x2="0%" y2="0%">
+    <stop offset="0%"   stop-color="#dc2626"/>
+    <stop offset="35%"  stop-color="#ea580c"/>
+    <stop offset="70%"  stop-color="#fbbf24"/>
+    <stop offset="100%" stop-color="#fef08a"/>
+  </linearGradient>
+  <linearGradient id="gRank" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#f472b6"/>
+    <stop offset="50%"  stop-color="#c084fc"/>
+    <stop offset="100%" stop-color="#67e8f9"/>
+  </linearGradient>
+  <filter id="fFog" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="42"/>
   </filter>
-  <filter id="titleGlow" x="-20%" y="-50%" width="140%" height="200%">
+  <filter id="fCard" x="-8%" y="-8%" width="116%" height="122%">
+    <feDropShadow dx="0"  dy="6"  stdDeviation="10" flood-color="#7c3aed" flood-opacity="0.28"/>
+    <feDropShadow dx="0"  dy="20" stdDeviation="30" flood-color="#000000" flood-opacity="0.55"/>
+  </filter>
+  <filter id="fGlow" x="-25%" y="-60%" width="150%" height="220%">
+    <feGaussianBlur stdDeviation="9" result="b1"/>
+    <feGaussianBlur stdDeviation="4" result="b2"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="fNumGlow" x="-20%" y="-25%" width="140%" height="150%">
     <feGaussianBlur stdDeviation="6" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <feFlood flood-color="#c084fc" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <filter id="numDepth" x="-15%" y="-20%" width="130%" height="140%">
-    <feDropShadow dx="1" dy="3" stdDeviation="4" flood-color="#c084fc" flood-opacity="0.55"/>
+  <filter id="fDot" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="2.5"/>
   </filter>
-  <filter id="dotGlow" x="-80%" y="-80%" width="260%" height="260%">
-    <feGaussianBlur stdDeviation="3"/>
+  <filter id="fFireGlow" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="14" result="b"/>
+    <feFlood flood-color="#ea580c" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-
-  <filter id="trophyGlow" x="-40%" y="-40%" width="180%" height="180%">
+  <filter id="fSnake" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="4" result="b"/>
+    <feFlood flood-color="#4ade80" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="fHead" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="6" result="b"/>
+    <feFlood flood-color="#86efac" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="fGold" x="-50%" y="-50%" width="200%" height="200%">
     <feGaussianBlur stdDeviation="5" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <feFlood flood-color="#fbbf24" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="fLineGlow" x="-10%" y="-40%" width="120%" height="180%">
+    <feGaussianBlur stdDeviation="3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
 </defs>
-<rect width="900" height="152" fill="#050300"/>
-<ellipse cx="450" cy="90" rx="400" ry="80" fill="#f59e0b" opacity="0.06" filter="url(#fog)">
-  <animate attributeName="opacity" values="0.06;0.1;0.06" dur="5s" repeatCount="indefinite"/>
+<rect width="900" height="180" fill="#050300"/>
+<ellipse cx="450" cy="100" rx="400" ry="90" fill="#d97706" opacity="0.07" filter="url(#fFog)">
+  <animate attributeName="opacity" values="0.07;0.12;0.07" dur="5s" repeatCount="indefinite"/>
 </ellipse>
 
 
-<g transform="translate(64,76)">
-  <text x="0" y="0"  text-anchor="middle" font-size="34">🏆</text>
-  <text x="0" y="24" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#fbbf24" font-weight="700" letter-spacing="0.5">COMMITS</text>
-  <text x="0" y="44" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" fill="#ffffff" font-weight="900" filter="url(#numDepth)">792</text>
-  <animate attributeName="opacity" values="1;0.75;1" dur="2.4s" repeatCount="indefinite" begin="0s"/>
+<g transform="translate(64,90)">
+  <circle cx="4"  cy="8"  r="40" fill="#fbbf24" opacity="0.08"/>
+  <circle cx="0"  cy="0"  r="40" fill="#0e0a00" stroke="#fbbf24" stroke-width="1.2" opacity="0.85"/>
+  <text x="0" y="14" text-anchor="middle" font-size="30" filter="url(#fGold)">🏆</text>
+  <text x="0" y="56" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="900"
+    fill="#ffffff" filter="url(#fNumGlow)">0</text>
+  <text x="0" y="72" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="#fbbf24"
+    font-weight="700" letter-spacing="0.5">COMMITS</text>
+  <animate attributeName="opacity" values="1;0.78;1"
+    dur="2.4s" repeatCount="indefinite" begin="0s"/>
 </g>
-<g transform="translate(174,76)">
-  <text x="0" y="0"  text-anchor="middle" font-size="34">🥇</text>
-  <text x="0" y="24" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#fbbf24" font-weight="700" letter-spacing="0.5">REPOS</text>
-  <text x="0" y="44" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" fill="#ffffff" font-weight="900" filter="url(#numDepth)">21</text>
-  <animate attributeName="opacity" values="1;0.75;1" dur="2.6999999999999997s" repeatCount="indefinite" begin="0.2s"/>
+<g transform="translate(176,90)">
+  <circle cx="4"  cy="8"  r="40" fill="#fbbf24" opacity="0.08"/>
+  <circle cx="0"  cy="0"  r="40" fill="#0e0a00" stroke="#fbbf24" stroke-width="1.2" opacity="0.85"/>
+  <text x="0" y="14" text-anchor="middle" font-size="30" filter="url(#fGold)">🥇</text>
+  <text x="0" y="56" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="900"
+    fill="#ffffff" filter="url(#fNumGlow)">21</text>
+  <text x="0" y="72" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="#fbbf24"
+    font-weight="700" letter-spacing="0.5">REPOS</text>
+  <animate attributeName="opacity" values="1;0.78;1"
+    dur="2.6999999999999997s" repeatCount="indefinite" begin="0.18s"/>
 </g>
-<g transform="translate(284,76)">
-  <text x="0" y="0"  text-anchor="middle" font-size="34">🥈</text>
-  <text x="0" y="24" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#e2e8f0" font-weight="700" letter-spacing="0.5">FOLLOWERS</text>
-  <text x="0" y="44" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" fill="#ffffff" font-weight="900" filter="url(#numDepth)">14</text>
-  <animate attributeName="opacity" values="1;0.75;1" dur="3s" repeatCount="indefinite" begin="0.4s"/>
+<g transform="translate(288,90)">
+  <circle cx="4"  cy="8"  r="40" fill="#e2e8f0" opacity="0.08"/>
+  <circle cx="0"  cy="0"  r="40" fill="#0e0a00" stroke="#e2e8f0" stroke-width="1.2" opacity="0.85"/>
+  <text x="0" y="14" text-anchor="middle" font-size="30" filter="url(#fGold)">🥈</text>
+  <text x="0" y="56" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="900"
+    fill="#ffffff" filter="url(#fNumGlow)">14</text>
+  <text x="0" y="72" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="#e2e8f0"
+    font-weight="700" letter-spacing="0.5">FOLLOWERS</text>
+  <animate attributeName="opacity" values="1;0.78;1"
+    dur="3s" repeatCount="indefinite" begin="0.36s"/>
 </g>
-<g transform="translate(394,76)">
-  <text x="0" y="0"  text-anchor="middle" font-size="34">⭐</text>
-  <text x="0" y="24" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#fcd34d" font-weight="700" letter-spacing="0.5">STARS EARNED</text>
-  <text x="0" y="44" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" fill="#ffffff" font-weight="900" filter="url(#numDepth)">0</text>
-  <animate attributeName="opacity" values="1;0.75;1" dur="3.3s" repeatCount="indefinite" begin="0.6000000000000001s"/>
+<g transform="translate(400,90)">
+  <circle cx="4"  cy="8"  r="40" fill="#fcd34d" opacity="0.08"/>
+  <circle cx="0"  cy="0"  r="40" fill="#0e0a00" stroke="#fcd34d" stroke-width="1.2" opacity="0.85"/>
+  <text x="0" y="14" text-anchor="middle" font-size="30" filter="url(#fGold)">⭐</text>
+  <text x="0" y="56" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="900"
+    fill="#ffffff" filter="url(#fNumGlow)">0</text>
+  <text x="0" y="72" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="#fcd34d"
+    font-weight="700" letter-spacing="0.5">STARS</text>
+  <animate attributeName="opacity" values="1;0.78;1"
+    dur="3.3s" repeatCount="indefinite" begin="0.54s"/>
 </g>
-<g transform="translate(504,76)">
-  <text x="0" y="0"  text-anchor="middle" font-size="34">🏅</text>
-  <text x="0" y="24" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#e2e8f0" font-weight="700" letter-spacing="0.5">PULL REQUESTS</text>
-  <text x="0" y="44" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" fill="#ffffff" font-weight="900" filter="url(#numDepth)">43</text>
-  <animate attributeName="opacity" values="1;0.75;1" dur="3.5999999999999996s" repeatCount="indefinite" begin="0.8s"/>
+<g transform="translate(512,90)">
+  <circle cx="4"  cy="8"  r="40" fill="#e2e8f0" opacity="0.08"/>
+  <circle cx="0"  cy="0"  r="40" fill="#0e0a00" stroke="#e2e8f0" stroke-width="1.2" opacity="0.85"/>
+  <text x="0" y="14" text-anchor="middle" font-size="30" filter="url(#fGold)">🔀</text>
+  <text x="0" y="56" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="900"
+    fill="#ffffff" filter="url(#fNumGlow)">0</text>
+  <text x="0" y="72" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="#e2e8f0"
+    font-weight="700" letter-spacing="0.5">PULL REQS</text>
+  <animate attributeName="opacity" values="1;0.78;1"
+    dur="3.5999999999999996s" repeatCount="indefinite" begin="0.72s"/>
 </g>
-<g transform="translate(614,76)">
-  <text x="0" y="0"  text-anchor="middle" font-size="34">🎯</text>
-  <text x="0" y="24" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#fbbf24" font-weight="700" letter-spacing="0.5">JOINED</text>
-  <text x="0" y="44" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" fill="#ffffff" font-weight="900" filter="url(#numDepth)">2023</text>
-  <animate attributeName="opacity" values="1;0.75;1" dur="3.9s" repeatCount="indefinite" begin="1s"/>
+<g transform="translate(624,90)">
+  <circle cx="4"  cy="8"  r="40" fill="#fbbf24" opacity="0.08"/>
+  <circle cx="0"  cy="0"  r="40" fill="#0e0a00" stroke="#fbbf24" stroke-width="1.2" opacity="0.85"/>
+  <text x="0" y="14" text-anchor="middle" font-size="30" filter="url(#fGold)">🎯</text>
+  <text x="0" y="56" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="900"
+    fill="#ffffff" filter="url(#fNumGlow)">2023</text>
+  <text x="0" y="72" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="#fbbf24"
+    font-weight="700" letter-spacing="0.5">JOINED</text>
+  <animate attributeName="opacity" values="1;0.78;1"
+    dur="3.9s" repeatCount="indefinite" begin="0.8999999999999999s"/>
 </g>
-<g transform="translate(724,76)">
-  <text x="0" y="0"  text-anchor="middle" font-size="34">⚡</text>
-  <text x="0" y="24" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#f472b6" font-weight="700" letter-spacing="0.5">STREAK</text>
-  <text x="0" y="44" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" fill="#ffffff" font-weight="900" filter="url(#numDepth)">9d</text>
-  <animate attributeName="opacity" values="1;0.75;1" dur="4.199999999999999s" repeatCount="indefinite" begin="1.2000000000000002s"/>
+<g transform="translate(736,90)">
+  <circle cx="4"  cy="8"  r="40" fill="#f472b6" opacity="0.08"/>
+  <circle cx="0"  cy="0"  r="40" fill="#0e0a00" stroke="#f472b6" stroke-width="1.2" opacity="0.85"/>
+  <text x="0" y="14" text-anchor="middle" font-size="30" filter="url(#fGold)">⚡</text>
+  <text x="0" y="56" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="900"
+    fill="#ffffff" filter="url(#fNumGlow)">0d</text>
+  <text x="0" y="72" text-anchor="middle"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" fill="#f472b6"
+    font-weight="700" letter-spacing="0.5">CUR STREAK</text>
+  <animate attributeName="opacity" values="1;0.78;1"
+    dur="4.199999999999999s" repeatCount="indefinite" begin="1.08s"/>
 </g>
 </svg>
