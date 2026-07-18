@@ -43,11 +43,11 @@
 
 <h2>📦 projects.pinned()</h2>
 
-<a href="https://github.com/muhammadadmiral/REPLACE_REPO_1">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=muhammadadmiral&repo=REPLACE_REPO_1&theme=tokyonight&hide_border=true&border_radius=15"/>
+<a href="https://github.com/muhammadadmiral/Watch-This">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=muhammadadmiral&repo=Watch-This&theme=tokyonight&hide_border=true&border_radius=15"/>
 </a>
-<a href="https://github.com/muhammadadmiral/REPLACE_REPO_2">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=muhammadadmiral&repo=REPLACE_REPO_2&theme=tokyonight&hide_border=true&border_radius=15"/>
+<a href="https://github.com/muhammadadmiral/sereluna-ai-engine">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=muhammadadmiral&repo=sereluna-ai-engine&theme=tokyonight&hide_border=true&border_radius=15"/>
 </a>
 
 <br/>
