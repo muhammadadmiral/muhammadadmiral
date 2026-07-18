@@ -51,7 +51,7 @@
 </a>
 
 <br/>
-<sub>👉 ganti <code>REPLACE_REPO_1</code> / <code>REPLACE_REPO_2</code> dengan nama repo pinned lu persis (case-sensitive)</sub>
+<code>watch-this</code> / <code>sereluna-ai-engine</code> 
 
 </div>
 
