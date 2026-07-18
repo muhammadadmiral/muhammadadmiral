@@ -1,93 +1,270 @@
-<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="360" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <filter id="neonGlowPink" x="-80%" y="-80%" width="260%" height="260%">
-    <feGaussianBlur stdDeviation="4" result="b">
-      <animate attributeName="stdDeviation" values="3;7;3" dur="2.2s" repeatCount="indefinite"/>
+  <linearGradient id="bgH" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#03010f"/>
+    <stop offset="100%" stop-color="#08001a"/>
+  </linearGradient>
+  <linearGradient id="hobbyBorderP" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#ff1cf7"/>
+    <stop offset="100%" stop-color="#b06ef3"/>
+  </linearGradient>
+  <linearGradient id="hobbyBorderC" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#00d4ff"/>
+    <stop offset="100%" stop-color="#0080ff"/>
+  </linearGradient>
+  <linearGradient id="hobbyBorderPu" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#b06ef3"/>
+    <stop offset="100%" stop-color="#6600cc"/>
+  </linearGradient>
+  <linearGradient id="hobbyBorderM" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#00ff88"/>
+    <stop offset="100%" stop-color="#00cc66"/>
+  </linearGradient>
+  <linearGradient id="titleHG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ff1cf7"/>
+    <stop offset="50%" stop-color="#00d4ff"/>
+    <stop offset="100%" stop-color="#00ff88"/>
+  </linearGradient>
+  <!-- 3D neon glow filters -->
+  <filter id="neonP3d" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="6" result="b">
+      <animate attributeName="stdDeviation" values="4;10;4" dur="2.2s" repeatCount="indefinite"/>
     </feGaussianBlur>
-    <feFlood flood-color="#ff2fd8" result="c"/>
-    <feComposite in="c" in2="b" operator="in" result="glow"/>
-    <feMerge>
-      <feMergeNode in="glow"/>
-      <feMergeNode in="glow"/>
-      <feMergeNode in="SourceGraphic"/>
-    </feMerge>
+    <feFlood flood-color="#ff1cf7" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <filter id="neonGlowCyan" x="-80%" y="-80%" width="260%" height="260%">
-    <feGaussianBlur stdDeviation="4" result="b">
-      <animate attributeName="stdDeviation" values="3;7;3" dur="2.6s" repeatCount="indefinite"/>
+  <filter id="neonC3d" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="6" result="b">
+      <animate attributeName="stdDeviation" values="4;10;4" dur="2.8s" repeatCount="indefinite"/>
     </feGaussianBlur>
-    <feFlood flood-color="#2fe0ff" result="c"/>
-    <feComposite in="c" in2="b" operator="in" result="glow"/>
-    <feMerge>
-      <feMergeNode in="glow"/>
-      <feMergeNode in="glow"/>
-      <feMergeNode in="SourceGraphic"/>
-    </feMerge>
+    <feFlood flood-color="#00d4ff" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <filter id="neonGlowPurple" x="-80%" y="-80%" width="260%" height="260%">
-    <feGaussianBlur stdDeviation="4" result="b">
-      <animate attributeName="stdDeviation" values="3;7;3" dur="2.4s" repeatCount="indefinite"/>
+  <filter id="neonPu3d" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="6" result="b">
+      <animate attributeName="stdDeviation" values="4;10;4" dur="2.5s" repeatCount="indefinite"/>
     </feGaussianBlur>
-    <feFlood flood-color="#b026ff" result="c"/>
-    <feComposite in="c" in2="b" operator="in" result="glow"/>
-    <feMerge>
-      <feMergeNode in="glow"/>
-      <feMergeNode in="glow"/>
-      <feMergeNode in="SourceGraphic"/>
-    </feMerge>
+    <feFlood flood-color="#b06ef3" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <filter id="neonGlowMint" x="-80%" y="-80%" width="260%" height="260%">
-    <feGaussianBlur stdDeviation="4" result="b">
-      <animate attributeName="stdDeviation" values="3;7;3" dur="2.8s" repeatCount="indefinite"/>
+  <filter id="neonM3d" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="6" result="b">
+      <animate attributeName="stdDeviation" values="4;10;4" dur="3.1s" repeatCount="indefinite"/>
     </feGaussianBlur>
-    <feFlood flood-color="#39ff9d" result="c"/>
-    <feComposite in="c" in2="b" operator="in" result="glow"/>
-    <feMerge>
-      <feMergeNode in="glow"/>
-      <feMergeNode in="glow"/>
-      <feMergeNode in="SourceGraphic"/>
-    </feMerge>
+    <feFlood flood-color="#00ff88" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
+  <filter id="fog3" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="45"/>
+  </filter>
+  <filter id="smGlow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+  <!-- 3D isometric grid -->
+  <pattern id="iso" width="30" height="52" patternUnits="userSpaceOnUse" patternTransform="translate(0,330) scale(1,-1)">
+    <path d="M15 0 L30 8.66 L30 26 L15 34.64 L0 26 L0 8.66 Z" fill="none" stroke="#ffffff" stroke-width="0.2" opacity="0.08"/>
+  </pattern>
 </defs>
 
-<rect x="0" y="0" width="900" height="280" fill="#08080f"/>
+<rect width="900" height="360" fill="url(#bgH)"/>
+<rect width="900" height="360" fill="url(#iso)"/>
 
-<text x="450" y="34" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="20" font-weight="700" fill="#ffffff">🎮 interests.render()</text>
+<!-- Ambient glow blobs -->
+<ellipse cx="120" cy="280" rx="180" ry="120" fill="#ff1cf7" opacity="0.12" filter="url(#fog3)">
+  <animate attributeName="cx" values="120;180;120" dur="8s" repeatCount="indefinite"/>
+</ellipse>
+<ellipse cx="790" cy="100" rx="160" ry="110" fill="#00d4ff" opacity="0.10" filter="url(#fog3)">
+  <animate attributeName="cy" values="100;140;100" dur="7s" repeatCount="indefinite"/>
+</ellipse>
 
+<!-- Title -->
+<text x="450" y="42" text-anchor="middle" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="22" font-weight="900" fill="url(#titleHG)" filter="url(#smGlow)" letter-spacing="2">
+  🎮 interests.render()
+  <animate attributeName="opacity" values="1;0.7;1" dur="3.5s" repeatCount="indefinite"/>
+</text>
+<rect x="320" y="50" width="260" height="1.5" rx="0.75" fill="url(#titleHG)" opacity="0.5"/>
+
+<!-- ======= CARD 1: GYM (PINK) ======= -->
 <g>
-  <rect x="30" y="55" width="195" height="205" rx="16" fill="#0d0d18" stroke="#ff2fd8" stroke-width="2" filter="url(#neonGlowPink)"/>
-  <text x="127" y="95" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#ff6fe0">🏋️ GYM</text>
-  <text x="127" y="125" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Incline DB Press</text>
-  <text x="127" y="143" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Addict</text>
-  <text x="127" y="171" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Shoulder Press</text>
-  <text x="127" y="189" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Addict</text>
-  <text x="127" y="217" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Lat Pulldown</text>
-  <text x="127" y="235" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Addict</text>
+  <!-- 3D bottom shadow -->
+  <rect x="32" y="78" width="200" height="252" rx="20" fill="#ff1cf7" opacity="0.15"/>
+  <rect x="28" y="74" width="200" height="252" rx="20" fill="#ff1cf7" opacity="0.08"/>
+  <!-- Main card -->
+  <rect x="24" y="70" width="200" height="252" rx="20" fill="#08050f" stroke="url(#hobbyBorderP)" stroke-width="2" filter="url(#neonP3d)"/>
+  <!-- Top shine -->
+  <rect x="26" y="72" width="196" height="1.5" rx="0.75" fill="#ffffff" opacity="0.2"/>
+  <!-- Inner glow bar -->
+  <rect x="24" y="70" width="200" height="60" rx="20" fill="#ff1cf7" opacity="0.06"/>
+
+  <!-- Emoji + title -->
+  <text x="124" y="118" text-anchor="middle" font-size="32">🏋️</text>
+  <text x="124" y="146" text-anchor="middle" font-family="'Trebuchet MS',sans-serif" font-size="17" font-weight="900" fill="#ff6ef8" filter="url(#neonP3d)" letter-spacing="2">GYM</text>
+
+  <!-- Items with bullet glow -->
+  <circle cx="48" cy="172" r="3" fill="#ff1cf7" filter="url(#neonP3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="62" y="177" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#f0e0ff">Incline DB Press</text>
+
+  <circle cx="48" cy="200" r="3" fill="#ff1cf7" filter="url(#neonP3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <text x="62" y="205" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#f0e0ff">Shoulder Press</text>
+
+  <circle cx="48" cy="228" r="3" fill="#ff1cf7" filter="url(#neonP3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="62" y="233" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#f0e0ff">Lat Pulldown</text>
+
+  <circle cx="48" cy="256" r="3" fill="#ff1cf7" filter="url(#neonP3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="62" y="261" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#f0e0ff">4-5 days / week</text>
+
+  <!-- Bottom stat bar -->
+  <rect x="36" y="292" width="176" height="18" rx="9" fill="#0a0010" stroke="#ff1cf7" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="38" y="294" width="0" height="14" rx="7" fill="#ff1cf7" opacity="0.7">
+    <animate attributeName="width" values="0;155;155" keyTimes="0;0.5;1" dur="3s" repeatCount="indefinite" begin="0s"/>
+  </rect>
+  <text x="124" y="305" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9" fill="#ffffff" opacity="0.9">GAINS MODE: 88%</text>
+
+  <!-- Floating particle -->
+  <circle cx="206" cy="88" r="2" fill="#ff1cf7" filter="url(#neonP3d)" opacity="0.9">
+    <animateTransform attributeName="transform" type="translate" values="0,0;6,-14;0,0" dur="3.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9;0.2;0.9" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
 </g>
 
+<!-- ======= CARD 2: GAMING (CYAN) ======= -->
 <g>
-  <rect x="243" y="55" width="195" height="205" rx="16" fill="#0d0d18" stroke="#2fe0ff" stroke-width="2" filter="url(#neonGlowCyan)"/>
-  <text x="340" y="95" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#7fecff">🎮 GAMING</text>
-  <text x="340" y="130" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">VALORANT</text>
-  <text x="340" y="152" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">CS2</text>
-  <text x="340" y="174" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Overwatch 2</text>
-  <text x="340" y="196" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">EA Sports FC</text>
+  <rect x="244" y="78" width="200" height="252" rx="20" fill="#00d4ff" opacity="0.12"/>
+  <rect x="240" y="74" width="200" height="252" rx="20" fill="#00d4ff" opacity="0.06"/>
+  <rect x="236" y="70" width="200" height="252" rx="20" fill="#04080f" stroke="url(#hobbyBorderC)" stroke-width="2" filter="url(#neonC3d)"/>
+  <rect x="238" y="72" width="196" height="1.5" rx="0.75" fill="#ffffff" opacity="0.2"/>
+  <rect x="236" y="70" width="200" height="60" rx="20" fill="#00d4ff" opacity="0.05"/>
+
+  <text x="336" y="118" text-anchor="middle" font-size="32">🎮</text>
+  <text x="336" y="146" text-anchor="middle" font-family="'Trebuchet MS',sans-serif" font-size="17" font-weight="900" fill="#6efaff" filter="url(#neonC3d)" letter-spacing="2">GAMING</text>
+
+  <circle cx="260" cy="172" r="3" fill="#00d4ff" filter="url(#neonC3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="274" y="177" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#d0f6ff">VALORANT</text>
+
+  <circle cx="260" cy="200" r="3" fill="#00d4ff" filter="url(#neonC3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="3.0s" repeatCount="indefinite"/>
+  </circle>
+  <text x="274" y="205" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#d0f6ff">CS2</text>
+
+  <circle cx="260" cy="228" r="3" fill="#00d4ff" filter="url(#neonC3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.7s" repeatCount="indefinite"/>
+  </circle>
+  <text x="274" y="233" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#d0f6ff">Overwatch 2</text>
+
+  <circle cx="260" cy="256" r="3" fill="#00d4ff" filter="url(#neonC3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="274" y="261" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#d0f6ff">EA Sports FC</text>
+
+  <rect x="248" y="292" width="176" height="18" rx="9" fill="#040810" stroke="#00d4ff" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="250" y="294" width="0" height="14" rx="7" fill="#00d4ff" opacity="0.7">
+    <animate attributeName="width" values="0;140;140" keyTimes="0;0.5;1" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+  </rect>
+  <text x="336" y="305" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9" fill="#ffffff" opacity="0.9">FRAGGING: 78%</text>
+
+  <circle cx="416" cy="88" r="2.2" fill="#00d4ff" filter="url(#neonC3d)" opacity="0.9">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-8,-16;0,0" dur="4.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9;0.15;0.9" dur="4.2s" repeatCount="indefinite"/>
+  </circle>
 </g>
 
+<!-- ======= CARD 3: MUSIC (PURPLE) ======= -->
 <g>
-  <rect x="456" y="55" width="195" height="205" rx="16" fill="#0d0d18" stroke="#b026ff" stroke-width="2" filter="url(#neonGlowPurple)"/>
-  <text x="553" y="95" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#d191ff">🎸 MUSIC</text>
-  <text x="553" y="128" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Rock / Pop Rock</text>
-  <text x="553" y="150" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">City Pop</text>
-  <text x="553" y="172" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Vox AC30 Twang</text>
-  <text x="553" y="194" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">0 Gain Tube Screamer</text>
+  <rect x="456" y="78" width="200" height="252" rx="20" fill="#b06ef3" opacity="0.12"/>
+  <rect x="452" y="74" width="200" height="252" rx="20" fill="#b06ef3" opacity="0.06"/>
+  <rect x="448" y="70" width="200" height="252" rx="20" fill="#060410" stroke="url(#hobbyBorderPu)" stroke-width="2" filter="url(#neonPu3d)"/>
+  <rect x="450" y="72" width="196" height="1.5" rx="0.75" fill="#ffffff" opacity="0.2"/>
+  <rect x="448" y="70" width="200" height="60" rx="20" fill="#b06ef3" opacity="0.05"/>
+
+  <text x="548" y="118" text-anchor="middle" font-size="32">🎸</text>
+  <text x="548" y="146" text-anchor="middle" font-family="'Trebuchet MS',sans-serif" font-size="17" font-weight="900" fill="#d8a0ff" filter="url(#neonPu3d)" letter-spacing="2">MUSIC</text>
+
+  <circle cx="472" cy="172" r="3" fill="#b06ef3" filter="url(#neonPu3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
+  <text x="486" y="177" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#ecd8ff">Rock / Pop Rock</text>
+
+  <circle cx="472" cy="200" r="3" fill="#b06ef3" filter="url(#neonPu3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="3.3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="486" y="205" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#ecd8ff">Stratocaster</text>
+
+  <circle cx="472" cy="228" r="3" fill="#b06ef3" filter="url(#neonPu3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.9s" repeatCount="indefinite"/>
+  </circle>
+  <text x="486" y="233" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#ecd8ff">Vox AC30 Twang</text>
+
+  <circle cx="472" cy="256" r="3" fill="#b06ef3" filter="url(#neonPu3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="3.7s" repeatCount="indefinite"/>
+  </circle>
+  <text x="486" y="261" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#ecd8ff">0 Gain Tube Screamer</text>
+
+  <rect x="460" y="292" width="176" height="18" rx="9" fill="#06040e" stroke="#b06ef3" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="462" y="294" width="0" height="14" rx="7" fill="#b06ef3" opacity="0.7">
+    <animate attributeName="width" values="0;160;160" keyTimes="0;0.5;1" dur="3s" repeatCount="indefinite" begin="1s"/>
+  </rect>
+  <text x="548" y="305" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9" fill="#ffffff" opacity="0.9">TONE CHASING: 90%</text>
+
+  <circle cx="628" cy="92" r="1.8" fill="#b06ef3" filter="url(#neonPu3d)" opacity="0.9">
+    <animateTransform attributeName="transform" type="translate" values="0,0;6,-18;0,0" dur="5.1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9;0.2;0.9" dur="5.1s" repeatCount="indefinite"/>
+  </circle>
 </g>
 
+<!-- ======= CARD 4: LIFESTYLE (MINT) ======= -->
 <g>
-  <rect x="669" y="55" width="201" height="205" rx="16" fill="#0d0d18" stroke="#39ff9d" stroke-width="2" filter="url(#neonGlowMint)"/>
-  <text x="769" y="95" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#8dffc4">☕ LIFESTYLE</text>
-  <text x="769" y="128" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Coffee</text>
-  <text x="769" y="150" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Late Night Coding</text>
-  <text x="769" y="172" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Fixing Bugs at 2AM</text>
+  <rect x="668" y="78" width="210" height="252" rx="20" fill="#00ff88" opacity="0.10"/>
+  <rect x="664" y="74" width="210" height="252" rx="20" fill="#00ff88" opacity="0.05"/>
+  <rect x="660" y="70" width="210" height="252" rx="20" fill="#030f06" stroke="url(#hobbyBorderM)" stroke-width="2" filter="url(#neonM3d)"/>
+  <rect x="662" y="72" width="206" height="1.5" rx="0.75" fill="#ffffff" opacity="0.2"/>
+  <rect x="660" y="70" width="210" height="60" rx="20" fill="#00ff88" opacity="0.04"/>
+
+  <text x="765" y="118" text-anchor="middle" font-size="32">☕</text>
+  <text x="765" y="146" text-anchor="middle" font-family="'Trebuchet MS',sans-serif" font-size="14" font-weight="900" fill="#80ffbb" filter="url(#neonM3d)" letter-spacing="2">LIFESTYLE</text>
+
+  <circle cx="684" cy="172" r="3" fill="#00ff88" filter="url(#neonM3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="698" y="177" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#c0ffe0">Coffee Addict</text>
+
+  <circle cx="684" cy="200" r="3" fill="#00ff88" filter="url(#neonM3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="698" y="205" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#c0ffe0">Late Night Coding</text>
+
+  <circle cx="684" cy="228" r="3" fill="#00ff88" filter="url(#neonM3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <text x="698" y="233" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#c0ffe0">Fixing Bugs at 2AM</text>
+
+  <circle cx="684" cy="256" r="3" fill="#00ff88" filter="url(#neonM3d)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="4.0s" repeatCount="indefinite"/>
+  </circle>
+  <text x="698" y="261" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#c0ffe0">Series Enjoyer</text>
+
+  <rect x="672" y="292" width="186" height="18" rx="9" fill="#020a04" stroke="#00ff88" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="674" y="294" width="0" height="14" rx="7" fill="#00ff88" opacity="0.7">
+    <animate attributeName="width" values="0;170;170" keyTimes="0;0.5;1" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+  </rect>
+  <text x="765" y="305" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9" fill="#ffffff" opacity="0.9">VIBES: 95%</text>
+
+  <circle cx="845" cy="80" r="2.5" fill="#00ff88" filter="url(#neonM3d)" opacity="0.85">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-10,-20;0,0" dur="4.7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.85;0.15;0.85" dur="4.7s" repeatCount="indefinite"/>
+  </circle>
 </g>
 </svg>

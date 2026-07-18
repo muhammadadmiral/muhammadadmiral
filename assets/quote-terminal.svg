@@ -1,29 +1,102 @@
-<svg width="900" height="200" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-    <rect width="4" height="2" fill="#ffffff" opacity="0.035"/>
-  </pattern>
-  <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
-    <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
-    <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+  <linearGradient id="bgQ" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#01050100"/>
+    <stop offset="0%" stop-color="#01050100"/>
+    <stop offset="0%" stop-color="#010501"/>
+    <stop offset="100%" stop-color="#020a02"/>
+  </linearGradient>
+  <filter id="crtGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="6" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="crtGlowBig" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="14" result="b"/>
+    <feFlood flood-color="#00ff88" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="vignetteQ">
+    <feComposite in="SourceGraphic" in2="SourceGraphic" operator="over"/>
+  </filter>
+  <radialGradient id="vigQ" cx="50%" cy="50%" r="70%">
+    <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.7"/>
   </radialGradient>
-  <filter id="termGlow" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="5"/>
+  <pattern id="scanlQ" width="2" height="3" patternUnits="userSpaceOnUse">
+    <rect width="2" height="1.5" fill="#ffffff" opacity="0.022"/>
+  </pattern>
+  <pattern id="noiseQ" width="200" height="200" patternUnits="userSpaceOnUse">
+    <rect width="200" height="200" fill="#000000"/>
+    <!-- Static noise dots -->
+    <circle cx="12" cy="8" r="0.5" fill="#00ff88" opacity="0.3"/>
+    <circle cx="45" cy="23" r="0.5" fill="#00ff88" opacity="0.2"/>
+    <circle cx="78" cy="67" r="0.5" fill="#00ff88" opacity="0.4"/>
+    <circle cx="120" cy="15" r="0.5" fill="#00ff88" opacity="0.25"/>
+    <circle cx="160" cy="88" r="0.5" fill="#00ff88" opacity="0.3"/>
+    <circle cx="34" cy="140" r="0.5" fill="#00ff88" opacity="0.2"/>
+    <circle cx="190" cy="170" r="0.5" fill="#00ff88" opacity="0.35"/>
+  </pattern>
+  <filter id="glowDrop3d" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#00ff88" flood-opacity="0.6"/>
+    <feDropShadow dx="-1" dy="-2" stdDeviation="2" flood-color="#39ff9d" flood-opacity="0.3"/>
   </filter>
 </defs>
 
-<rect x="0" y="0" width="900" height="200" rx="14" fill="#020402"/>
-<rect x="2" y="2" width="896" height="196" rx="12" fill="none" stroke="#39ff9d" stroke-width="1.5" opacity="0.7" filter="url(#termGlow)"/>
-<rect x="2" y="2" width="896" height="196" rx="12" fill="none" stroke="#39ff9d" stroke-width="1"/>
+<!-- Background — deep CRT black -->
+<rect width="900" height="220" rx="18" fill="#010601"/>
+<rect width="900" height="220" rx="18" fill="url(#noiseQ)" opacity="0.4"/>
 
-<text x="40" y="60" font-family="'Courier New',monospace" font-size="15" fill="#4d5a4d">guest@admiral<tspan fill="#39ff9d">:~$</tspan> cat favorite_quote.txt</text>
-<text x="40" y="95" font-family="'Courier New',monospace" font-size="17" fill="#39ff9d" font-weight="700">"train to failure."</text>
-<text x="40" y="120" font-family="'Courier New',monospace" font-size="15" fill="#8effc0">— Sam Sulek</text>
-<text x="40" y="155" font-family="'Courier New',monospace" font-size="15" fill="#4d5a4d">guest@admiral<tspan fill="#39ff9d">:~$</tspan></text>
-<rect x="228" y="142" width="10" height="17" fill="#39ff9d">
-  <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" dur="1.1s" repeatCount="indefinite"/>
+<!-- CRT outer frame glow (3D depth) -->
+<rect x="0" y="0" width="900" height="220" rx="18" fill="none" stroke="#00ff88" stroke-width="3" opacity="0.08" filter="url(#crtGlowBig)"/>
+<!-- Inner crisp border -->
+<rect x="1.5" y="1.5" width="897" height="217" rx="17" fill="none" stroke="#00ff88" stroke-width="1.5" opacity="0.75" filter="url(#crtGlow)"/>
+<!-- Top highlight (3D depth) -->
+<rect x="3" y="3" width="894" height="2" rx="1" fill="#00ff88" opacity="0.3"/>
+
+<!-- Scanlines -->
+<rect width="900" height="220" rx="18" fill="url(#scanlQ)"/>
+
+<!-- Floating cursor line (horizontal jitter) -->
+<rect x="0" y="110" width="900" height="1" fill="#00ff88" opacity="0.04">
+  <animate attributeName="y" values="20;200;20" dur="8s" repeatCount="indefinite" calcMode="linear"/>
+  <animate attributeName="opacity" values="0;0.06;0" dur="8s" repeatCount="indefinite"/>
 </rect>
 
-<rect x="0" y="0" width="900" height="200" rx="14" fill="url(#scanlines)"/>
-<rect x="0" y="0" width="900" height="200" rx="14" fill="url(#vignette)"/>
+<!-- Prompt line 1 -->
+<text x="40" y="65" font-family="'Courier New',monospace" font-size="15" fill="#3a4a3a">
+  guest@admiral<tspan fill="#00ff88">:~$</tspan>
+  <tspan fill="#5a6a5a"> cat</tspan>
+  <tspan fill="#39ff9d"> favorite_quote.txt</tspan>
+</text>
+
+<!-- Quote (3D shadow + main) -->
+<text x="42" y="108" font-family="'Courier New',monospace" font-size="21" fill="#00ff88" opacity="0.18" font-weight="700">"train to failure."</text>
+<text x="40" y="106" font-family="'Courier New',monospace" font-size="21" fill="#00ff88" font-weight="700" filter="url(#glowDrop3d)">
+  "train to failure."
+  <animate attributeName="opacity" values="1;0.85;1" dur="3s" repeatCount="indefinite"/>
+</text>
+
+<!-- Attribution -->
+<text x="42" y="134" font-family="'Courier New',monospace" font-size="14" fill="#4d7a5a" opacity="0.9">— Sam Sulek</text>
+<text x="40" y="132" font-family="'Courier New',monospace" font-size="14" fill="#6df0a0">— Sam Sulek</text>
+
+<!-- Prompt line 2 -->
+<text x="40" y="168" font-family="'Courier New',monospace" font-size="15" fill="#3a4a3a">
+  guest@admiral<tspan fill="#00ff88">:~$</tspan>
+</text>
+
+<!-- Blinking cursor block -->
+<rect x="226" y="154" width="11" height="18" rx="1" fill="#00ff88" filter="url(#crtGlowBig)">
+  <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="1.0s" repeatCount="indefinite"/>
+</rect>
+
+<!-- Vignette overlay -->
+<rect width="900" height="220" rx="18" fill="url(#vigQ)"/>
+
+<!-- CRT corner spherical distortion hint (color aberration dots) -->
+<circle cx="12" cy="12" r="4" fill="#ff1cf7" opacity="0.08"/>
+<circle cx="888" cy="12" r="4" fill="#00d4ff" opacity="0.08"/>
+<circle cx="12" cy="208" r="4" fill="#00d4ff" opacity="0.08"/>
+<circle cx="888" cy="208" r="4" fill="#ff1cf7" opacity="0.08"/>
 </svg>

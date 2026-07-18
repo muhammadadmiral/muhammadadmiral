@@ -1,63 +1,163 @@
-<svg width="900" height="480" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <linearGradient id="titleBar98" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#000082"/>
-    <stop offset="100%" stop-color="#1084d0"/>
+  <linearGradient id="bgT" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#020208"/>
+    <stop offset="100%" stop-color="#080018"/>
   </linearGradient>
+  <linearGradient id="tbG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#0c0090"/>
+    <stop offset="50%" stop-color="#2060d0"/>
+    <stop offset="100%" stop-color="#0c0090"/>
+  </linearGradient>
+  <linearGradient id="techTitleG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ff1cf7"/>
+    <stop offset="50%" stop-color="#00d4ff"/>
+    <stop offset="100%" stop-color="#00ff88"/>
+  </linearGradient>
+  <linearGradient id="barFront" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ff1cf7"/>
+    <stop offset="50%" stop-color="#00d4ff"/>
+    <stop offset="100%" stop-color="#00ff88"/>
+  </linearGradient>
+  <filter id="fogT" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="40"/>
+  </filter>
+  <filter id="win3dShadow" x="-5%" y="-5%" width="110%" height="110%">
+    <feDropShadow dx="6" dy="12" stdDeviation="8" flood-color="#ff1cf7" flood-opacity="0.3"/>
+    <feDropShadow dx="-3" dy="-6" stdDeviation="4" flood-color="#00d4ff" flood-opacity="0.2"/>
+  </filter>
+  <filter id="smGlowT" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+  <filter id="scanT">
+    <feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="1" result="noise"/>
+  </filter>
+  <!-- CRT scanlines -->
+  <pattern id="scanT" width="2" height="4" patternUnits="userSpaceOnUse">
+    <rect width="2" height="2" fill="#ffffff" opacity="0.025"/>
+  </pattern>
+  <!-- 3D grid -->
+  <pattern id="grid3dT" width="50" height="50" patternUnits="userSpaceOnUse" patternTransform="skewY(-8) scaleY(0.6)">
+    <line x1="50" y1="0" x2="50" y2="50" stroke="#00d4ff" stroke-width="0.2" opacity="0.2"/>
+    <line x1="0" y1="50" x2="50" y2="50" stroke="#ff1cf7" stroke-width="0.2" opacity="0.2"/>
+  </pattern>
 </defs>
 
-<rect x="0" y="0" width="900" height="480" fill="#0a0a14"/>
+<rect width="900" height="520" fill="url(#bgT)"/>
+<rect x="0" y="380" width="900" height="140" fill="url(#grid3dT)" opacity="0.5"/>
 
-<g transform="translate(50,30)">
-  <rect x="0" y="0" width="800" height="420" fill="#c3c7cb"/>
-  <rect x="0" y="0" width="800" height="420" fill="none" stroke="#ffffff" stroke-width="2"/>
-  <line x1="1" y1="1" x2="799" y2="1" stroke="#ffffff" stroke-width="2"/>
-  <line x1="1" y1="1" x2="1" y2="419" stroke="#ffffff" stroke-width="2"/>
-  <line x1="799" y1="1" x2="799" y2="419" stroke="#404040" stroke-width="2"/>
-  <line x1="1" y1="419" x2="799" y2="419" stroke="#404040" stroke-width="2"/>
+<!-- Ambient blobs -->
+<ellipse cx="150" cy="420" rx="200" ry="120" fill="#ff1cf7" opacity="0.10" filter="url(#fogT)">
+  <animate attributeName="cx" values="150;220;150" dur="10s" repeatCount="indefinite"/>
+</ellipse>
+<ellipse cx="780" cy="120" rx="180" ry="110" fill="#00d4ff" opacity="0.08" filter="url(#fogT)">
+  <animate attributeName="cy" values="120;160;120" dur="8s" repeatCount="indefinite"/>
+</ellipse>
 
-  <rect x="4" y="4" width="792" height="30" fill="url(#titleBar98)"/>
-  <text x="14" y="25" font-family="'Tahoma','Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">📁 C:\ADMIRAL\SYSTEM_PROPERTIES.exe</text>
+<!-- ======= 3D Window frame ======= -->
+<!-- Deepest shadow -->
+<rect x="62" y="48" width="800" height="440" rx="4" fill="#ff1cf7" opacity="0.12" filter="url(#win3dShadow)"/>
+<!-- Side depth slices (isometric illusion) -->
+<polygon points="862,56 872,64 872,496 862,488" fill="#1a0030" opacity="0.8"/>
+<polygon points="62,488 70,496 872,496 862,488" fill="#0d0018" opacity="0.9"/>
+<!-- Main window -->
+<rect x="58" y="48" width="800" height="440" rx="3" fill="#1a1a1a"/>
+<rect x="58" y="48" width="800" height="440" fill="none" stroke="#ffffff" stroke-width="1.5" rx="3" opacity="0.6"/>
+<line x1="60" y1="50" x2="856" y2="50" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+<line x1="60" y1="50" x2="60" y2="486" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+<line x1="856" y1="50" x2="856" y2="486" stroke="#404040" stroke-width="1.5" opacity="0.8"/>
+<line x1="60" y1="486" x2="856" y2="486" stroke="#404040" stroke-width="1.5" opacity="0.8"/>
 
-  <g transform="translate(730,9)">
-    <rect x="0" y="0" width="20" height="20" fill="#c3c7cb" stroke="#000" stroke-width="1"/>
-    <text x="10" y="15" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#000">_</text>
-    <rect x="24" y="0" width="20" height="20" fill="#c3c7cb" stroke="#000" stroke-width="1"/>
-    <text x="34" y="15" text-anchor="middle" font-family="monospace" font-size="12" font-weight="700" fill="#000">&#9633;</text>
-    <rect x="48" y="0" width="20" height="20" fill="#c3c7cb" stroke="#000" stroke-width="1"/>
-    <text x="58" y="15" text-anchor="middle" font-family="monospace" font-size="12" font-weight="700" fill="#000">X</text>
-  </g>
+<!-- Title bar (animated gradient) -->
+<rect x="62" y="52" width="792" height="32" fill="url(#tbG)"/>
+<text x="80" y="73" font-family="'Courier New','Tahoma',monospace" font-size="14" font-weight="700" fill="#ffffff">📁 C:\ADMIRAL\TECH_STACK.exe — [Build: 2024]</text>
 
-  <rect x="4" y="34" width="792" height="22" fill="#c3c7cb" stroke="#808080" stroke-width="1"/>
-  <text x="14" y="49" font-family="'Tahoma',sans-serif" font-size="12" fill="#000000">File   Edit   View   Help</text>
-
-  <rect x="20" y="70" width="760" height="270" fill="#dfdfdf" stroke="#808080" stroke-width="1"/>
-  <text x="36" y="98" font-family="'Tahoma',sans-serif" font-size="14" font-weight="700" fill="#000000">🖥️ Installed Components — currently.using</text>
-  <line x1="36" y1="108" x2="764" y2="108" stroke="#a0a0a0" stroke-width="1"/>
-
-  <text x="60" y="140" font-family="'Tahoma',sans-serif" font-size="13" font-weight="700" fill="#000082">▸ Frontend</text>
-  <text x="60" y="162" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ React</text>
-  <text x="60" y="182" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ Tailwind CSS</text>
-  <text x="60" y="202" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ Framer Motion</text>
-  <text x="60" y="222" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ Vite</text>
-
-  <text x="320" y="140" font-family="'Tahoma',sans-serif" font-size="13" font-weight="700" fill="#000082">▸ Backend</text>
-  <text x="320" y="162" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ NestJS</text>
-  <text x="320" y="182" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ Firebase</text>
-  <text x="320" y="202" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ PostgreSQL</text>
-
-  <text x="580" y="140" font-family="'Tahoma',sans-serif" font-size="13" font-weight="700" fill="#000082">▸ Learning...</text>
-  <text x="580" y="162" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ PHP</text>
-  <text x="580" y="182" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ Machine Learning</text>
-  <text x="580" y="202" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ System Design</text>
-
-  <line x1="36" y1="250" x2="764" y2="250" stroke="#a0a0a0" stroke-width="1"/>
-
-  <rect x="36" y="270" width="728" height="24" fill="#ffffff" stroke="#808080" stroke-width="1"/>
-  <rect x="38" y="272" width="655" height="20" fill="#000082"/>
-  <text x="405" y="287" text-anchor="middle" font-family="'Tahoma',sans-serif" font-size="11" font-weight="700" fill="#ffffff">90% — STILL LEARNING. ALWAYS LEARNING.</text>
-
-  <rect x="0" y="392" width="800" height="28" fill="#c3c7cb" stroke="#808080" stroke-width="1"/>
-  <text x="14" y="410" font-family="'Tahoma',sans-serif" font-size="11" fill="#000">Ready</text>
+<!-- Window buttons -->
+<g transform="translate(808,59)">
+  <rect x="0" y="0" width="22" height="22" fill="#c8c8c8" stroke="#404040" stroke-width="1"/>
+  <line x1="6" y1="14" x2="16" y2="14" stroke="#000" stroke-width="2"/>
+  <rect x="24" y="0" width="22" height="22" fill="#c8c8c8" stroke="#404040" stroke-width="1"/>
+  <rect x="28" y="4" width="14" height="14" fill="none" stroke="#000" stroke-width="1.5"/>
+  <rect x="48" y="0" width="22" height="22" fill="#e07070" stroke="#404040" stroke-width="1"/>
+  <line x1="52" y1="4" x2="66" y2="18" stroke="#000" stroke-width="2"/>
+  <line x1="66" y1="4" x2="52" y2="18" stroke="#000" stroke-width="2"/>
 </g>
+
+<!-- Menu bar -->
+<rect x="62" y="84" width="792" height="22" fill="#c3c7cb" stroke="#808080" stroke-width="0.5"/>
+<text x="76" y="99" font-family="'Courier New','Tahoma',monospace" font-size="12" fill="#000000">File   Edit   View   Run   Help</text>
+
+<!-- Content area -->
+<rect x="62" y="106" width="792" height="346" fill="#e8e8e8"/>
+<rect x="62" y="106" width="792" height="346" fill="url(#scanT)" opacity="0.5"/>
+
+<!-- Content header -->
+<text x="80" y="134" font-family="'Courier New',monospace" font-size="15" font-weight="700" fill="#000082">🖥️ System Components — currently.using()</text>
+<line x1="80" y1="144" x2="840" y2="144" stroke="#a0a0a0" stroke-width="1"/>
+
+<!-- ======= 3 columns of tech ======= -->
+
+<!-- COL 1: Frontend -->
+<text x="96" y="172" font-family="'Courier New',monospace" font-size="13" font-weight="700" fill="#000082">▸ Frontend</text>
+<g font-family="'Courier New',monospace" font-size="12.5" fill="#000000">
+  <text x="106" y="195">▪ React 19</text>
+  <text x="106" y="215">▪ TypeScript</text>
+  <text x="106" y="235">▪ Tailwind CSS</text>
+  <text x="106" y="255">▪ Framer Motion</text>
+  <text x="106" y="275">▪ Next.js</text>
+</g>
+
+<!-- COL 2: Backend -->
+<text x="342" y="172" font-family="'Courier New',monospace" font-size="13" font-weight="700" fill="#000082">▸ Backend</text>
+<g font-family="'Courier New',monospace" font-size="12.5" fill="#000000">
+  <text x="352" y="195">▪ NestJS</text>
+  <text x="352" y="215">▪ FastAPI</text>
+  <text x="352" y="235">▪ PostgreSQL</text>
+  <text x="352" y="255">▪ Firebase</text>
+  <text x="352" y="275">▪ Supabase</text>
+</g>
+
+<!-- COL 3: Learning -->
+<text x="594" y="172" font-family="'Courier New',monospace" font-size="13" font-weight="700" fill="#800000">▸ Exploring...</text>
+<g font-family="'Courier New',monospace" font-size="12.5" fill="#000000">
+  <text x="604" y="195">▪ PHP / Laravel</text>
+  <text x="604" y="215">▪ Kotlin</text>
+  <text x="604" y="235">▪ Python</text>
+  <text x="604" y="255">▪ System Design</text>
+  <text x="604" y="275">▪ C</text>
+</g>
+
+<!-- Separator line -->
+<line x1="80" y1="296" x2="840" y2="296" stroke="#a0a0a0" stroke-width="1"/>
+
+<!-- Animated XP progress bar -->
+<text x="80" y="322" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#000082">Experience Progress:</text>
+<rect x="80" y="334" width="756" height="26" fill="#ffffff" stroke="#808080" stroke-width="1"/>
+<!-- Animated fill -->
+<rect x="82" y="336" width="0" height="22" fill="url(#barFront)">
+  <animate attributeName="width" values="0;680;680;0" keyTimes="0;0.7;0.9;1" dur="5s" repeatCount="indefinite"/>
+</rect>
+<!-- Shimmer effect on bar -->
+<rect x="82" y="336" width="40" height="22" fill="#ffffff" opacity="0.3">
+  <animate attributeName="x" values="80;820;80" dur="5s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0.35;0" dur="5s" repeatCount="indefinite"/>
+</rect>
+<text x="450" y="352" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" fill="#000000">90% — STILL LEARNING. ALWAYS LEARNING.</text>
+
+<!-- Status bar -->
+<rect x="62" y="452" width="792" height="26" fill="#c3c7cb" stroke="#808080" stroke-width="0.5"/>
+<text x="76" y="469" font-family="'Courier New',monospace" font-size="11" fill="#000000">Ready   |   Repos: 21   |   Stars: 0   |   Followers: 14   |   Member Since: Dec 2023</text>
+
+<!-- 3D floating particles -->
+<circle cx="840" cy="100" r="2.5" fill="#ff1cf7" filter="url(#smGlowT)" opacity="0.8">
+  <animateTransform attributeName="transform" type="translate" values="0,0;-8,-18;0,0" dur="4.2s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4.2s" repeatCount="indefinite"/>
+</circle>
+<circle cx="70" cy="420" r="2" fill="#00d4ff" filter="url(#smGlowT)" opacity="0.7">
+  <animateTransform attributeName="transform" type="translate" values="0,0;8,-15;0,0" dur="5.5s" repeatCount="indefinite"/>
+</circle>
+<circle cx="870" cy="380" r="1.8" fill="#00ff88" filter="url(#smGlowT)" opacity="0.6">
+  <animateTransform attributeName="transform" type="translate" values="0,0;-5,-12;0,0" dur="3.9s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3.9s" repeatCount="indefinite"/>
+</circle>
 </svg>

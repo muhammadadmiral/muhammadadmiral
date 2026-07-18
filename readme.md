@@ -41,47 +41,32 @@
 <!-- ================= PROJECTS — PINNED REPOS ================= -->
 <div align="center">
 
-<h2>📦 projects.pinned()</h2>
-
-<a href="https://github.com/muhammadadmiral/Watch-This">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=muhammadadmiral&repo=Watch-This&theme=tokyonight&hide_border=true&border_radius=15"/>
-</a>
-<a href="https://github.com/muhammadadmiral/sereluna-ai-engine">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=muhammadadmiral&repo=sereluna-ai-engine&theme=tokyonight&hide_border=true&border_radius=15"/>
-</a>
-
-<br/>
-<code>watch-this</code> / <code>sereluna-ai-engine</code> 
+<img src="./assets/pinned-repos.svg" width="100%"/>
 
 </div>
 
 <br/>
 
-<!-- ================= STATS — MULTI PROVIDER ================= -->
+<!-- ================= STATS — 100% LOCAL SVGs ================= -->
 <div align="center">
 
-<h2>📊 github.analytics()</h2>
-
-<img height="165em" src="https://github-readme-stats.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true"/>
-<img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=tokyonight&hide_border=true&langs_count=10"/>
+<img src="./assets/stats-card.svg" width="100%"/>
 
 <br/><br/>
 
-<a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=muhammadadmiral&theme=kanagawa-paper&border_radius=5" alt="GitHub Streak" /></a>
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammadadmiral&theme=tokyo-night&hide_border=true&area=true"/>
+<img src="./assets/langs-card.svg" width="100%"/>
 
 <br/><br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=muhammadadmiral&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=8"/>
+<img src="./assets/streak-card.svg" width="100%"/>
 
-<br/>
-<!-- <sub>
-⚠️ kalau ada card yang gak muncul: layanan publik ini (vercel/demolab) sering kena rate-limit atau lagi down bareng-bareng.<br/>
-Cek lagi beberapa menit kemudian, atau paling stabil <b>self-host</b> — fork repo providernya & deploy ke Vercel akun sendiri.<br/>
-Kalau streak masih 0 padahal udah commit: buka <b>github.com/settings/profile</b> → centang "Include private contributions on my profile".
-</sub> -->
+<br/><br/>
+
+<img src="./assets/activity-graph.svg" width="100%"/>
+
+<br/><br/>
+
+<img src="./assets/trophies.svg" width="100%"/>
 
 </div>
 

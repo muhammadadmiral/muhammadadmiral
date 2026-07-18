@@ -1,0 +1,157 @@
+<svg width="900" height="240" viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bgP" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#04020c"/>
+    <stop offset="100%" stop-color="#08001a"/>
+  </linearGradient>
+  <linearGradient id="pinBorderL" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#ff1cf7"/>
+    <stop offset="100%" stop-color="#7040ff"/>
+    <animateTransform attributeName="gradientTransform" type="rotate" values="0 0.5 0.5;360 0.5 0.5" dur="5s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="pinBorderR" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#00d4ff"/>
+    <stop offset="100%" stop-color="#00ff88"/>
+    <animateTransform attributeName="gradientTransform" type="rotate" values="0 0.5 0.5;360 0.5 0.5" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="pinTitleG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ff1cf7"/>
+    <stop offset="100%" stop-color="#00d4ff"/>
+  </linearGradient>
+  <linearGradient id="pinNumG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ff1cf7"/>
+    <stop offset="100%" stop-color="#b06ef3"/>
+  </linearGradient>
+  <filter id="fogP" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="35"/>
+  </filter>
+  <filter id="glowP" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="6" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="glowSmP" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="depth3dP" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="2" dy="5" stdDeviation="5" flood-color="#ff1cf7" flood-opacity="0.45"/>
+    <feDropShadow dx="-2" dy="-3" stdDeviation="3" flood-color="#7040ff" flood-opacity="0.25"/>
+  </filter>
+  <filter id="depth3dPR" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="2" dy="5" stdDeviation="5" flood-color="#00d4ff" flood-opacity="0.45"/>
+    <feDropShadow dx="-2" dy="-3" stdDeviation="3" flood-color="#00ff88" flood-opacity="0.25"/>
+  </filter>
+  <!-- Hex grid background -->
+  <pattern id="hexPin" width="28" height="32" patternUnits="userSpaceOnUse">
+    <polygon points="14,1 27,8.5 27,23.5 14,31 1,23.5 1,8.5" fill="none" stroke="#ffffff" stroke-width="0.15" opacity="0.04"/>
+  </pattern>
+</defs>
+
+<rect width="900" height="240" fill="url(#bgP)"/>
+<rect width="900" height="240" fill="url(#hexPin)"/>
+
+<!-- Ambient blobs -->
+<ellipse cx="120" cy="200" rx="150" ry="100" fill="#ff1cf7" opacity="0.12" filter="url(#fogP)">
+  <animate attributeName="cx" values="120;180;120" dur="9s" repeatCount="indefinite"/>
+</ellipse>
+<ellipse cx="800" cy="50" rx="150" ry="90" fill="#00d4ff" opacity="0.10" filter="url(#fogP)">
+  <animate attributeName="cy" values="50;80;50" dur="7s" repeatCount="indefinite"/>
+</ellipse>
+
+<!-- Section title -->
+<text x="450" y="32" text-anchor="middle" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="20" font-weight="900" fill="url(#pinTitleG)" filter="url(#glowSmP)" letter-spacing="1">
+  📦 projects.pinned()
+  <animate attributeName="opacity" values="1;0.75;1" dur="3s" repeatCount="indefinite"/>
+</text>
+<rect x="310" y="40" width="280" height="1.5" rx="0.75" fill="url(#pinTitleG)" opacity="0.4"/>
+
+<!-- ======= LEFT CARD: Watch-This ======= -->
+<g>
+  <!-- 3D shadow layers -->
+  <rect x="24" y="62" width="414" height="162" rx="18" fill="#ff1cf7" opacity="0.12"/>
+  <rect x="20" y="58" width="414" height="162" rx="18" fill="#7040ff" opacity="0.07"/>
+  <!-- Main card -->
+  <rect x="16" y="54" width="414" height="162" rx="18" fill="#0a0512" stroke="url(#pinBorderL)" stroke-width="1.8" filter="url(#glowSmP)"/>
+  <rect x="18" y="56" width="410" height="1.5" rx="0.75" fill="#ffffff" opacity="0.2"/>
+
+  <!-- Repo icon -->
+  <text x="40" y="92" font-size="24">📺</text>
+
+  <!-- Repo name (3D shadow) -->
+  <text x="72" y="86" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="18" font-weight="900" fill="#ff1cf7" opacity="0.3" filter="url(#depth3dP)">Watch-This</text>
+  <text x="70" y="84" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="18" font-weight="900" fill="#ff1cf7" filter="url(#glowSmP)">Watch-This</text>
+
+  <!-- Description -->
+  <text x="28" y="112" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#b090d0">A curated watchlist &amp; recommendation engine</text>
+  <text x="28" y="130" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#b090d0">for movies and series you actually want to see.</text>
+
+  <!-- Tech tags -->
+  <rect x="28" y="144" width="72" height="18" rx="9" fill="#ff1cf7" opacity="0.15" stroke="#ff1cf7" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="64" y="157" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#ff9ef9" font-weight="700">TypeScript</text>
+
+  <rect x="108" y="144" width="55" height="18" rx="9" fill="#f7df1e" opacity="0.12" stroke="#f7df1e" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="135" y="157" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#f7df1e">React</text>
+
+  <rect x="171" y="144" width="50" height="18" rx="9" fill="#ff6600" opacity="0.12" stroke="#ff6600" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="196" y="157" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#ff9940">Vite</text>
+
+  <!-- Stars / forks -->
+  <text x="28" y="198" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8060a0">⭐ 0 &nbsp;&nbsp; 🍴 0 &nbsp;&nbsp; 🔖 TypeScript</text>
+
+  <!-- Animated border highlight sweep -->
+  <rect x="16" y="54" width="414" height="162" rx="18" fill="none" stroke="#ff1cf7" stroke-width="0.5" stroke-dasharray="20 10" opacity="0.4">
+    <animateTransform attributeName="transform" type="rotate" values="0 223 135;360 223 135" dur="12s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Floating particle -->
+  <circle cx="410" cy="72" r="2.2" fill="#ff1cf7" filter="url(#glowP)" opacity="0.8">
+    <animateTransform attributeName="transform" type="translate" values="0,0;6,-14;0,0" dur="4.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+<!-- ======= RIGHT CARD: sereluna-ai-engine ======= -->
+<g>
+  <!-- 3D shadow layers -->
+  <rect x="472" y="62" width="414" height="162" rx="18" fill="#00d4ff" opacity="0.10"/>
+  <rect x="468" y="58" width="414" height="162" rx="18" fill="#00ff88" opacity="0.05"/>
+  <!-- Main card -->
+  <rect x="464" y="54" width="414" height="162" rx="18" fill="#031008" stroke="url(#pinBorderR)" stroke-width="1.8" filter="url(#glowSmP)"/>
+  <rect x="466" y="56" width="410" height="1.5" rx="0.75" fill="#ffffff" opacity="0.2"/>
+
+  <!-- Repo icon -->
+  <text x="488" y="92" font-size="24">🤖</text>
+
+  <!-- Repo name -->
+  <text x="522" y="86" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="16" font-weight="900" fill="#00d4ff" opacity="0.3" filter="url(#depth3dPR)">sereluna-ai-engine</text>
+  <text x="520" y="84" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="16" font-weight="900" fill="#00d4ff" filter="url(#glowSmP)">sereluna-ai-engine</text>
+
+  <!-- Description -->
+  <text x="476" y="112" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#80b090">AI engine powering the Sereluna mental health</text>
+  <text x="476" y="130" font-family="'Segoe UI',sans-serif" font-size="12.5" fill="#80b090">companion app (Bangkit 2024 Capstone).</text>
+
+  <!-- Tech tags -->
+  <rect x="476" y="144" width="52" height="18" rx="9" fill="#3776ab" opacity="0.18" stroke="#3776ab" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="502" y="157" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#6ab0e0" font-weight="700">Python</text>
+
+  <rect x="536" y="144" width="48" height="18" rx="9" fill="#00ff88" opacity="0.10" stroke="#00ff88" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="560" y="157" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#60d090">Flask</text>
+
+  <rect x="592" y="144" width="40" height="18" rx="9" fill="#00d4ff" opacity="0.10" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="612" y="157" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#60e0f0">AI/ML</text>
+
+  <!-- Stars / forks -->
+  <text x="476" y="198" font-family="'Segoe UI',sans-serif" font-size="11" fill="#406050">⭐ 0 &nbsp;&nbsp; 🍴 0 &nbsp;&nbsp; 🔖 Python</text>
+
+  <!-- Animated border -->
+  <rect x="464" y="54" width="414" height="162" rx="18" fill="none" stroke="#00d4ff" stroke-width="0.5" stroke-dasharray="20 10" opacity="0.35">
+    <animateTransform attributeName="transform" type="rotate" values="360 671 135;0 671 135" dur="14s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Floating particle -->
+  <circle cx="860" cy="72" r="2" fill="#00d4ff" filter="url(#glowP)" opacity="0.8">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-8,-16;0,0" dur="5.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.15;0.8" dur="5.2s" repeatCount="indefinite"/>
+  </circle>
+</g>
+</svg>
