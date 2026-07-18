@@ -1,0 +1,93 @@
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <filter id="neonGlowPink" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="4" result="b">
+      <animate attributeName="stdDeviation" values="3;7;3" dur="2.2s" repeatCount="indefinite"/>
+    </feGaussianBlur>
+    <feFlood flood-color="#ff2fd8" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="glow"/>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <filter id="neonGlowCyan" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="4" result="b">
+      <animate attributeName="stdDeviation" values="3;7;3" dur="2.6s" repeatCount="indefinite"/>
+    </feGaussianBlur>
+    <feFlood flood-color="#2fe0ff" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="glow"/>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <filter id="neonGlowPurple" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="4" result="b">
+      <animate attributeName="stdDeviation" values="3;7;3" dur="2.4s" repeatCount="indefinite"/>
+    </feGaussianBlur>
+    <feFlood flood-color="#b026ff" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="glow"/>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <filter id="neonGlowMint" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="4" result="b">
+      <animate attributeName="stdDeviation" values="3;7;3" dur="2.8s" repeatCount="indefinite"/>
+    </feGaussianBlur>
+    <feFlood flood-color="#39ff9d" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="glow"/>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+
+<rect x="0" y="0" width="900" height="280" fill="#08080f"/>
+
+<text x="450" y="34" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="20" font-weight="700" fill="#ffffff">🎮 interests.render()</text>
+
+<g>
+  <rect x="30" y="55" width="195" height="205" rx="16" fill="#0d0d18" stroke="#ff2fd8" stroke-width="2" filter="url(#neonGlowPink)"/>
+  <text x="127" y="95" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#ff6fe0">🏋️ GYM</text>
+  <text x="127" y="125" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Incline DB Press</text>
+  <text x="127" y="143" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Addict</text>
+  <text x="127" y="171" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Shoulder Press</text>
+  <text x="127" y="189" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Addict</text>
+  <text x="127" y="217" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Lat Pulldown</text>
+  <text x="127" y="235" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Addict</text>
+</g>
+
+<g>
+  <rect x="243" y="55" width="195" height="205" rx="16" fill="#0d0d18" stroke="#2fe0ff" stroke-width="2" filter="url(#neonGlowCyan)"/>
+  <text x="340" y="95" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#7fecff">🎮 GAMING</text>
+  <text x="340" y="130" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">VALORANT</text>
+  <text x="340" y="152" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">CS2</text>
+  <text x="340" y="174" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Overwatch 2</text>
+  <text x="340" y="196" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">EA Sports FC</text>
+</g>
+
+<g>
+  <rect x="456" y="55" width="195" height="205" rx="16" fill="#0d0d18" stroke="#b026ff" stroke-width="2" filter="url(#neonGlowPurple)"/>
+  <text x="553" y="95" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#d191ff">🎸 MUSIC</text>
+  <text x="553" y="128" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Rock / Pop Rock</text>
+  <text x="553" y="150" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">City Pop</text>
+  <text x="553" y="172" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Vox AC30 Twang</text>
+  <text x="553" y="194" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">0 Gain Tube Screamer</text>
+</g>
+
+<g>
+  <rect x="669" y="55" width="201" height="205" rx="16" fill="#0d0d18" stroke="#39ff9d" stroke-width="2" filter="url(#neonGlowMint)"/>
+  <text x="769" y="95" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#8dffc4">☕ LIFESTYLE</text>
+  <text x="769" y="128" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Coffee</text>
+  <text x="769" y="150" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Late Night Coding</text>
+  <text x="769" y="172" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#e8e8f5">Fixing Bugs at 2AM</text>
+</g>
+</svg>

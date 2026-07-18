@@ -1,0 +1,41 @@
+<svg width="900" height="330" viewBox="0 0 900 330" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0a0a14"/>
+    <stop offset="100%" stop-color="#14102a"/>
+  </linearGradient>
+  <filter id="blurBig2" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="40"/>
+  </filter>
+  <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#000000" flood-opacity="0.5"/>
+  </filter>
+  <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="8"/>
+  </filter>
+</defs>
+
+<rect x="0" y="0" width="900" height="330" fill="url(#bgGrad2)"/>
+
+<ellipse cx="120" cy="260" rx="170" ry="120" fill="#2fe0ff" opacity="0.28" filter="url(#blurBig2)"/>
+<ellipse cx="800" cy="60" rx="170" ry="120" fill="#ff2fd8" opacity="0.28" filter="url(#blurBig2)"/>
+
+<rect x="90" y="45" width="720" height="240" rx="24" fill="#ffffff" opacity="0.055" stroke="#ffffff" stroke-width="1" stroke-opacity="0.16" filter="url(#cardShadow)"/>
+<rect x="92" y="47" width="716" height="1" fill="#ffffff" opacity="0.28"/>
+
+<circle cx="810" cy="90" r="10" fill="#39ff9d" opacity="0.7" filter="url(#softGlow)">
+  <animateTransform attributeName="transform" type="translate" values="0,0; 0,-14; 0,0" dur="4s" repeatCount="indefinite"/>
+</circle>
+<circle cx="820" cy="240" r="7" fill="#2fe0ff" opacity="0.6" filter="url(#softGlow)">
+  <animateTransform attributeName="transform" type="translate" values="0,0; 0,12; 0,0" dur="5s" repeatCount="indefinite"/>
+</circle>
+
+<text x="450" y="100" text-anchor="middle" font-family="'Segoe UI', 'Trebuchet MS', sans-serif" font-size="24" font-weight="700" fill="#ffffff">✨ About Me</text>
+
+<text x="450" y="145" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="16" fill="#d6d3ec">
+  <tspan x="450" dy="0">Fullstack Developer yang fokus di Frontend Development, Dashboard Development,</tspan>
+  <tspan x="450" dy="28">dan Interactive UI/UX dengan sentuhan motion design.</tspan>
+  <tspan x="450" dy="46">Ngoding sambil ngopi, ngulik animasi sampai jam 2 pagi,</tspan>
+  <tspan x="450" dy="28">dan masih terus belajar hal baru tiap hari.</tspan>
+</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg width="900" height="480" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="titleBar98" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#000082"/>
+    <stop offset="100%" stop-color="#1084d0"/>
+  </linearGradient>
+</defs>
+
+<rect x="0" y="0" width="900" height="480" fill="#0a0a14"/>
+
+<g transform="translate(50,30)">
+  <rect x="0" y="0" width="800" height="420" fill="#c3c7cb"/>
+  <rect x="0" y="0" width="800" height="420" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <line x1="1" y1="1" x2="799" y2="1" stroke="#ffffff" stroke-width="2"/>
+  <line x1="1" y1="1" x2="1" y2="419" stroke="#ffffff" stroke-width="2"/>
+  <line x1="799" y1="1" x2="799" y2="419" stroke="#404040" stroke-width="2"/>
+  <line x1="1" y1="419" x2="799" y2="419" stroke="#404040" stroke-width="2"/>
+
+  <rect x="4" y="4" width="792" height="30" fill="url(#titleBar98)"/>
+  <text x="14" y="25" font-family="'Tahoma','Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">📁 C:\ADMIRAL\SYSTEM_PROPERTIES.exe</text>
+
+  <g transform="translate(730,9)">
+    <rect x="0" y="0" width="20" height="20" fill="#c3c7cb" stroke="#000" stroke-width="1"/>
+    <text x="10" y="15" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#000">_</text>
+    <rect x="24" y="0" width="20" height="20" fill="#c3c7cb" stroke="#000" stroke-width="1"/>
+    <text x="34" y="15" text-anchor="middle" font-family="monospace" font-size="12" font-weight="700" fill="#000">&#9633;</text>
+    <rect x="48" y="0" width="20" height="20" fill="#c3c7cb" stroke="#000" stroke-width="1"/>
+    <text x="58" y="15" text-anchor="middle" font-family="monospace" font-size="12" font-weight="700" fill="#000">X</text>
+  </g>
+
+  <rect x="4" y="34" width="792" height="22" fill="#c3c7cb" stroke="#808080" stroke-width="1"/>
+  <text x="14" y="49" font-family="'Tahoma',sans-serif" font-size="12" fill="#000000">File   Edit   View   Help</text>
+
+  <rect x="20" y="70" width="760" height="270" fill="#dfdfdf" stroke="#808080" stroke-width="1"/>
+  <text x="36" y="98" font-family="'Tahoma',sans-serif" font-size="14" font-weight="700" fill="#000000">🖥️ Installed Components — currently.using</text>
+  <line x1="36" y1="108" x2="764" y2="108" stroke="#a0a0a0" stroke-width="1"/>
+
+  <text x="60" y="140" font-family="'Tahoma',sans-serif" font-size="13" font-weight="700" fill="#000082">▸ Frontend</text>
+  <text x="60" y="162" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ React</text>
+  <text x="60" y="182" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ Tailwind CSS</text>
+  <text x="60" y="202" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ Framer Motion</text>
+  <text x="60" y="222" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ Vite</text>
+
+  <text x="320" y="140" font-family="'Tahoma',sans-serif" font-size="13" font-weight="700" fill="#000082">▸ Backend</text>
+  <text x="320" y="162" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ NestJS</text>
+  <text x="320" y="182" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ Firebase</text>
+  <text x="320" y="202" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ PostgreSQL</text>
+
+  <text x="580" y="140" font-family="'Tahoma',sans-serif" font-size="13" font-weight="700" fill="#000082">▸ Learning...</text>
+  <text x="580" y="162" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ PHP</text>
+  <text x="580" y="182" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ Machine Learning</text>
+  <text x="580" y="202" font-family="'Tahoma',sans-serif" font-size="12" fill="#000">▪ System Design</text>
+
+  <line x1="36" y1="250" x2="764" y2="250" stroke="#a0a0a0" stroke-width="1"/>
+
+  <rect x="36" y="270" width="728" height="24" fill="#ffffff" stroke="#808080" stroke-width="1"/>
+  <rect x="38" y="272" width="655" height="20" fill="#000082"/>
+  <text x="405" y="287" text-anchor="middle" font-family="'Tahoma',sans-serif" font-size="11" font-weight="700" fill="#ffffff">90% — STILL LEARNING. ALWAYS LEARNING.</text>
+
+  <rect x="0" y="392" width="800" height="28" fill="#c3c7cb" stroke="#808080" stroke-width="1"/>
+  <text x="14" y="410" font-family="'Tahoma',sans-serif" font-size="11" fill="#000">Ready</text>
+</g>
+</svg>

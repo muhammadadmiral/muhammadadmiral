@@ -1,0 +1,63 @@
+<svg width="900" height="300" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0a0a14"/>
+    <stop offset="50%" stop-color="#12081f"/>
+    <stop offset="100%" stop-color="#0a0a14"/>
+  </linearGradient>
+  <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ff2fd8"/>
+    <stop offset="50%" stop-color="#b026ff"/>
+    <stop offset="100%" stop-color="#2fe0ff"/>
+  </linearGradient>
+  <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ff2fd8"/>
+    <stop offset="33%" stop-color="#b026ff"/>
+    <stop offset="66%" stop-color="#2fe0ff"/>
+    <stop offset="100%" stop-color="#39ff9d"/>
+  </linearGradient>
+  <filter id="blurBig" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="35"/>
+  </filter>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="6" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <filter id="glassShadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="#000000" flood-opacity="0.55"/>
+  </filter>
+</defs>
+
+<rect x="0" y="0" width="900" height="300" fill="url(#bgGrad)"/>
+
+<ellipse cx="140" cy="80" rx="160" ry="120" fill="#ff2fd8" opacity="0.35" filter="url(#blurBig)">
+  <animate attributeName="cx" values="140;180;140" dur="7s" repeatCount="indefinite"/>
+</ellipse>
+<ellipse cx="760" cy="230" rx="180" ry="130" fill="#2fe0ff" opacity="0.3" filter="url(#blurBig)">
+  <animate attributeName="cy" values="230;190;230" dur="8s" repeatCount="indefinite"/>
+</ellipse>
+<ellipse cx="470" cy="260" rx="150" ry="90" fill="#b026ff" opacity="0.28" filter="url(#blurBig)">
+  <animate attributeName="cx" values="470;520;470" dur="9s" repeatCount="indefinite"/>
+</ellipse>
+
+<rect x="70" y="60" width="760" height="180" rx="26" fill="#ffffff" opacity="0.05" stroke="#ffffff" stroke-width="1" stroke-opacity="0.18" filter="url(#glassShadow)"/>
+<rect x="72" y="62" width="756" height="1" fill="#ffffff" opacity="0.3"/>
+
+<text x="450" y="150" text-anchor="middle" font-family="'Segoe UI', 'Trebuchet MS', sans-serif" font-size="46" font-weight="700" fill="url(#nameGrad)" filter="url(#glow)" opacity="0.85">
+  MUHAMMAD ADMIRAL
+  <animate attributeName="opacity" values="0.6;0.95;0.6" dur="3s" repeatCount="indefinite"/>
+</text>
+<text x="450" y="150" text-anchor="middle" font-family="'Segoe UI', 'Trebuchet MS', sans-serif" font-size="46" font-weight="700" fill="url(#nameGrad)">
+  MUHAMMAD ADMIRAL
+</text>
+
+<text x="450" y="190" text-anchor="middle" font-family="'Segoe UI', 'Trebuchet MS', sans-serif" font-size="14.5" fill="#d8d4f0" opacity="0.9" letter-spacing="0.8">
+  FULLSTACK DEVELOPER  •  INTERACTIVE UI ENGINEER  •  FRAMER MOTION ENJOYER
+</text>
+
+<rect x="330" y="205" width="240" height="3" rx="1.5" fill="url(#lineGrad)"/>
+</svg>
