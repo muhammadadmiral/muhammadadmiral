@@ -1,0 +1,71 @@
+# .github/workflows/update-profile-stats.yml
+#
+# Runs the SVG generator on schedule and on every push to master.
+# Requires secret: GH_PAT (Personal Access Token, scope: read:user, repo)
+#
+# Setup:
+#   1. Go to GitHub → Settings → Developer settings → Personal access tokens
+#   2. Generate a fine-grained token or classic PAT with:
+#      - read:user  (to fetch contribution data)
+#      - repo       (to include private repo contributions)
+#   3. Go to your repo → Settings → Secrets → Actions → New repository secret
+#      Name: GH_PAT  Value: <your token>
+
+name: 🎨 Update Profile Stats SVGs
+
+on:
+  # Run every day at 00:30 UTC (07:30 WIB)
+  schedule:
+    - cron: "30 0 * * *"
+
+  # Run on every push to master (so you see results immediately)
+  push:
+    branches:
+      - master
+
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed to commit updated SVGs back to repo
+
+jobs:
+  generate:
+    name: Generate SVG Cards
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout ─────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Use PAT so the commit can trigger workflows downstream
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
+      # ── 2. Setup Node.js ────────────────────────────────────────────────────
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      # ── 3. Install dependencies ─────────────────────────────────────────────
+      - name: Install dependencies
+        run: npm ci --prefer-offline
+
+      # ── 4. Run SVG generator ────────────────────────────────────────────────
+      - name: Generate profile SVGs
+        env:
+          # GH_PAT gives access to contribution data (private repos included)
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-profile-svgs.mjs
+
+      # ── 5. Commit if anything changed ────────────────────────────────────────
+      - name: Commit updated SVGs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: 🎨 auto-update profile SVG cards [skip ci]"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          file_pattern: "assets/*.svg"
+          # Only push if files actually changed
+          skip_dirty_check: false

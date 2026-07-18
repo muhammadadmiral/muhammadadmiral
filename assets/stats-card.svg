@@ -1,124 +1,116 @@
-<svg width="900" height="200" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="240" viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <linearGradient id="bgS" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#0a0214"/>
-    <stop offset="100%" stop-color="#080018"/>
+  <linearGradient id="valG" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#c084fc"/>
+    <stop offset="100%" stop-color="#67e8f9"/>
   </linearGradient>
-  <linearGradient id="statBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#ff1cf7"/>
-    <stop offset="50%" stop-color="#7040ff"/>
-    <stop offset="100%" stop-color="#00d4ff"/>
-    <animateTransform attributeName="gradientTransform" type="rotate" values="0 0.5 0.5;360 0.5 0.5" dur="6s" repeatCount="indefinite"/>
+  <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#c084fc" stop-opacity="0.8"/>
+    <stop offset="50%" stop-color="#67e8f9" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#f472b6" stop-opacity="0.8"/>
+    <animateTransform attributeName="gradientTransform" type="rotate" values="0 .5 .5;360 .5 .5" dur="8s" repeatCount="indefinite"/>
   </linearGradient>
-  <linearGradient id="numG" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#ff1cf7"/>
-    <stop offset="100%" stop-color="#00d4ff"/>
+  <linearGradient id="shimmer" x1="-100%" y1="0%" x2="200%" y2="0%">
+    <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    <animate attributeName="x1" values="-100%;200%;-100%" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="0%;400%;0%"       dur="5s" repeatCount="indefinite"/>
   </linearGradient>
-  <linearGradient id="orbitG" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#ff1cf7" stop-opacity="0"/>
-    <stop offset="50%" stop-color="#00d4ff"/>
-    <stop offset="100%" stop-color="#ff1cf7" stop-opacity="0"/>
-  </linearGradient>
-  <filter id="fogS" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="35"/>
+  <filter id="fog" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="48"/></filter>
+  <filter id="cardDepth" x="-8%" y="-8%" width="116%" height="120%">
+    <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#7c3aed" flood-opacity="0.22"/>
   </filter>
-  <filter id="glowS" x="-80%" y="-80%" width="260%" height="260%">
-    <feGaussianBlur stdDeviation="8" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="glowSmS" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="4" result="b"/>
+  <filter id="titleGlow" x="-20%" y="-50%" width="140%" height="200%">
+    <feGaussianBlur stdDeviation="6" result="b"/>
     <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <filter id="depth3dS" x="-20%" y="-20%" width="140%" height="140%">
-    <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#ff1cf7" flood-opacity="0.5"/>
+  <filter id="numDepth" x="-15%" y="-20%" width="130%" height="140%">
+    <feDropShadow dx="1" dy="3" stdDeviation="4" flood-color="#c084fc" flood-opacity="0.55"/>
   </filter>
+  <filter id="dotGlow" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+
+  <linearGradient id="arcG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#f472b6"/>
+    <stop offset="50%" stop-color="#c084fc"/>
+    <stop offset="100%" stop-color="#67e8f9"/>
+  </linearGradient>
 </defs>
-
-<rect width="900" height="200" fill="url(#bgS)"/>
-
-<!-- Ambient blobs -->
-<ellipse cx="80" cy="160" rx="140" ry="90" fill="#ff1cf7" opacity="0.14" filter="url(#fogS)">
-  <animate attributeName="cx" values="80;140;80" dur="8s" repeatCount="indefinite"/>
+<rect width="900" height="240" fill="#03001a"/>
+<ellipse cx="100" cy="190" rx="160" ry="100" fill="#7c3aed" opacity="0.17" filter="url(#fog)">
+  <animate attributeName="cx" values="100;155;100" dur="9s" repeatCount="indefinite"/>
 </ellipse>
-<ellipse cx="840" cy="50" rx="130" ry="80" fill="#00d4ff" opacity="0.12" filter="url(#fogS)">
-  <animate attributeName="cy" values="50;80;50" dur="7s" repeatCount="indefinite"/>
+<ellipse cx="820" cy="60" rx="140" ry="90" fill="#0891b2" opacity="0.13" filter="url(#fog)">
+  <animate attributeName="cy" values="60;90;60" dur="7s" repeatCount="indefinite"/>
 </ellipse>
+<rect x="56" y="20" width="788" height="198" rx="24" fill="#07031a" stroke="url(#cardBorder)" stroke-width="1.5" filter="url(#cardDepth)"/>
+<rect x="58" y="22" width="784" height="3" rx="1.5" fill="#ffffff" opacity="0.14"/>
+<rect x="56" y="20" width="788" height="198" rx="24" fill="url(#shimmer)"/>
 
-<!-- Shadow layers (3D) -->
-<rect x="18" y="18" width="864" height="170" rx="20" fill="#ff1cf7" opacity="0.08"/>
-<rect x="14" y="14" width="872" height="174" rx="21" fill="#00d4ff" opacity="0.04"/>
-<!-- Main card -->
-<rect x="10" y="10" width="880" height="178" rx="22" fill="#09050f" stroke="url(#statBorder)" stroke-width="1.5"/>
-<rect x="12" y="12" width="876" height="2" rx="1" fill="#ffffff" opacity="0.18"/>
-<rect x="12" y="12" width="2" height="174" rx="1" fill="#ffffff" opacity="0.08"/>
+<text x="450" y="58" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="16" font-weight="800" letter-spacing="3" fill="url(#valG)" filter="url(#titleGlow)">📊 GITHUB STATS — @muhammadadmiral</text>
 
-<!-- Avatar / GitHub icon area with orbit -->
-<g transform="translate(72,100)">
-  <!-- 3D orbit rings -->
-  <ellipse cx="0" cy="0" rx="38" ry="12" fill="none" stroke="url(#orbitG)" stroke-width="1.2" opacity="0.6">
-    <animateTransform attributeName="transform" type="rotate" values="0;360" dur="6s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="0" cy="0" rx="38" ry="12" fill="none" stroke="url(#orbitG)" stroke-width="0.8" opacity="0.4" transform="rotate(60)">
-    <animateTransform attributeName="transform" type="rotate" values="60;420" dur="9s" repeatCount="indefinite"/>
-  </ellipse>
-  <!-- GitHub octocat simplified icon circle -->
-  <circle cx="0" cy="0" r="26" fill="#1a0a2a" stroke="#ff1cf7" stroke-width="1.8" filter="url(#glowSmS)"/>
-  <text x="0" y="9" text-anchor="middle" font-size="26" fill="#ffffff">⬡</text>
-  <!-- Orbiting dot -->
-  <circle cx="38" cy="0" r="3" fill="#ff1cf7" filter="url(#glowSmS)">
-    <animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" dur="4s" repeatCount="indefinite"/>
+<line x1="196" y1="32" x2="196" y2="208" stroke="#c084fc" stroke-width="0.8" opacity="0.2"/>
+
+<!-- Avatar -->
+<circle cx="118" cy="125" r="44" fill="#0e0830" stroke="#c084fc" stroke-width="1.5" opacity="0.8"/>
+<text x="118" y="140" text-anchor="middle" font-size="40">⬡</text>
+<circle cx="162" cy="125" r="3.5" fill="#f472b6">
+  <animateTransform attributeName="transform" type="rotate" values="0 118 125;360 118 125" dur="5s" repeatCount="indefinite"/>
+</circle>
+<circle cx="74" cy="125" r="2.5" fill="#67e8f9">
+  <animateTransform attributeName="transform" type="rotate" values="0 118 125;-360 118 125" dur="7s" repeatCount="indefinite"/>
+</circle>
+<text x="118" y="190" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="11.5" font-weight="700" fill="#ddd6fe">muhammadadmiral</text>
+<text x="118" y="206" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#7c6fc0">Since Dec 11, 2023</text>
+
+<!-- Stats grid -->
+
+<g transform="translate(220,72)">
+  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="10" fill="#6b7280" letter-spacing="0.8">⭐ TOTAL STARS</text>
+  <text x="0" y="24" font-family="'Segoe UI',sans-serif" font-size="26" font-weight="900" fill="url(#valG)" filter="url(#numDepth)">0</text>
+</g>
+<g transform="translate(380,72)">
+  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="10" fill="#6b7280" letter-spacing="0.8">📝 COMMITS (yr)</text>
+  <text x="0" y="24" font-family="'Segoe UI',sans-serif" font-size="26" font-weight="900" fill="url(#valG)" filter="url(#numDepth)">792</text>
+</g>
+<g transform="translate(540,72)">
+  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="10" fill="#6b7280" letter-spacing="0.8">🔀 PULL REQUESTS</text>
+  <text x="0" y="24" font-family="'Segoe UI',sans-serif" font-size="26" font-weight="900" fill="url(#valG)" filter="url(#numDepth)">43</text>
+</g>
+<g transform="translate(700,72)">
+  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="10" fill="#6b7280" letter-spacing="0.8">🐛 ISSUES</text>
+  <text x="0" y="24" font-family="'Segoe UI',sans-serif" font-size="26" font-weight="900" fill="url(#valG)" filter="url(#numDepth)">0</text>
+</g>
+
+
+<g transform="translate(220,148)">
+  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="10" fill="#6b7280" letter-spacing="0.8">📦 PUBLIC REPOS</text>
+  <text x="0" y="24" font-family="'Segoe UI',sans-serif" font-size="26" font-weight="900" fill="url(#valG)" filter="url(#numDepth)">21</text>
+</g>
+<g transform="translate(380,148)">
+  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="10" fill="#6b7280" letter-spacing="0.8">👥 FOLLOWERS</text>
+  <text x="0" y="24" font-family="'Segoe UI',sans-serif" font-size="26" font-weight="900" fill="url(#valG)" filter="url(#numDepth)">14</text>
+</g>
+<g transform="translate(540,148)">
+  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="10" fill="#6b7280" letter-spacing="0.8">🔥 CONTRIBUTIONS</text>
+  <text x="0" y="24" font-family="'Segoe UI',sans-serif" font-size="26" font-weight="900" fill="url(#valG)" filter="url(#numDepth)">841</text>
+</g>
+
+<!-- Rank badge -->
+<g transform="translate(748,62)">
+  <circle cx="40" cy="40" r="40" fill="#0e0830" stroke="url(#arcG)" stroke-width="2.5"/>
+  <circle cx="40" cy="40" r="35" fill="none" stroke="url(#arcG)" stroke-width="3.5"
+          stroke-dasharray="154 66" stroke-linecap="round" transform="rotate(-90 40 40)" opacity="0.75">
+    <animate attributeName="stroke-dasharray" values="0 220;154 66;154 66" dur="2s" fill="freeze"/>
   </circle>
-  <circle cx="-38" cy="0" r="2.5" fill="#00d4ff" filter="url(#glowSmS)">
-    <animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" dur="6s" repeatCount="indefinite"/>
-  </circle>
+  <text x="40" y="34" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#9ca3af" letter-spacing="1">RANK</text>
+  <text x="40" y="58" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="24" font-weight="900" fill="#ffffff" filter="url(#numDepth)">B+</text>
 </g>
 
-<!-- Username -->
-<text x="136" y="46" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="18" font-weight="900" fill="#ffffff" filter="url(#glowSmS)">muhammadadmiral</text>
-<text x="136" y="66" font-family="'Segoe UI',sans-serif" font-size="12" fill="#9080cc" letter-spacing="1">GITHUB STATS CARD</text>
-
-<!-- Stats grid (4 stats) -->
-<!-- Stars -->
-<g transform="translate(136,90)">
-  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="11" fill="#888" letter-spacing="0.5">TOTAL STARS EARNED</text>
-  <text x="2" y="22" font-family="'Trebuchet MS',sans-serif" font-size="22" font-weight="900" fill="url(#numG)" filter="url(#depth3dS)">0</text>
-  <text x="0" y="0" font-size="11" fill="#ffcc00" opacity="0.8">⭐</text>
-</g>
-
-<!-- Commits -->
-<g transform="translate(290,90)">
-  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="11" fill="#888" letter-spacing="0.5">TOTAL COMMITS (2025)</text>
-  <text x="2" y="22" font-family="'Trebuchet MS',sans-serif" font-size="22" font-weight="900" fill="url(#numG)" filter="url(#depth3dS)">100+</text>
-</g>
-
-<!-- PRs -->
-<g transform="translate(460,90)">
-  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="11" fill="#888" letter-spacing="0.5">TOTAL PRs</text>
-  <text x="2" y="22" font-family="'Trebuchet MS',sans-serif" font-size="22" font-weight="900" fill="url(#numG)" filter="url(#depth3dS)">10+</text>
-</g>
-
-<!-- Repos -->
-<g transform="translate(590,90)">
-  <text x="0" y="0" font-family="'Segoe UI',sans-serif" font-size="11" fill="#888" letter-spacing="0.5">PUBLIC REPOS</text>
-  <text x="2" y="22" font-family="'Trebuchet MS',sans-serif" font-size="22" font-weight="900" fill="url(#numG)" filter="url(#depth3dS)">21</text>
-</g>
-
-<!-- Rank badge (3D) -->
-<g transform="translate(770,100)">
-  <!-- 3D shadow -->
-  <rect x="4" y="4" width="94" height="50" rx="12" fill="#ff1cf7" opacity="0.3"/>
-  <rect x="0" y="0" width="94" height="50" rx="12" fill="#1a0825" stroke="#ff1cf7" stroke-width="1.5" filter="url(#glowSmS)"/>
-  <text x="47" y="18" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#ff9ef9" letter-spacing="1">RANK</text>
-  <text x="47" y="40" text-anchor="middle" font-family="'Trebuchet MS',sans-serif" font-size="24" font-weight="900" fill="#ffffff" filter="url(#depth3dS)">B+</text>
-  <!-- Rotating ring -->
-  <circle cx="47" cy="25" r="28" fill="none" stroke="#ff1cf7" stroke-width="1" stroke-dasharray="12 4" opacity="0.5">
-    <animateTransform attributeName="transform" type="rotate" values="0 47 25;360 47 25" dur="8s" repeatCount="indefinite"/>
-  </circle>
-</g>
-
-<!-- Bottom divider with animated sweep -->
-<rect x="136" y="152" width="0" height="1.5" rx="0.75" fill="url(#statBorder)" opacity="0.6">
-  <animate attributeName="width" values="0;630;0" dur="5s" repeatCount="indefinite"/>
-</rect>
+<circle cx="86" cy="32" r="1.8" fill="#c084fc" opacity="0.8">
+  <animateTransform attributeName="transform" type="translate" values="0,0;5,-12;0,0" dur="4.4s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.8;0.1;0.8" dur="4.4s" repeatCount="indefinite"/>
+</circle>
 </svg>

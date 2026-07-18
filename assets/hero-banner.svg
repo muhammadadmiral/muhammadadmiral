@@ -1,171 +1,173 @@
 <svg width="900" height="320" viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#030308"/>
-    <stop offset="40%" stop-color="#0c0018"/>
-    <stop offset="100%" stop-color="#000510"/>
+  <!-- Backgrounds -->
+  <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#020010"/>
+    <stop offset="50%" stop-color="#0a0022"/>
+    <stop offset="100%" stop-color="#000818"/>
   </linearGradient>
-  <linearGradient id="nameG" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#ff1cf7"/>
-    <stop offset="35%" stop-color="#b06ef3"/>
-    <stop offset="70%" stop-color="#00d4ff"/>
-    <stop offset="100%" stop-color="#00ff88"/>
-    <animateTransform attributeName="gradientTransform" type="translate" values="-0.3 0;0.3 0;-0.3 0" dur="4s" repeatCount="indefinite"/>
+
+  <!-- Name gradient — chrome iridescent -->
+  <linearGradient id="nameG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#c084fc"/>
+    <stop offset="20%"  stop-color="#f0abfc"/>
+    <stop offset="40%"  stop-color="#67e8f9"/>
+    <stop offset="60%"  stop-color="#a78bfa"/>
+    <stop offset="80%"  stop-color="#fb7185"/>
+    <stop offset="100%" stop-color="#c084fc"/>
+    <animate attributeName="x1" values="0%;-100%;0%" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="100%;200%;100%" dur="6s" repeatCount="indefinite"/>
   </linearGradient>
+
+  <!-- Subtitle gradient -->
   <linearGradient id="subG" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.8"/>
-    <stop offset="100%" stop-color="#ff1cf7" stop-opacity="0.8"/>
-  </linearGradient>
-  <linearGradient id="divG" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#ff1cf7" stop-opacity="0"/>
-    <stop offset="20%" stop-color="#ff1cf7"/>
-    <stop offset="50%" stop-color="#00d4ff"/>
-    <stop offset="80%" stop-color="#00ff88"/>
-    <stop offset="100%" stop-color="#00ff88" stop-opacity="0"/>
+    <stop offset="0%"   stop-color="#67e8f9" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#c084fc" stop-opacity="0.9"/>
   </linearGradient>
 
-  <!-- 3D glow filters -->
-  <filter id="megaGlow" x="-100%" y="-100%" width="300%" height="300%">
-    <feGaussianBlur stdDeviation="12" result="b1"/>
-    <feGaussianBlur stdDeviation="6" result="b2" in="SourceGraphic"/>
-    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="glowPink" x="-80%" y="-80%" width="260%" height="260%">
-    <feGaussianBlur stdDeviation="18" result="blur"/>
-    <feFlood flood-color="#ff1cf7" result="c"/>
-    <feComposite in="c" in2="blur" operator="in" result="g"/>
-    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="glowCyan" x="-80%" y="-80%" width="260%" height="260%">
-    <feGaussianBlur stdDeviation="18" result="blur"/>
-    <feFlood flood-color="#00d4ff" result="c"/>
-    <feComposite in="c" in2="blur" operator="in" result="g"/>
-    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="glowMint" x="-80%" y="-80%" width="260%" height="260%">
-    <feGaussianBlur stdDeviation="14" result="blur"/>
-    <feFlood flood-color="#00ff88" result="c"/>
-    <feComposite in="c" in2="blur" operator="in" result="g"/>
-    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="depth3d" x="-20%" y="-20%" width="140%" height="140%">
-    <feDropShadow dx="4" dy="8" stdDeviation="6" flood-color="#ff1cf7" flood-opacity="0.5"/>
-    <feDropShadow dx="-2" dy="-4" stdDeviation="4" flood-color="#00d4ff" flood-opacity="0.3"/>
-  </filter>
-  <filter id="softFog" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="45"/>
+  <!-- Bar gradient -->
+  <linearGradient id="barG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#f0abfc"/>
+    <stop offset="50%"  stop-color="#67e8f9"/>
+    <stop offset="100%" stop-color="#a3e635"/>
+  </linearGradient>
+
+  <!-- Fog blob filter -->
+  <filter id="fog" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="50"/>
   </filter>
 
-  <!-- Grid pattern for 3D floor -->
-  <pattern id="grid3d" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="skewY(-10) scaleY(0.5)">
-    <line x1="40" y1="0" x2="40" y2="40" stroke="#ff1cf7" stroke-width="0.3" opacity="0.25"/>
-    <line x1="0" y1="40" x2="40" y2="40" stroke="#00d4ff" stroke-width="0.3" opacity="0.25"/>
+  <!-- Text glow — SEPARATE from card border -->
+  <filter id="nameGlow" x="-30%" y="-60%" width="160%" height="220%">
+    <feGaussianBlur stdDeviation="8" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <!-- Soft drop shadow for 3D depth -->
+  <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+    <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#7c3aed" flood-opacity="0.25"/>
+    <feDropShadow dx="0" dy="4"  stdDeviation="6"  flood-color="#000000" flood-opacity="0.6"/>
+  </filter>
+
+  <!-- Small crisp glow for accents -->
+  <filter id="crispGlow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <!-- Card border gradient (rotating) -->
+  <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%"   stop-color="#c084fc" stop-opacity="0.8"/>
+    <stop offset="33%"  stop-color="#67e8f9" stop-opacity="0.6"/>
+    <stop offset="66%"  stop-color="#f472b6" stop-opacity="0.8"/>
+    <stop offset="100%" stop-color="#c084fc" stop-opacity="0.8"/>
+  </linearGradient>
+
+  <!-- Perspective grid -->
+  <pattern id="perspGrid" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="skewY(-12) scaleY(0.5) translate(0,200)">
+    <line x1="60" y1="0"  x2="60"  y2="60" stroke="#c084fc" stroke-width="0.4" opacity="0.18"/>
+    <line x1="0"  y1="60" x2="60"  y2="60" stroke="#67e8f9" stroke-width="0.4" opacity="0.18"/>
   </pattern>
+
+  <!-- Shimmer mask -->
+  <linearGradient id="shimmer" x1="-100%" y1="0%" x2="200%" y2="0%">
+    <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    <animate attributeName="x1" values="-100%;200%;-100%" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="0%;400%;0%"       dur="4s" repeatCount="indefinite"/>
+  </linearGradient>
 </defs>
 
-<!-- Background -->
-<rect width="900" height="320" fill="url(#bgG)"/>
+<!-- BG -->
+<rect width="900" height="320" fill="url(#bg)"/>
 
-<!-- 3D perspective grid floor -->
-<rect x="0" y="200" width="900" height="120" fill="url(#grid3d)" opacity="0.4"/>
+<!-- Perspective grid floor -->
+<rect x="0" y="220" width="900" height="100" fill="url(#perspGrid)" opacity="0.7"/>
 
-<!-- Ambient blobs (3D depth layers) -->
-<ellipse cx="100" cy="100" rx="220" ry="160" fill="#ff1cf7" opacity="0.18" filter="url(#softFog)">
-  <animate attributeName="cx" values="100;160;100" dur="8s" repeatCount="indefinite"/>
-  <animate attributeName="cy" values="100;130;100" dur="6s" repeatCount="indefinite"/>
+<!-- Ambient orbs (no filter on text, isolated) -->
+<ellipse cx="140" cy="120" rx="200" ry="160" fill="#7c3aed" opacity="0.22" filter="url(#fog)">
+  <animate attributeName="cx" values="140;200;140" dur="9s"  repeatCount="indefinite"/>
+  <animate attributeName="cy" values="120;160;120" dur="7s"  repeatCount="indefinite"/>
 </ellipse>
-<ellipse cx="820" cy="200" rx="200" ry="150" fill="#00d4ff" opacity="0.15" filter="url(#softFog)">
-  <animate attributeName="cx" values="820;760;820" dur="9s" repeatCount="indefinite"/>
-  <animate attributeName="cy" values="200;160;200" dur="7s" repeatCount="indefinite"/>
+<ellipse cx="780" cy="200" rx="180" ry="140" fill="#0891b2" opacity="0.18" filter="url(#fog)">
+  <animate attributeName="cx" values="780;720;780" dur="10s" repeatCount="indefinite"/>
+  <animate attributeName="cy" values="200;160;200" dur="8s"  repeatCount="indefinite"/>
 </ellipse>
-<ellipse cx="460" cy="280" rx="180" ry="100" fill="#b06ef3" opacity="0.12" filter="url(#softFog)">
-  <animate attributeName="cx" values="460;520;460" dur="10s" repeatCount="indefinite"/>
+<ellipse cx="460" cy="290" rx="160" ry="90"  fill="#db2777" opacity="0.12" filter="url(#fog)">
+  <animate attributeName="cx" values="460;510;460" dur="11s" repeatCount="indefinite"/>
 </ellipse>
 
-<!-- 3D floating particles -->
-<circle cx="80" cy="60" r="2.5" fill="#ff1cf7" filter="url(#glowPink)" opacity="0.9">
-  <animateTransform attributeName="transform" type="translate" values="0,0;8,-18;0,0" dur="4.1s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values="0.9;0.4;0.9" dur="4.1s" repeatCount="indefinite"/>
+<!-- Floating particles -->
+<circle cx="80"  cy="60"  r="2.5" fill="#c084fc" filter="url(#crispGlow)" opacity="0.9">
+  <animateTransform attributeName="transform" type="translate" values="0,0;8,-20;0,0"  dur="4.1s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4.1s" repeatCount="indefinite"/>
 </circle>
-<circle cx="160" cy="230" r="2" fill="#00d4ff" filter="url(#glowCyan)" opacity="0.8">
-  <animateTransform attributeName="transform" type="translate" values="0,0;-12,-22;0,0" dur="5.3s" repeatCount="indefinite"/>
+<circle cx="820" cy="80"  r="2"   fill="#67e8f9" filter="url(#crispGlow)" opacity="0.85">
+  <animateTransform attributeName="transform" type="translate" values="0,0;-6,-18;0,0" dur="5.3s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.85;0.2;0.85" dur="5.3s" repeatCount="indefinite"/>
 </circle>
-<circle cx="820" cy="80" r="3" fill="#00ff88" filter="url(#glowMint)" opacity="0.85">
-  <animateTransform attributeName="transform" type="translate" values="0,0;-6,-20;0,0" dur="3.7s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values="0.85;0.3;0.85" dur="3.7s" repeatCount="indefinite"/>
+<circle cx="190" cy="240" r="1.8" fill="#f472b6" filter="url(#crispGlow)" opacity="0.75">
+  <animateTransform attributeName="transform" type="translate" values="0,0;-4,-14;0,0" dur="6.2s" repeatCount="indefinite"/>
 </circle>
-<circle cx="740" cy="260" r="2" fill="#ff1cf7" filter="url(#glowPink)" opacity="0.7">
-  <animateTransform attributeName="transform" type="translate" values="0,0;10,-16;0,0" dur="6.2s" repeatCount="indefinite"/>
+<circle cx="700" cy="260" r="2.2" fill="#a3e635" filter="url(#crispGlow)" opacity="0.7">
+  <animateTransform attributeName="transform" type="translate" values="0,0;6,-16;0,0"  dur="3.8s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.8s" repeatCount="indefinite"/>
 </circle>
-<circle cx="350" cy="40" r="1.8" fill="#b06ef3" opacity="0.9">
-  <animateTransform attributeName="transform" type="translate" values="0,0;4,-12;0,0" dur="4.8s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values="0.9;0.2;0.9" dur="4.8s" repeatCount="indefinite"/>
-</circle>
-<circle cx="580" cy="290" r="2.2" fill="#00d4ff" filter="url(#glowCyan)" opacity="0.8">
-  <animateTransform attributeName="transform" type="translate" values="0,0;-8,-14;0,0" dur="5.9s" repeatCount="indefinite"/>
-</circle>
-<circle cx="220" cy="150" r="1.5" fill="#00ff88" filter="url(#glowMint)" opacity="0.6">
-  <animateTransform attributeName="transform" type="translate" values="0,0;6,-10;0,0" dur="7.1s" repeatCount="indefinite"/>
-</circle>
-<circle cx="670" cy="120" r="2.8" fill="#ff1cf7" filter="url(#glowPink)" opacity="0.75">
-  <animateTransform attributeName="transform" type="translate" values="0,0;-10,-24;0,0" dur="4.4s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values="0.75;0.25;0.75" dur="4.4s" repeatCount="indefinite"/>
+<circle cx="440" cy="40"  r="1.5" fill="#67e8f9" opacity="0.8">
+  <animateTransform attributeName="transform" type="translate" values="0,0;4,-12;0,0"  dur="5.7s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.8;0.1;0.8" dur="5.7s" repeatCount="indefinite"/>
 </circle>
 
-<!-- 3D diamond accent shapes -->
-<polygon points="60,140 75,125 90,140 75,155" fill="none" stroke="#ff1cf7" stroke-width="1.2" opacity="0.6" filter="url(#glowPink)">
-  <animateTransform attributeName="transform" type="rotate" values="0 75 140;360 75 140" dur="8s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
-</polygon>
-<polygon points="840,160 852,148 864,160 852,172" fill="none" stroke="#00d4ff" stroke-width="1.2" opacity="0.6" filter="url(#glowCyan)">
-  <animateTransform attributeName="transform" type="rotate" values="0 852 160;-360 852 160" dur="6s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values="0.6;0.15;0.6" dur="4s" repeatCount="indefinite"/>
-</polygon>
+<!-- === MAIN CARD === -->
+<!-- Shadow -->
+<rect x="60" y="60" width="780" height="210" rx="28" fill="#7c3aed" opacity="0.15" filter="url(#cardShadow)"/>
+<!-- Card body -->
+<rect x="56" y="56" width="788" height="210" rx="28"
+      fill="#08041a" stroke="url(#cardBorder)" stroke-width="1.5"/>
+<!-- Top glass highlight -->
+<rect x="58" y="58" width="784" height="3"   rx="1.5" fill="#ffffff" opacity="0.15"/>
+<!-- Shimmer sweep -->
+<rect x="56" y="56" width="788" height="210" rx="28" fill="url(#shimmer)"/>
 
-<!-- Glassmorphism card with 3D shadow layers -->
-<!-- Shadow layer 1 (deepest) -->
-<rect x="80" y="74" width="740" height="190" rx="22" fill="#ff1cf7" opacity="0.08"/>
-<!-- Shadow layer 2 -->
-<rect x="76" y="72" width="748" height="194" rx="23" fill="#00d4ff" opacity="0.05"/>
-<!-- Main card -->
-<rect x="72" y="68" width="756" height="196" rx="24" fill="#ffffff" opacity="0.04" stroke="url(#divG)" stroke-width="1.2"/>
-<!-- Top shine -->
-<rect x="74" y="70" width="752" height="2" rx="1" fill="#ffffff" opacity="0.25"/>
-<!-- Left shine -->
-<rect x="74" y="70" width="2" height="192" rx="1" fill="#ffffff" opacity="0.12"/>
-
-<!-- 3D text — shadow offset layer -->
-<text x="454" y="162" text-anchor="middle" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="52" font-weight="900" fill="#000000" opacity="0.5">
+<!-- === NAME TEXT — shadow layer first, glow on top === -->
+<!-- Shadow -->
+<text x="452" y="162"
+      text-anchor="middle"
+      font-family="'Segoe UI','Trebuchet MS',sans-serif"
+      font-size="50" font-weight="900" letter-spacing="1"
+      fill="#1a0040" opacity="0.6">MUHAMMAD ADMIRAL</text>
+<!-- Glow layer -->
+<text x="450" y="160"
+      text-anchor="middle"
+      font-family="'Segoe UI','Trebuchet MS',sans-serif"
+      font-size="50" font-weight="900" letter-spacing="1"
+      fill="url(#nameG)" filter="url(#nameGlow)">
   MUHAMMAD ADMIRAL
-</text>
-<!-- Main glowing name -->
-<text x="450" y="158" text-anchor="middle" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="52" font-weight="900" fill="url(#nameG)" filter="url(#depth3d)">
-  MUHAMMAD ADMIRAL
-  <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite"/>
-</text>
-<!-- Reflection text (upside down, faded) -->
-<text x="450" y="163" text-anchor="middle" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="52" font-weight="900" fill="url(#nameG)" opacity="0.12" transform="scale(1,-1) translate(0,-326)">
-  MUHAMMAD ADMIRAL
+  <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
 </text>
 
-<!-- Subtitle with animated color sweep -->
-<text x="450" y="196" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="14" fill="url(#subG)" letter-spacing="2.5" opacity="0.9">
-  FULLSTACK DEV  ·  INTERACTIVE UI ENG  ·  FRAMER MOTION ENJOYER
-  <animate attributeName="opacity" values="0.9;0.6;0.9" dur="4s" repeatCount="indefinite"/>
+<!-- Subtitle -->
+<text x="450" y="197"
+      text-anchor="middle"
+      font-family="'Segoe UI',sans-serif"
+      font-size="13.5" letter-spacing="3"
+      fill="url(#subG)">FULLSTACK DEVELOPER  ·  INTERACTIVE UI ENGINEER  ·  FRAMER MOTION ENJOYER
+  <animate attributeName="opacity" values="1;0.7;1" dur="5s" repeatCount="indefinite"/>
 </text>
 
-<!-- Bottom divider line (animated fill) -->
-<rect x="280" y="218" width="0" height="2.5" rx="1.2" fill="url(#divG)">
-  <animate attributeName="width" values="0;340;0" dur="5s" repeatCount="indefinite"/>
-  <animate attributeName="x" values="450;280;450" dur="5s" repeatCount="indefinite"/>
+<!-- Animated bar below subtitle -->
+<rect x="450" y="214" width="0" height="2.5" rx="1.25" fill="url(#barG)">
+  <animate attributeName="width" values="0;300;0"   dur="5s" repeatCount="indefinite"/>
+  <animate attributeName="x"     values="450;300;450" dur="5s" repeatCount="indefinite"/>
 </rect>
 
-<!-- Corner brackets (3D accent) -->
-<g fill="none" stroke="#ff1cf7" stroke-width="1.8" opacity="0.7" filter="url(#glowPink)">
-  <line x1="85" y1="80" x2="85" y2="100"/><line x1="85" y1="80" x2="105" y2="80"/>
-  <line x1="815" y1="80" x2="815" y2="100"/><line x1="795" y1="80" x2="815" y2="80"/>
-  <line x1="85" y1="254" x2="85" y2="234"/><line x1="85" y1="254" x2="105" y2="254"/>
-  <line x1="815" y1="254" x2="815" y2="234"/><line x1="795" y1="254" x2="815" y2="254"/>
-  <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3.5s" repeatCount="indefinite"/>
+<!-- Corner brackets — solid lines only, no dashes, no rotation -->
+<g fill="none" stroke="#c084fc" stroke-width="2" opacity="0.5" filter="url(#crispGlow)">
+  <path d="M70 70 L70 90 M70 70 L90 70"/>
+  <path d="M830 70 L830 90 M830 70 L810 70"/>
+  <path d="M70 260 L70 240 M70 260 L90 260"/>
+  <path d="M830 260 L830 240 M830 260 L810 260"/>
+  <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite"/>
 </g>
 </svg>
