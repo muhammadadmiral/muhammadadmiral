@@ -30,45 +30,59 @@
 
 ### <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f468-200d-1f4bb.png" width="28" align="center" /> About Me
 
-- <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f52d.png" width="20" align="center" /> I’m currently working on some exciting projects!
-- <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f331.png" width="20" align="center" /> I’m currently learning **Backend Development** <img src="https://img.shields.io/badge/Backend-000000?style=flat&logo=linux&logoColor=white" height="30" align="center" /> &nbsp;|&nbsp; **Go** <img src="https://skillicons.dev/icons?i=go" height="30" align="center" /> &nbsp;|&nbsp; **C & C++** <img src="https://skillicons.dev/icons?i=c,cpp" height="30" align="center" />
-- <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f46f.png" width="20" align="center" /> I’m looking to collaborate on open-source projects.
-- <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png" width="20" align="center" /> Ask me about **Tech, Coding, and Web Development!**
-- <img src="https://github.githubassets.com/images/icons/emoji/unicode/26a1.png" width="20" align="center" /> Fun fact: I run on code and caffeine <img src="https://github.githubassets.com/images/icons/emoji/unicode/2615.png" width="20" align="center" />
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" width="20" align="center" /> I’m currently building and exploring software projects, from web applications to backend systems.
+
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/2721/2721267.png" width="20" align="center" /> I’m currently learning *Backend Development* <img src="https://img.shields.io/badge/Backend-000000?style=flat&logo=linux&logoColor=white" height="30" align="center" /> &nbsp;|&nbsp; *Go* <img src="https://skillicons.dev/icons?i=go" height="30" align="center" /> &nbsp;|&nbsp; *C & C++* <img src="https://skillicons.dev/icons?i=c,cpp" height="30" align="center" />
+
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" width="20" align="center" /> I’m looking to collaborate on open-source projects and interesting ideas.
+
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/1827/1827370.png" width="20" align="center" /> Ask me about *software development, system design, music, and technology.*
+
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" width="20" align="center" /> Fun fact: *I love figuring out how things work — from software architecture to the hardware underneath.*
 
 ---
+
+### <img src="https://cdn-icons-png.flaticon.com/512/3655/3655573.png" width="28" align="center" /> Beyond Code
+
+Outside of coding, I enjoy:
+
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/3659/3659594.png" width="18" align="center" /> Playing guitar and creating music
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/2935/2935418.png" width="18" align="center" /> Exploring coffee and cafés
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/686/686589.png" width="18" align="center" /> Playing games
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/2964/2964514.png" width="18" align="center" /> Working out and running
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/2991/2991606.png" width="18" align="center" /> Watching movies and series
 
 ### <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f6e0.png" width="28" align="center" /> Tech Stack & Tools
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=kotlin,python,html,css,js,ts,react,nextjs,nodejs,tailwind,docker,git,github,postgres,supabase,nestjs,fastapi&perline=10" alt="My Skills" />
+    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vercel,vite,nodejs,tailwind,docker,git,github,postgres,supabase,nestjs,fastapi,kotlin,ktor&perline=10" alt="My Skills" />
   </a>
 </p>
 
 ---
 
 <div align="center">
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="48%" />
-  <img src="https://github-stats-extended.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" width="48%" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&hide_border=true&bg_color=0a0118&title_color=37e6ff&text_color=ffffff&icon_color=ff2e9e" alt="Top Languages" width="48%" />
+  <img src="https://github-stats-extended.vercel.app/api?username=muhammadadmiral&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0a0118&title_color=37e6ff&text_color=ffffff&icon_color=ff2e9e" alt="GitHub Stats" width="48%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com/?user=muhammadadmiral&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=muhammadadmiral&hide_border=true&background=0a0118&stroke=ffffff&ring=37e6ff&fire=ff2e9e&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=37e6ff&sideLabels=37e6ff&dates=ffffff" alt="GitHub Streak" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammadadmiral&theme=tokyo-night&hide_border=true" alt="Activity Graph" width="800" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammadadmiral&hide_border=true&bg_color=0a0118&title_color=37e6ff&color=ffffff&line=ff2e9e&point=ffffff" alt="Activity Graph" width="800" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://ghchart.rshah.org/38bdf8/muhammadadmiral" alt="Contribution Graph" width="800" />
+  <img src="https://ghchart.rshah.org/37e6ff/muhammadadmiral" alt="Contribution Graph" width="800" />
 </div>
 
 ---
