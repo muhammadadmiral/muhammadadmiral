@@ -9,14 +9,14 @@
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/muhammadadmiral" target="_blank">
+  <a href="https://www.linkedin.com/in/muhammadadmiral/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="mailto:your.email@example.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <a href="https://instagram.com/admiraalll" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
   </a>
-  <a href="https://github.com/muhammadadmiral" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <a href="https://tiktok.com/@larmelar" target="_blank">
+    <img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok" />
   </a>
 </p>
 
@@ -25,7 +25,7 @@
 ### 👨‍💻 About Me
 
 - 🔭 I’m currently working on some exciting projects!
-- 🌱 I’m currently learning and exploring **Go**, **System Architecture**, **C**, **C++** and more!
+- 🌱 I’m currently learning **Backend Development** <img src="https://img.shields.io/badge/Backend-000000?style=flat&logo=linux&logoColor=white" height="20" align="center" /> &nbsp;|&nbsp; <img src="https://skillicons.dev/icons?i=go,c,cpp" height="22" align="center" />
 - 👯 I’m looking to collaborate on open-source projects.
 - 💬 Ask me about **Tech, Coding, and Web Development!**
 - ⚡ Fun fact: I run on code and caffeine ☕
@@ -36,7 +36,7 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=kotlin,python,html,css,js,ts,react,nextjs,nodejs,tailwind,docker,git,github,postgres,go,c,cpp,kubernetes,linux&perline=10" alt="My Skills" />
+    <img src="https://skillicons.dev/icons?i=kotlin,python,html,css,js,ts,react,nextjs,nodejs,tailwind,docker,git,github,postgres,supabase,nestjs,fastapi&perline=10" alt="My Skills" />
   </a>
 </p>
 
