@@ -1,4 +1,4 @@
-# 🚀 Welcome to My Universe
+# <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png" width="32" align="center" /> Welcome to My Universe
 
 <div align="center">
   <img src="./assets/header.svg" alt="Animated Header" width="800" />
@@ -18,21 +18,27 @@
   <a href="https://tiktok.com/@larmelar" target="_blank">
     <img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok" />
   </a>
+  <a href="https://discordapp.com/users/larmelar" target="_blank">
+    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
+  </a>
+</p>
+<p align="center">
+  <i>You can contact me on the contacts above!</i>
 </p>
 
 ---
 
-### 👨‍💻 About Me
+### <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f468-200d-1f4bb.png" width="28" align="center" /> About Me
 
-- 🔭 I’m currently working on some exciting projects!
-- 🌱 I’m currently learning **Backend Development** <img src="https://img.shields.io/badge/Backend-000000?style=flat&logo=linux&logoColor=white" height="30" align="center" /> &nbsp;|&nbsp; **Go** <img src="https://skillicons.dev/icons?i=go" height="30" align="center" /> &nbsp;|&nbsp; **C & C++** <img src="https://skillicons.dev/icons?i=c,cpp" height="30" align="center" />
-- 👯 I’m looking to collaborate on open-source projects.
-- 💬 Ask me about **Tech, Coding, and Web Development!**
-- ⚡ Fun fact: I run on code and caffeine ☕
+- <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f52d.png" width="20" align="center" /> I’m currently working on some exciting projects!
+- <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f331.png" width="20" align="center" /> I’m currently learning **Backend Development** <img src="https://img.shields.io/badge/Backend-000000?style=flat&logo=linux&logoColor=white" height="30" align="center" /> &nbsp;|&nbsp; **Go** <img src="https://skillicons.dev/icons?i=go" height="30" align="center" /> &nbsp;|&nbsp; **C & C++** <img src="https://skillicons.dev/icons?i=c,cpp" height="30" align="center" />
+- <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f46f.png" width="20" align="center" /> I’m looking to collaborate on open-source projects.
+- <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png" width="20" align="center" /> Ask me about **Tech, Coding, and Web Development!**
+- <img src="https://github.githubassets.com/images/icons/emoji/unicode/26a1.png" width="20" align="center" /> Fun fact: I run on code and caffeine <img src="https://github.githubassets.com/images/icons/emoji/unicode/2615.png" width="20" align="center" />
 
 ---
 
-### 🛠️ Tech Stack & Tools
+### <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f6e0.png" width="28" align="center" /> Tech Stack & Tools
 
 <p align="center">
   <a href="https://skillicons.dev">
