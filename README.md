@@ -76,13 +76,13 @@ Outside of coding, I enjoy:
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammadadmiral&hide_border=true&bg_color=0a0118&title_color=37e6ff&color=ffffff&line=ff2e9e&point=ffffff" alt="Activity Graph" width="800" />
+  <img src="https://raw.githubusercontent.com/muhammadadmiral/muhammadadmiral/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake Animation" width="800" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://ghchart.rshah.org/37e6ff/muhammadadmiral" alt="Contribution Graph" width="800" />
+  <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D Contribution Graph" width="800" />
 </div>
 
 ---
