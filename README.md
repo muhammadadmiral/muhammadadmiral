@@ -50,8 +50,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=muhammadadmiral&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="48%" />
-  <img src="https://github-profile-trophy.vercel.app/?username=muhammadadmiral&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=15" alt="Trophies" width="48%" />
+  <img src="https://streak-stats.demolab.com/?user=muhammadadmiral&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </div>
 
 <br/>
