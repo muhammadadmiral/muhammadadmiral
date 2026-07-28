@@ -25,7 +25,7 @@
 ### 👨‍💻 About Me
 
 - 🔭 I’m currently working on some exciting projects!
-- 🌱 I’m currently learning **Backend Development** <img src="https://img.shields.io/badge/Backend-000000?style=flat&logo=linux&logoColor=white" height="20" align="center" /> &nbsp;|&nbsp; <img src="https://skillicons.dev/icons?i=go,c,cpp" height="22" align="center" />
+- 🌱 I’m currently learning **Backend Development** <img src="https://img.shields.io/badge/Backend-000000?style=flat&logo=linux&logoColor=white" height="30" align="center" /> &nbsp;|&nbsp; **Go** <img src="https://skillicons.dev/icons?i=go" height="30" align="center" /> &nbsp;|&nbsp; **C & C++** <img src="https://skillicons.dev/icons?i=c,cpp" height="30" align="center" />
 - 👯 I’m looking to collaborate on open-source projects.
 - 💬 Ask me about **Tech, Coding, and Web Development!**
 - ⚡ Fun fact: I run on code and caffeine ☕
