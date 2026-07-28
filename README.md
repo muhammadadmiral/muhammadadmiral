@@ -1,7 +1,9 @@
 # Hi there, I'm Muhammad Admiral 👋
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Welcome%20to%20My%20Profile!&fontSize=50" />
+  <a href="https://github.com/muhammadadmiral">
+    <img src="https://readme-typing-svg.demolab.com/?lines=Welcome+to+My+Profile!;I'm+Muhammad+Admiral+👋;A+Passionate+Software+Engineer&center=true&width=500&height=50&color=38bdf8&vCenter=true&size=25" alt="Typing SVG" />
+  </a>
 </div>
 
 <p align="center">
@@ -31,7 +33,7 @@
 
 <div align="center">
   <a href="https://github.com/muhammadadmiral">
-    <img src="https://github-readme-stats.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" width="48%" />
+    <img src="https://github-stats-extended.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" width="48%" />
   </a>
   <a href="https://github.com/muhammadadmiral">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=muhammadadmiral&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="48%" />
@@ -40,7 +42,7 @@
 <br/>
 <div align="center">
   <a href="https://github.com/muhammadadmiral">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="48%" />
+    <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="48%" />
   </a>
 </div>
 
