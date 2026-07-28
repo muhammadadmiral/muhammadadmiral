@@ -1,9 +1,7 @@
 # 🚀 Welcome to My Universe
 
 <div align="center">
-  <a href="https://github.com/muhammadadmiral">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&weight=600&size=30&pause=1000&color=38bdf8&center=true&vCenter=true&width=800&height=50&lines=Hi+there,+I'm+Muhammad+Admiral!+%F0%9F%91%8B;A+Passionate+Software+Engineer;Welcome+to+my+GitHub+Profile!" alt="Typing SVG" />
-  </a>
+  <img src="./assets/header.svg" alt="Animated Header" width="800" />
 </div>
 
 <p align="center">
@@ -32,20 +30,19 @@
 - 💬 Ask me about **Tech, Coding, and Web Development!**
 - ⚡ Fun fact: I run on code and caffeine ☕
 
+---
+
 ### 🛠️ Tech Stack & Tools
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=kotlin,python,html,css,js,ts,react,nextjs,nodejs,tailwind,docker,git,github,postgres&perline=10" />
+    <img src="https://skillicons.dev/icons?i=kotlin,python,html,css,js,ts,react,nextjs,nodejs,tailwind,docker,git,github,postgres,go,c,cpp,kubernetes,linux&perline=10" alt="My Skills" />
   </a>
 </p>
 
 ---
 
-### 📊 GitHub Metrics & Analytics
-
-> 💡 **PENTING UNTUK PREVIEW LOKAL (VSCODE):**  
-> Kalau beberapa gambar (*Streak, Trophies, dll*) nggak bisa di-load di preview VSCode kamu atau terlihat rusak, **itu wajar banget!** Itu karena ISP/Provider internet lokal di Indonesia sering memblokir API stats. **TAPI tenang aja**, cukup `git push` file ini ke GitHub, maka **Server Proxy Gambar GitHub (Camo)** yang akan nge-load semuanya secara otomatis dan profil kamu di website GitHub akan 100% jalan dengan sempurna! 🚀
+### 📊 GitHub Analytics & Deep Stats
 
 <div align="center">
   <!-- Detailed GitHub Metrics by Lecoq -->
@@ -55,26 +52,26 @@
 <br/>
 
 <div align="center">
+  <!-- Top Languages (Stable Instance) -->
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="48%" />
+  <!-- Basic Stats (Stable Instance) -->
   <img src="https://github-stats-extended.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=muhammadadmiral&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="48%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <!-- Contribution Chart -->
-  <h3>🔥 My Contribution Graph</h3>
-  <img src="https://ghchart.rshah.org/38bdf8/muhammadadmiral" alt="Contribution Graph" width="800" />
+  <!-- Interactive Activity Graph -->
+  <h3>📈 Dynamic Activity Graph</h3>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammadadmiral&theme=tokyo-night&hide_border=true" alt="Activity Graph" width="800" />
 </div>
 
----
-
-### 🏆 GitHub Trophies
+<br/>
 
 <div align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=muhammadadmiral&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=15" alt="Trophies" />
-  </a>
+  <!-- Heatmap Contribution Chart -->
+  <h3>🔥 Year Contribution Heatmap</h3>
+  <img src="https://ghchart.rshah.org/38bdf8/muhammadadmiral" alt="Contribution Graph" width="800" />
 </div>
 
 ---
