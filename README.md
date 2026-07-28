@@ -36,9 +36,9 @@
 
 •⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" width="20" align="center" /> I’m looking to collaborate on open-source projects and interesting ideas.
 
-•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/1827/1827370.png" width="20" align="center" /> Ask me about *software development, system design, music, and technology.*
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/1827/1827370.png" width="20" align="center" /> You can ask me about *anything*
 
-•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" width="20" align="center" /> Fun fact: *I love figuring out how things work — from software architecture to the hardware underneath.*
+•⁠  ⁠<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" width="20" align="center" />*I love figuring out how things work — such as software architecture to the hardware underneath.*
 
 ---
 
