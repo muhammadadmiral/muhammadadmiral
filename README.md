@@ -15,17 +15,16 @@
 ### 👨‍💻 About Me
 
 - 🔭 I’m currently working on some exciting projects!
-- 🌱 I’m currently learning and exploring **Go**, **System Architecture**, and more!
+- 🌱 I’m currently learning and exploring **Go**, **System Architecture**, **C**, **C++** and more!
 - 👯 I’m looking to collaborate on open-source projects.
 - 💬 Ask me about **Tech, Coding, and Web Development!**
-- 📫 How to reach me: **your.email@example.com** *(update this!)*
 - ⚡ Fun fact: I run on code and caffeine ☕
 
 ### 🛠️ Tech Stack & Tools
 
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=kotlin,python,ts,js,react,nextjs,nodejs,tailwind,docker,git,github,postgres&perline=10" />
+    <img src="https://skillicons.dev/icons?i=kotlin,python,html,css,js,ts,react,nextjs,nodejs,tailwind,docker,git,github,postgres&perline=10" />
   </a>
 </p>
 
