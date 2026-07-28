@@ -42,35 +42,27 @@
 
 ---
 
-### 📊 GitHub Analytics & Deep Stats
-
 <div align="center">
-  <!-- Detailed GitHub Metrics by Lecoq -->
-  <img src="https://metrics.lecoq.io/muhammadadmiral?template=classic&config.timezone=Asia%2FJakarta" alt="GitHub Metrics" width="800" />
-</div>
-
-<br/>
-
-<div align="center">
-  <!-- Top Languages (Stable Instance) -->
   <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="48%" />
-  <!-- Basic Stats (Stable Instance) -->
   <img src="https://github-stats-extended.vercel.app/api?username=muhammadadmiral&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" width="48%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <!-- Interactive Activity Graph -->
-  <h3>📈 Dynamic Activity Graph</h3>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=muhammadadmiral&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="48%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=muhammadadmiral&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=15" alt="Trophies" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammadadmiral&theme=tokyo-night&hide_border=true" alt="Activity Graph" width="800" />
 </div>
 
 <br/>
 
 <div align="center">
-  <!-- Heatmap Contribution Chart -->
-  <h3>🔥 Year Contribution Heatmap</h3>
   <img src="https://ghchart.rshah.org/38bdf8/muhammadadmiral" alt="Contribution Graph" width="800" />
 </div>
 
