@@ -1,0 +1,66 @@
+name: Profile Metrics
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # refresh daily at 00:00 UTC
+  workflow_dispatch:        # lets you trigger it manually from the Actions tab
+  push:
+    branches: [main]
+
+jobs:
+  profile-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # 1) Overview card — replaces the old "GitHub Stats" vercel widget
+      - name: Overview
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: assets/metrics-overview.svg
+          base: header, activity, community, repositories
+          config_timezone: Asia/Jakarta
+          extras_css: |
+            .card { background-color: #0a0118 !important; }
+            h2, h3, .large { color: #37e6ff !important; }
+            a, .icon { color: #ff2e9e !important; fill: #ff2e9e !important; }
+
+      # 2) Top languages — replaces the old "Top Languages" vercel widget
+      - name: Languages
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: assets/metrics-languages.svg
+          base: ""
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          plugin_languages_details: percentage
+          plugin_languages_colors: 0:37e6ff, 1:ff2e9e, 2:ffffff, 3:37e6ff, 4:ff2e9e
+          extras_css: |
+            .card { background-color: #0a0118 !important; }
+
+      # 3) Real GitHub achievements — replaces the streak / contribution graph
+      - name: Achievements
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: assets/metrics-achievements.svg
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          extras_css: |
+            .card { background-color: #0a0118 !important; }
+
+      # 4) Notable contributions — real PRs/issues/commits made in other people's repos
+      - name: Notable Contributions
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: assets/metrics-notable.svg
+          base: ""
+          plugin_notable: yes
+          plugin_notable_types: commit, pull_request, issue
+          plugin_notable_repositories: yes
+          extras_css: |
+            .card { background-color: #0a0118 !important; }

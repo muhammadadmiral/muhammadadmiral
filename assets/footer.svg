@@ -1,0 +1,101 @@
+<svg width="800" height="150" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Footer">
+    <defs>
+        <linearGradient id="footerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0a0118" />
+            <stop offset="50%" stop-color="#120226" />
+            <stop offset="100%" stop-color="#0a0118" />
+        </linearGradient>
+
+        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="objectBoundingBox">
+            <stop offset="0%" stop-color="#0a0118" stop-opacity="0" />
+            <stop offset="20%" stop-color="#37e6ff" />
+            <stop offset="50%" stop-color="#ff2e9e" />
+            <stop offset="80%" stop-color="#37e6ff" />
+            <stop offset="100%" stop-color="#0a0118" stop-opacity="0" />
+            <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0;-1 0" dur="7s"
+                repeatCount="indefinite" />
+        </linearGradient>
+
+        <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#37e6ff" stop-opacity="0.85" />
+            <stop offset="100%" stop-color="#37e6ff" stop-opacity="0" />
+        </radialGradient>
+
+        <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="2.2" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+
+        <clipPath id="typeReveal">
+            <rect x="185" y="50" width="0" height="28">
+                <animate attributeName="width" values="0;420;420" keyTimes="0;1;1" dur="2.3s" begin="0.3s"
+                    fill="freeze" />
+            </rect>
+        </clipPath>
+    </defs>
+
+    <!-- card background -->
+    <rect x="0" y="0" width="800" height="150" rx="14" fill="url(#footerBg)" />
+
+    <!-- animated top / bottom divider -->
+    <rect x="0" y="0" width="800" height="2" fill="url(#lineGrad)" />
+    <rect x="0" y="148" width="800" height="2" fill="url(#lineGrad)" />
+
+    <!-- twinkling stars -->
+    <circle cx="55" cy="28" r="1.4" fill="#ffffff">
+        <animate attributeName="opacity" values="0.15;1;0.15" dur="2.6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="745" cy="34" r="1.4" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.15;1" dur="3.1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="700" cy="120" r="1.1" fill="#37e6ff">
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="2.1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="40" cy="115" r="1.1" fill="#ff2e9e">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1.9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="620" cy="24" r="1" fill="#ffffff">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- orbiting mini planet, left side -->
+    <g transform="translate(95,75)">
+        <circle r="20" fill="url(#orbGlow)" />
+        <circle r="9" fill="#0a0118" stroke="#37e6ff" stroke-width="1.4" />
+        <ellipse rx="24" ry="8" fill="none" stroke="#ff2e9e" stroke-width="1" opacity="0.65" />
+        <circle r="2.4" fill="#ffffff" filter="url(#softGlow)">
+            <animateMotion dur="7s" repeatCount="indefinite" path="M24,0 A24,8 0 1,1 -24,0 A24,8 0 1,1 24,0" />
+        </circle>
+    </g>
+
+    <!-- terminal-style typed line -->
+    <g clip-path="url(#typeReveal)">
+        <text x="185" y="70" font-family="'Courier New', Courier, monospace" font-size="19" fill="#37e6ff"
+            filter="url(#softGlow)">$ echo "thanks for stopping by"</text>
+    </g>
+
+    <!-- blinking cursor -->
+    <rect x="600" y="53" width="9" height="21" fill="#37e6ff">
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" dur="1s" begin="2.6s"
+            repeatCount="indefinite" />
+    </rect>
+
+    <!-- simulated terminal output line -->
+    <text x="185" y="98" font-family="'Courier New', Courier, monospace" font-size="13" fill="#ffffff" opacity="0">
+        thanks for stopping by
+        <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.9;1" dur="2.9s" begin="0.3s" fill="freeze" />
+    </text>
+
+    <!-- closing line -->
+    <text x="185" y="122" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ff2e9e" opacity="0">
+        see you in the next commit 🚀
+        <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.95;1" dur="3.6s" begin="0.3s" fill="freeze" />
+    </text>
+
+    <!-- signature -->
+    <text x="770" y="138" text-anchor="end" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#ffffff"
+        opacity="0.45">muhammadadmiral</text>
+</svg>
