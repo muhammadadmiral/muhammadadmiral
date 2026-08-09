@@ -63,8 +63,8 @@ Outside of coding, I enjoy:
 ---
 
 <div align="center">
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=muhammadadmiral&layout=compact&hide_border=true&bg_color=0a0118&title_color=37e6ff&text_color=ffffff&icon_color=ff2e9e" alt="Top Languages" width="48%" />
-  <img src="https://github-stats-extended.vercel.app/api?username=muhammadadmiral&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0a0118&title_color=37e6ff&text_color=ffffff&icon_color=ff2e9e" alt="GitHub Stats" width="48%" />
+  <img src="./assets/metrics-languages.svg" alt="Top Languages" width="48%" />
+  <img src="./assets/metrics-overview.svg" alt="GitHub Stats" width="48%" />
 </div>
 <br/>
 <div align="center">
