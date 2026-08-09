@@ -68,7 +68,7 @@ Outside of coding, I enjoy:
 </div>
 <br/>
 <div align="center">
-  <img src="https://streak-stats.demolab.com/?user=muhammadadmiral&hide_border=true&background=0a0118&stroke=ffffff&ring=37e6ff&fire=ff2e9e&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=37e6ff&sideLabels=37e6ff&dates=ffffff" alt="GitHub Streak" />
+  <img src="./assets/streak.svg" alt="GitHub Streak" />
 </div>
 <br/>
 <div align="center">

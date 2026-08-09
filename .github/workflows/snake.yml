@@ -2,8 +2,8 @@ name: Generate Snake Contribution Grid
 
 on:
   schedule:
-    # Run automatically every day at midnight UTC
-    - cron: "0 0 * * *"
+    # Run automatically every 4 hours
+    - cron: "0 */4 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -26,6 +26,8 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2337e6ff
+        env:
+          GITHUB_TOKEN: ${{ secrets.STREAK_TOKEN }}
 
       # Deploy generated SVGs to the `output` branch
       - name: Deploy to output branch
